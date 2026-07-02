@@ -27,7 +27,8 @@ bun run build
 
 Add or revise non-blog sections:
 
-- Edit `app/page.tsx`.
+- Edit the relevant component in `app/_sections/`.
+- Keep `app/page.tsx` as the section composition layer.
 - Add or update section ids only if you also update `app/layout.tsx` and `docs/routes.md`.
 - Keep portfolio, services, about, and contact as home-page sections unless the user asks for standalone pages again.
 

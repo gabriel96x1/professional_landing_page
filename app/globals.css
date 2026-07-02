@@ -1,8 +1,9 @@
 @import "tailwindcss";
+@import "./theme.css";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: var(--theme-background);
+  --foreground: var(--theme-text-primary);
 }
 
 @theme inline {
@@ -10,13 +11,6 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
@@ -37,18 +31,19 @@ html {
     align-items: center;
     justify-content: center;
     border-radius: 9999px;
-    background: #111111;
+    background: var(--theme-text-primary);
     padding: 0.75rem 1.25rem;
     font-size: 0.875rem;
     font-weight: 700;
-    color: #ffffff;
+    color: var(--theme-background);
     transition:
       background-color 150ms ease,
       transform 150ms ease;
   }
 
   .button-primary:hover {
-    background: #0f766e;
+    background: var(--theme-label);
+    color: var(--theme-background);
   }
 
   .button-secondary {
@@ -57,19 +52,59 @@ html {
     align-items: center;
     justify-content: center;
     border-radius: 9999px;
-    border: 1px solid #d4d4d4;
-    background: #ffffff;
+    border: 1px solid var(--theme-border-strong);
+    background: transparent;
     padding: 0.75rem 1.25rem;
     font-size: 0.875rem;
     font-weight: 700;
-    color: #111111;
+    color: var(--theme-text-primary);
     transition:
       border-color 150ms ease,
       background-color 150ms ease;
   }
 
   .button-secondary:hover {
-    border-color: #0f766e;
-    background: #f0fdfa;
+    border-color: var(--theme-label);
+    background: var(--theme-surface-muted);
+  }
+
+  .theme-toggle {
+    display: inline-flex;
+    min-height: 2.5rem;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+    border-radius: 9999px;
+    border: 1px solid var(--theme-border-strong);
+    background: var(--theme-surface-muted);
+    padding: 0.55rem 0.85rem;
+    color: var(--theme-text-primary);
+    font-size: 0.875rem;
+    font-weight: 700;
+    transition:
+      background-color 150ms ease,
+      color 150ms ease,
+      border-color 150ms ease;
+  }
+
+  .theme-toggle:hover {
+    background: var(--theme-tag-background);
+    color: var(--theme-tag-text);
+  }
+
+  .theme-toggle__icon {
+    display: inline-grid;
+    width: 1.35rem;
+    height: 1.35rem;
+    place-items: center;
+    border-radius: 9999px;
+    background: var(--theme-tag-background);
+    color: var(--theme-tag-text);
+    font-size: 0.75rem;
+    line-height: 1;
+  }
+
+  .theme-card-shadow {
+    box-shadow: 0 1px 2px var(--theme-shadow);
   }
 }

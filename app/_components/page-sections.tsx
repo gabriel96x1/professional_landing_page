@@ -21,16 +21,16 @@ export function PageHero({
   primaryLabel,
 }: PageHeroProps) {
   return (
-    <section className="border-b border-neutral-200 bg-white">
+    <section className="border-b border-[var(--theme-border)] bg-[var(--theme-background)]">
       <div className="mx-auto grid w-full max-w-6xl gap-8 px-5 py-16 lg:grid-cols-[1.2fr_0.8fr] lg:px-8 lg:py-20">
         <div>
-          <p className="text-sm font-semibold uppercase text-teal-700">
+          <p className="text-sm font-semibold uppercase text-[var(--theme-label)]">
             {eyebrow}
           </p>
-          <h1 className="mt-5 max-w-3xl text-4xl font-semibold leading-tight text-neutral-950 sm:text-5xl">
+          <h1 className="mt-5 max-w-3xl text-4xl font-semibold leading-tight text-[var(--theme-text-primary)] sm:text-5xl">
             {title}
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-600">
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--theme-text-secondary)]">
             {description}
           </p>
           {primaryHref && primaryLabel ? (
@@ -39,11 +39,11 @@ export function PageHero({
             </Link>
           ) : null}
         </div>
-        <div className="grid content-end gap-3 rounded-lg border border-neutral-200 bg-stone-50 p-5">
-          <p className="text-sm font-medium text-neutral-500">
+        <div className="grid content-end gap-3 rounded-lg border border-[var(--theme-border)] bg-[var(--theme-surface-muted)] p-5">
+          <p className="text-sm font-medium text-[var(--theme-text-secondary)]">
             Placeholder editorial
           </p>
-          <div className="aspect-[4/3] rounded-md border border-dashed border-neutral-300 bg-white" />
+          <div className="aspect-[4/3] rounded-md border border-dashed border-[var(--theme-border-strong)] bg-[var(--theme-background)]" />
         </div>
       </div>
     </section>
@@ -64,9 +64,9 @@ export function PageSection({
   return (
     <section id={id} className="mx-auto w-full max-w-6xl px-5 py-14 lg:px-8">
       <div className="mb-8 max-w-3xl">
-        <h2 className="text-2xl font-semibold text-neutral-950">{title}</h2>
+        <h2 className="text-2xl font-semibold text-[var(--theme-text-primary)]">{title}</h2>
         {description ? (
-          <p className="mt-3 text-base leading-7 text-neutral-600">
+          <p className="mt-3 text-base leading-7 text-[var(--theme-text-secondary)]">
             {description}
           </p>
         ) : null}
@@ -78,18 +78,18 @@ export function PageSection({
 
 export function PlaceholderCard({ title, children }: PlaceholderCardProps) {
   return (
-    <article className="rounded-lg border border-neutral-200 bg-white p-5 shadow-sm">
-      <h3 className="text-lg font-semibold text-neutral-950">{title}</h3>
-      <div className="mt-3 text-sm leading-6 text-neutral-600">{children}</div>
+    <article className="theme-card-shadow rounded-lg border border-[var(--theme-border)] bg-[var(--theme-surface)] p-5">
+      <h3 className="text-lg font-semibold text-[var(--theme-text-primary)]">{title}</h3>
+      <div className="mt-3 text-sm leading-6 text-[var(--theme-text-secondary)]">{children}</div>
     </article>
   );
 }
 
 export function PlaceholderList({ items }: { items: string[] }) {
   return (
-    <ul className="grid gap-3 text-sm leading-6 text-neutral-600">
+    <ul className="grid gap-3 text-sm leading-6 text-[var(--theme-text-secondary)]">
       {items.map((item) => (
-        <li key={item} className="rounded-md border border-neutral-200 bg-white p-4">
+        <li key={item} className="rounded-md border border-[var(--theme-border)] bg-[var(--theme-surface)] p-4">
           {item}
         </li>
       ))}
@@ -99,10 +99,10 @@ export function PlaceholderList({ items }: { items: string[] }) {
 
 export function CtaBand() {
   return (
-    <section className="bg-neutral-950 text-white">
+    <section className="border-y border-[var(--theme-border)] bg-[var(--theme-text-primary)] text-[var(--theme-background)]">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-5 py-12 sm:flex-row sm:items-center sm:justify-between lg:px-8">
         <div>
-          <p className="text-sm font-semibold uppercase text-teal-300">
+          <p className="text-sm font-semibold uppercase text-[var(--theme-accent)]">
             Siguiente paso
           </p>
           <h2 className="mt-3 text-2xl font-semibold">
@@ -110,7 +110,7 @@ export function CtaBand() {
           </h2>
         </div>
         <Link
-          className="inline-flex min-h-11 items-center justify-center rounded-full bg-white px-5 text-sm font-semibold text-neutral-950 transition hover:bg-teal-100"
+          className="inline-flex min-h-11 items-center justify-center rounded-full bg-[var(--theme-tag-background)] px-5 text-sm font-semibold text-[var(--theme-tag-text)] transition hover:opacity-85"
           href="/#contact"
         >
           Ir a contacto

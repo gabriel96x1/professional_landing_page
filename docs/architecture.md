@@ -29,14 +29,20 @@ The intent is that the home page tells the full story quickly, while the blog ke
 
 `app/page.tsx`
 
-- The main landing page and source of truth for non-blog content.
-- Contains sections with ids used by the header nav:
+- Composes the main landing page from self-contained section components.
+- Renders sections with ids used by the header nav:
   - `inicio`
   - `services`
   - `portfolio`
   - `blog-preview`
   - `about`
   - `contact`
+
+`app/_sections/`
+
+- Private, non-routable folder for home-page section components.
+- Each main-page section should own its markup, local lists, and section-specific imports here.
+- Shared section primitives should remain in `app/_components/page-sections.tsx`.
 
 `app/_components/page-sections.tsx`
 

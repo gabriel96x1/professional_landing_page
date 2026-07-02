@@ -38,7 +38,7 @@ export default function BlogPage() {
             (category) => (
               <span
                 key={category}
-                className="rounded-full border border-neutral-200 bg-white px-4 py-2 text-sm text-neutral-600"
+                className="rounded-full border border-[var(--theme-tag-outline)] bg-transparent px-4 py-2 text-sm text-[var(--theme-tag-outline)]"
               >
                 {category}
               </span>
@@ -51,7 +51,7 @@ export default function BlogPage() {
         <div className="grid gap-4 md:grid-cols-3">
           {posts.map((post) => (
             <PlaceholderCard key={post.slug} title={post.title}>
-              <p className="text-xs font-semibold uppercase text-teal-700">
+              <p className="text-xs font-semibold uppercase text-[var(--theme-label)]">
                 {post.category}
               </p>
               <p className="mt-3">
@@ -59,7 +59,7 @@ export default function BlogPage() {
                 valor para quien lo lee.
               </p>
               <Link
-                className="mt-4 inline-flex font-medium text-neutral-950 underline-offset-4 hover:underline"
+                className="mt-4 inline-flex font-medium text-[var(--theme-text-primary)] underline-offset-4 hover:underline"
                 href={`/blog/${post.slug}`}
               >
                 Leer articulo

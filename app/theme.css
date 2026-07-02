@@ -1,0 +1,32 @@
+:root,
+:root[data-theme="light"] {
+  --theme-background: #fafaf5;
+  --theme-text-primary: #4f6817;
+  --theme-text-secondary: #5c5b4c;
+  --theme-label: #7c8132;
+  --theme-accent: #ecfc93;
+  --theme-tag-background: #ecfc93;
+  --theme-tag-text: #4f6817;
+  --theme-tag-outline: #7c8132;
+  --theme-surface: #fafaf5;
+  --theme-surface-muted: rgb(236 252 147 / 24%);
+  --theme-border: rgb(124 129 50 / 42%);
+  --theme-border-strong: #7c8132;
+  --theme-shadow: rgb(79 104 23 / 10%);
+}
+
+:root[data-theme="dark"] {
+  --theme-background: #4f6817;
+  --theme-text-primary: #fafaf5;
+  --theme-text-secondary: #d7dcc5;
+  --theme-label: #ecfc93;
+  --theme-accent: #ecfc93;
+  --theme-tag-background: #ecfc93;
+  --theme-tag-text: #4f6817;
+  --theme-tag-outline: #ecfc93;
+  --theme-surface: #4f6817;
+  --theme-surface-muted: rgb(236 252 147 / 14%);
+  --theme-border: rgb(236 252 147 / 38%);
+  --theme-border-strong: #ecfc93;
+  --theme-shadow: rgb(0 0 0 / 16%);
+}

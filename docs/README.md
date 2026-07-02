@@ -7,6 +7,7 @@ Recommended order:
 1. `architecture.md` - how the app is organized.
 2. `routes.md` - public URLs and anchors.
 3. `agent-playbook.md` - common workflows, validation, and known gotchas.
+4. `design-rules.md` - theme tokens, palette, and visual rules.
 
 High-level model:
 

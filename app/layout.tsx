@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
+import { ThemeToggle } from "./_components/theme-toggle";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -37,41 +38,43 @@ export default function RootLayout({
     <html
       lang="es"
       data-scroll-behavior="smooth"
+      data-theme="light"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-stone-50 text-neutral-950">
+      <body className="min-h-full bg-[var(--theme-background)] text-[var(--theme-text-primary)]">
         <div className="flex min-h-screen flex-col">
-          <header className="sticky top-0 z-20 border-b border-neutral-200 bg-stone-50/95 backdrop-blur">
+          <header className="sticky top-0 z-20 border-b border-[var(--theme-border)] bg-[var(--theme-background)]/95 backdrop-blur">
             <nav
               className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-5 py-4 sm:flex-row sm:items-center sm:justify-between lg:px-8"
               aria-label="Navegacion principal"
             >
               <Link
                 href="/#inicio"
-                className="text-sm font-semibold uppercase text-neutral-900"
+                className="text-sm font-semibold uppercase text-[var(--theme-text-primary)]"
               >
                 Tu Nombre
               </Link>
-              <div className="flex flex-wrap gap-2 text-sm text-neutral-600">
+              <div className="flex flex-wrap items-center gap-2 text-sm text-[var(--theme-text-secondary)]">
                 {navigation.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="rounded-full px-3 py-2 transition hover:bg-white hover:text-neutral-950"
+                    className="rounded-full px-3 py-2 transition hover:bg-[var(--theme-surface-muted)] hover:text-[var(--theme-text-primary)]"
                   >
                     {item.label}
                   </Link>
                 ))}
+                <ThemeToggle />
               </div>
             </nav>
           </header>
           {children}
-          <footer className="border-t border-neutral-200 bg-white">
-            <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-5 py-8 text-sm text-neutral-600 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+          <footer className="border-t border-[var(--theme-border)] bg-[var(--theme-background)]">
+            <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-5 py-8 text-sm text-[var(--theme-text-secondary)] sm:flex-row sm:items-center sm:justify-between lg:px-8">
               <p>Tu Nombre - Portafolio profesional</p>
               <Link
                 href="/#contact"
-                className="font-medium text-neutral-950 underline-offset-4 hover:underline"
+                className="font-medium text-[var(--theme-text-primary)] underline-offset-4 hover:underline"
               >
                 Hablemos de tu proyecto
               </Link>
