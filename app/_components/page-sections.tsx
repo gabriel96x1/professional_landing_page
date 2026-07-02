@@ -96,26 +96,3 @@ export function PlaceholderList({ items }: { items: string[] }) {
     </ul>
   );
 }
-
-export function CtaBand() {
-  return (
-    <section className="border-y border-[var(--theme-border)] bg-[var(--theme-text-primary)] text-[var(--theme-background)]">
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-5 py-12 sm:flex-row sm:items-center sm:justify-between lg:px-8">
-        <div>
-          <p className="text-sm font-semibold uppercase text-[var(--theme-accent)]">
-            Siguiente paso
-          </p>
-          <h2 className="mt-3 text-2xl font-semibold">
-            Placeholder para llamada de contacto
-          </h2>
-        </div>
-        <Link
-          className="inline-flex min-h-11 items-center justify-center rounded-full bg-[var(--theme-tag-background)] px-5 text-sm font-semibold text-[var(--theme-tag-text)] transition hover:opacity-85"
-          href="/#contact"
-        >
-          Ir a contacto
-        </Link>
-      </div>
-    </section>
-  );
-}

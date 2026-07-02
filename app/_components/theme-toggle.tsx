@@ -1,5 +1,6 @@
 "use client";
 
+import { Moon, Sun } from "lucide-react";
 import { useEffect, useSyncExternalStore } from "react";
 
 type ThemeName = "light" | "dark";
@@ -18,9 +19,9 @@ function getPreferredTheme(): ThemeName {
     return storedTheme;
   }
 
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
+  return window.matchMedia("(prefers-color-scheme: light)").matches
+    ? "light"
+    : "dark";
 }
 
 function applyTheme(theme: ThemeName) {
@@ -65,12 +66,16 @@ export function ThemeToggle() {
       aria-pressed={isDark}
       className="theme-toggle"
       onClick={toggleTheme}
+      title={`Cambiar a tema ${isDark ? "claro" : "oscuro"}`}
       type="button"
     >
-      <span aria-hidden="true" className="theme-toggle__icon">
-        {isDark ? "C" : "O"}
+      <span aria-hidden="true" className="theme-toggle__track">
+        {isDark ? (
+          <Moon className="theme-toggle__icon" size={16} strokeWidth={2} />
+        ) : (
+          <Sun className="theme-toggle__icon" size={16} strokeWidth={2} />
+        )}
       </span>
-      <span>{isDark ? "Claro" : "Oscuro"}</span>
     </button>
   );
 }

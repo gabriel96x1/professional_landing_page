@@ -1,4 +1,3 @@
-import { CtaBand } from "./_components/page-sections";
 import { AboutSection } from "./_sections/about-section";
 import { BlogPreviewSection } from "./_sections/blog-preview-section";
 import { ContactSection } from "./_sections/contact-section";
@@ -17,7 +16,6 @@ export default function Home() {
       <BlogPreviewSection />
       <AboutSection />
       <ContactSection />
-      <CtaBand />
     </main>
   );
 }
