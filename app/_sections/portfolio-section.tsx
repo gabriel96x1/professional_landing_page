@@ -25,7 +25,7 @@ export function PortfolioSection() {
       <div className="grid gap-5 md:grid-cols-2">
         {projects.map((project) => (
           <PlaceholderCard key={project} title={project}>
-            <div className="mb-4 aspect-video rounded-md border border-dashed border-[var(--theme-border-strong)] bg-[var(--theme-surface-muted)]" />
+            <div className="mb-4 aspect-video rounded-md border border-dashed border-(--theme-border-strong) bg-(--theme-surface-muted)" />
             <p>
               Problema: placeholder para explicar el contexto y la necesidad del
               cliente o producto.

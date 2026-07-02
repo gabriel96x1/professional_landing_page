@@ -30,7 +30,7 @@ export function ServicesSection() {
 
       <div className="mt-8 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
-          <h3 className="text-lg font-semibold text-[var(--theme-text-primary)]">
+          <h3 className="text-lg font-semibold text-(--theme-text-primary)">
             Para quien es
           </h3>
           <div className="mt-4">
@@ -44,7 +44,7 @@ export function ServicesSection() {
           </div>
         </div>
         <div>
-          <h3 className="text-lg font-semibold text-[var(--theme-text-primary)]">
+          <h3 className="text-lg font-semibold text-(--theme-text-primary)">
             Como trabajo
           </h3>
           <div className="mt-4 grid gap-4 sm:grid-cols-2">
@@ -58,7 +58,7 @@ export function ServicesSection() {
       </div>
 
       <div className="mt-8">
-        <h3 className="text-lg font-semibold text-[var(--theme-text-primary)]">Entregables</h3>
+        <h3 className="text-lg font-semibold text-(--theme-text-primary)">Entregables</h3>
         <div className="mt-4">
           <PlaceholderList
             items={[

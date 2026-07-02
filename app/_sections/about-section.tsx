@@ -12,7 +12,7 @@ export function AboutSection() {
       description="Una seccion para contar experiencia, criterio, forma de trabajar y que tipo de colaboraciones buscas."
     >
       <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-        <div className="theme-card-shadow rounded-lg border border-[var(--theme-border)] bg-[var(--theme-surface)] p-6 text-base leading-8 text-[var(--theme-text-secondary)]">
+        <div className="theme-card-shadow rounded-lg border border-(--theme-border) bg-(--theme-surface) p-6 text-base leading-8 text-(--theme-text-secondary)">
           <p>
             Placeholder para una biografia breve. Incluye experiencia,
             intereses, enfoque de trabajo y una nota humana que ayude a
@@ -34,7 +34,7 @@ export function AboutSection() {
         </div>
       </div>
       <div className="mt-8">
-        <h3 className="text-lg font-semibold text-[var(--theme-text-primary)]">
+        <h3 className="text-lg font-semibold text-(--theme-text-primary)">
           Valores de trabajo
         </h3>
         <div className="mt-4">

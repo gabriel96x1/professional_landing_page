@@ -26,6 +26,11 @@ semantic tokens and avoid replacing colors directly in components.
 ## Component Usage
 
 - Use semantic theme variables, not loose hexadecimal values in JSX.
+- Use Tailwind's canonical CSS variable shorthand for theme tokens:
+  `text-(--theme-text-secondary)`, not `text-[var(--theme-text-secondary)]`.
+- Apply the same shorthand for other utilities: `bg-(--theme-background)`,
+  `border-(--theme-border)`, `hover:bg-(--theme-surface-muted)`, and
+  `placeholder:text-(--theme-text-secondary)`.
 - The global background should use `--theme-background`.
 - Headings, the name, and primary links should use `--theme-text-primary`.
 - Body copy and secondary text should use `--theme-text-secondary`.
