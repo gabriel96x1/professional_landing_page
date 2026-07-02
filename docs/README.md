@@ -5,7 +5,7 @@ This folder is for agents working on this project. Read these docs before changi
 Recommended order:
 
 1. `architecture.md` - how the app is organized.
-2. `routes.md` - public URLs, anchors, and redirects.
+2. `routes.md` - public URLs and anchors.
 3. `agent-playbook.md` - common workflows, validation, and known gotchas.
 
 High-level model:
@@ -13,7 +13,7 @@ High-level model:
 - The site is primarily a one-page professional landing page at `/`.
 - The header tabs scroll to specific sections in that page.
 - Blog remains separate at `/blog` and `/blog/[slug]`.
-- Old standalone pages for portfolio, services, about, and contact redirect to home anchors.
+- Portfolio, services, about, and contact live only as sections on the home page.
 
 Next.js rule:
 

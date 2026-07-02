@@ -15,7 +15,7 @@ The product is a professional personal site with:
 - A single long home page at `/`
 - A separate blog index at `/blog`
 - Dynamic blog article pages at `/blog/[slug]`
-- Redirects from old section pages to anchors on `/`
+- Home-page sections for portfolio, services, about, and contact
 
 The intent is that the home page tells the full story quickly, while the blog keeps its own content structure.
 
@@ -59,11 +59,8 @@ The intent is that the home page tells the full story quickly, while the blog ke
 - Dynamic article placeholder.
 - Uses async `params`, which matches current Next.js App Router conventions.
 
-`app/portfolio/page.tsx`, `app/services/page.tsx`, `app/about/page.tsx`, `app/contact/page.tsx`
-
-- Compatibility routes only.
-- Each route redirects to the matching home anchor using `redirect()` from `next/navigation`.
-- Do not rebuild these into standalone pages unless the product direction changes.
+There are no standalone routes for portfolio, services, about, or contact.
+Keep these as home-page sections unless the product direction changes.
 
 `app/globals.css`
 

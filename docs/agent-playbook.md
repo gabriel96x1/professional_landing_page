@@ -29,7 +29,7 @@ Add or revise non-blog sections:
 
 - Edit `app/page.tsx`.
 - Add or update section ids only if you also update `app/layout.tsx` and `docs/routes.md`.
-- Keep `/portfolio`, `/services`, `/about`, and `/contact` as redirects unless the user asks for standalone pages again.
+- Keep portfolio, services, about, and contact as home-page sections unless the user asks for standalone pages again.
 
 Change navigation:
 
@@ -74,6 +74,9 @@ curl -I http://localhost:3000/services
 curl -I http://localhost:3000/about
 curl -I http://localhost:3000/contact
 ```
+
+The section URLs should return `404`; the matching navigation links should stay
+as home anchors like `/#portfolio`.
 
 ## Turbopack And Bun Notes
 

@@ -31,18 +31,20 @@ This keeps hash navigation smooth and prevents the sticky header from covering s
 
 The blog should remain separate unless the user explicitly asks to merge it into the one-page home.
 
-## Compatibility Redirects
+## Removed Section Routes
 
-These routes used to be standalone pages. They now redirect to home anchors.
+These routes used to be standalone pages. They are intentionally not exposed as
+routes now; keep the content on `/` and link to the matching home anchor.
 
-| Old URL | Redirect Target | File |
-| --- | --- | --- |
-| `/portfolio` | `/#portfolio` | `app/portfolio/page.tsx` |
-| `/services` | `/#services` | `app/services/page.tsx` |
-| `/about` | `/#about` | `app/about/page.tsx` |
-| `/contact` | `/#contact` | `app/contact/page.tsx` |
+| Old URL | Current Target |
+| --- | --- |
+| `/portfolio` | `/#portfolio` |
+| `/services` | `/#services` |
+| `/about` | `/#about` |
+| `/contact` | `/#contact` |
 
-Use these routes only as compatibility redirects. For non-blog content, edit `app/page.tsx`.
+Do not add redirect wrappers for these URLs unless compatibility becomes a
+requirement again. For non-blog content, edit `app/page.tsx`.
 
 ## Route Check Expectations
 
@@ -51,7 +53,7 @@ Expected local responses:
 - `/` returns `200`
 - `/blog` returns `200`
 - `/blog/articulo-placeholder-1` returns `200`
-- `/portfolio` returns `307` with `location: /#portfolio`
-- `/services` returns `307` with `location: /#services`
-- `/about` returns `307` with `location: /#about`
-- `/contact` returns `307` with `location: /#contact`
+- `/portfolio` returns `404`
+- `/services` returns `404`
+- `/about` returns `404`
+- `/contact` returns `404`
