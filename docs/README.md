@@ -6,15 +6,17 @@ Recommended order:
 
 1. `architecture.md` - how the app is organized.
 2. `routes.md` - public URLs and anchors.
-3. `agent-playbook.md` - common workflows, validation, and known gotchas.
-4. `design-rules.md` - theme tokens, palette, and visual rules.
+3. `i18n.md` - locale routing, messages, navigation, and localized blog slugs.
+4. `agent-playbook.md` - common workflows, validation, and known gotchas.
+5. `design-rules.md` - theme tokens, palette, and visual rules.
 
 High-level model:
 
-- The site is primarily a one-page professional landing page at `/`.
-- The header tabs scroll to specific sections in that page.
-- Blog remains separate at `/blog` and `/blog/[slug]`.
+- The site is primarily a localized one-page professional landing page at `/es` and `/en`.
+- The header tabs scroll to specific sections in the localized home page.
+- Blog remains separate at `/es/blog`, `/en/blog`, and localized `/[locale]/blog/[slug]` routes.
 - Portfolio, services, about, and contact live only as sections on the home page.
+- Public routes use always-prefixed `next-intl` locales. `/` redirects to a locale-prefixed route.
 
 Next.js rule:
 

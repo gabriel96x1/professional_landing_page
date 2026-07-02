@@ -1,6 +1,7 @@
 "use client";
 
 import { Moon, Sun } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { useEffect, useSyncExternalStore } from "react";
 
 type ThemeName = "light" | "dark";
@@ -40,6 +41,7 @@ function subscribeToThemeChanges(onStoreChange: () => void) {
 }
 
 export function ThemeToggle() {
+  const t = useTranslations("Theme");
   const theme = useSyncExternalStore<ThemeName>(
     subscribeToThemeChanges,
     getPreferredTheme,
@@ -59,14 +61,15 @@ export function ThemeToggle() {
   }
 
   const isDark = theme === "dark";
+  const label = isDark ? t("switchToLight") : t("switchToDark");
 
   return (
     <button
-      aria-label={`Cambiar a tema ${isDark ? "claro" : "oscuro"}`}
+      aria-label={label}
       aria-pressed={isDark}
       className="theme-toggle"
       onClick={toggleTheme}
-      title={`Cambiar a tema ${isDark ? "claro" : "oscuro"}`}
+      title={label}
       type="button"
     >
       <span aria-hidden="true" className="theme-toggle__track">

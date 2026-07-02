@@ -7,29 +7,30 @@
 - Tailwind CSS v4 via `@import "tailwindcss"`
 - TypeScript with App Router
 - Bun is the user's preferred package manager
+- next-intl `4.13.1` with always-prefixed locale routes
 
 ## App Shape
 
 The product is a professional personal site with:
 
-- A single long home page at `/`
-- A separate blog index at `/blog`
-- Dynamic blog article pages at `/blog/[slug]`
+- A single long localized home page at `/es` and `/en`
+- A separate localized blog index at `/es/blog` and `/en/blog`
+- Dynamic localized blog article pages at `/es/blog/[slug]` and `/en/blog/[slug]`
 - Home-page sections for portfolio, services, about, and contact
 
 The intent is that the home page tells the full story quickly, while the blog keeps its own content structure.
 
 ## Important Files
 
-`app/layout.tsx`
+`app/[locale]/layout.tsx`
 
-- Root layout required by App Router.
-- Owns global metadata, fonts, header navigation, and footer.
-- Navigation should point to anchors on `/` except for Blog.
+- Localized root layout for public pages.
+- Owns metadata, fonts, header navigation, footer, `NextIntlClientProvider`, and `html lang`.
+- Navigation should point to anchors on the localized home page except for Blog.
 
-`app/page.tsx`
+`app/[locale]/page.tsx`
 
-- Composes the main landing page from self-contained section components.
+- Composes the localized main landing page from self-contained section components.
 - Renders sections with ids used by the header nav:
   - `inicio`
   - `services`
@@ -54,16 +55,16 @@ The intent is that the home page tells the full story quickly, while the blog ke
   - `CtaBand`
 - This folder starts with `_`, so it is private and not routable.
 
-`app/blog/page.tsx`
+`app/[locale]/blog/page.tsx`
 
-- Blog index placeholder.
-- Currently owns local placeholder post metadata.
-- Links to `/blog/[slug]` routes.
+- Localized blog index placeholder.
+- Reads locale-specific placeholder post metadata from `app/_lib/blog-posts.ts`.
+- Links to the active locale's `/blog/[slug]` routes.
 
-`app/blog/[slug]/page.tsx`
+`app/[locale]/blog/[slug]/page.tsx`
 
-- Dynamic article placeholder.
-- Uses async `params`, which matches current Next.js App Router conventions.
+- Dynamic localized article placeholder.
+- Uses async `params`, validates `locale + slug`, and returns `notFound()` for wrong-locale slugs.
 
 There are no standalone routes for portfolio, services, about, or contact.
 Keep these as home-page sections unless the product direction changes.
@@ -77,6 +78,22 @@ Keep these as home-page sections unless the product direction changes.
 
 - Sets `turbopack.root` using the physical config location.
 - This avoids root detection problems when Bun/npm or external lockfiles confuse Turbopack.
+- Is wrapped with `createNextIntlPlugin()` for next-intl.
+
+`proxy.ts`
+
+- Runs next-intl locale routing before route rendering.
+- Uses the Next.js 16 `proxy` convention, not deprecated `middleware`.
+
+`i18n/`
+
+- Contains routing, request, and navigation helpers.
+- `i18n/routing.ts` is the source of truth for supported locales.
+
+`messages/`
+
+- Contains Spanish and English message catalogs.
+- User-facing text should live here instead of being hard-coded in components.
 
 `tsconfig.json` and `eslint.config.mjs`
 

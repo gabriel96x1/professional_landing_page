@@ -5,7 +5,8 @@
 1. Read `AGENTS.md`.
 2. Read relevant local Next.js docs under `node_modules/next/dist/docs/`.
 3. Read `docs/architecture.md` and `docs/routes.md`.
-4. Inspect current files before editing.
+4. Read `docs/i18n.md`.
+5. Inspect current files before editing.
 
 Useful commands:
 
@@ -28,15 +29,16 @@ bun run build
 Add or revise non-blog sections:
 
 - Edit the relevant component in `app/_sections/`.
-- Keep `app/page.tsx` as the section composition layer.
-- Add or update section ids only if you also update `app/layout.tsx` and `docs/routes.md`.
+- Keep `app/[locale]/page.tsx` as the section composition layer.
+- Put user-facing copy in `messages/es.json` and `messages/en.json`.
+- Add or update section ids only if you also update `app/[locale]/layout.tsx`, redirects, `docs/routes.md`, and `docs/i18n.md`.
 - Keep portfolio, services, about, and contact as home-page sections unless the user asks for standalone pages again.
 
 Change navigation:
 
-- Edit the `navigation` array in `app/layout.tsx`.
-- Keep one-page links as `/#section-id`.
-- Keep Blog as `/blog`.
+- Edit the localized `navigation` array in `app/[locale]/layout.tsx`.
+- Keep one-page links locale-aware through `i18n/navigation.ts`.
+- Keep Blog as `/{locale}/blog`.
 
 Change shared layout primitives:
 
@@ -45,8 +47,10 @@ Change shared layout primitives:
 
 Change blog behavior:
 
-- Edit `app/blog/page.tsx` for the index.
-- Edit `app/blog/[slug]/page.tsx` for article pages.
+- Edit `app/[locale]/blog/page.tsx` for the index.
+- Edit `app/[locale]/blog/[slug]/page.tsx` for article pages.
+- Edit `app/_lib/blog-posts.ts` for localized slugs and placeholder post metadata.
+- Keep stable post ids and separate Spanish/English slugs.
 - If replacing placeholders with real content, prefer a structured data source or MDX/CMS integration over hard-coded strings once content grows.
 
 ## Validation
@@ -68,16 +72,21 @@ Then check:
 
 ```bash
 curl -I http://localhost:3000/
-curl -I http://localhost:3000/blog
-curl -I http://localhost:3000/blog/articulo-placeholder-1
+curl -I http://localhost:3000/es
+curl -I http://localhost:3000/en
+curl -I http://localhost:3000/es/blog
+curl -I http://localhost:3000/en/blog
+curl -I http://localhost:3000/es/blog/articulo-placeholder-1
+curl -I http://localhost:3000/en/blog/article-placeholder-1
+curl -I http://localhost:3000/es/blog/article-placeholder-1
+curl -I http://localhost:3000/en/blog/articulo-placeholder-1
 curl -I http://localhost:3000/portfolio
-curl -I http://localhost:3000/services
-curl -I http://localhost:3000/about
-curl -I http://localhost:3000/contact
+curl -I http://localhost:3000/es/portfolio
+curl -I http://localhost:3000/en/contact
 ```
 
-The section URLs should return `404`; the matching navigation links should stay
-as home anchors like `/#portfolio`.
+Wrong-locale blog slugs should return `404`. Section URLs should redirect to
+localized home anchors like `/es#portfolio` and `/en#contact`.
 
 ## Turbopack And Bun Notes
 

@@ -1,0 +1,220 @@
+{
+  "Metadata": {
+    "title": "Professional Landing Page",
+    "description": "Portafolio profesional de una pagina con servicios freelance, proyectos destacados, sobre mi, contacto y blog separado."
+  },
+  "Layout": {
+    "brand": "Tu Nombre",
+    "ariaLabel": "Navegacion principal",
+    "nav": {
+      "home": "Inicio",
+      "portfolio": "Portafolio",
+      "services": "Servicios",
+      "blog": "Blog",
+      "about": "Sobre mi",
+      "contact": "Contacto"
+    },
+    "footerText": "Tu Nombre - Portafolio profesional",
+    "footerCta": "Hablemos de tu proyecto"
+  },
+  "LanguageSwitcher": {
+    "label": "Cambiar idioma",
+    "es": "ES",
+    "en": "EN"
+  },
+  "Theme": {
+    "switchToLight": "Cambiar a tema claro",
+    "switchToDark": "Cambiar a tema oscuro"
+  },
+  "Shared": {
+    "editorialPlaceholder": "Placeholder editorial"
+  },
+  "Home": {
+    "Hero": {
+      "eyebrow": "Portafolio + freelance + blog",
+      "title": "Placeholder para una propuesta profesional clara.",
+      "description": "Resumen breve de que haces, para quien trabajas y que resultado ayudas a conseguir. Esta home debe convencer en 30 a 60 segundos.",
+      "primaryCta": "Contactar",
+      "secondaryCta": "Ver proyectos",
+      "visualPlaceholder": "Placeholder para screenshot, retrato o visual principal.",
+      "specialty": "Especialidad principal: [tu stack / tu enfoque]."
+    },
+    "WhatIDo": {
+      "title": "Que haces",
+      "description": "Una explicacion corta de tu enfoque profesional, tus fortalezas y el tipo de problemas que resuelves.",
+      "cards": {
+        "web": {
+          "title": "Desarrollo web",
+          "body": "Placeholder para describir stack, alcance y tipos de producto."
+        },
+        "product": {
+          "title": "Producto y UX",
+          "body": "Placeholder para hablar de criterio, estructura y experiencia."
+        },
+        "content": {
+          "title": "Contenido tecnico",
+          "body": "Placeholder para conectar el blog con tu autoridad profesional."
+        }
+      }
+    },
+    "Services": {
+      "title": "Servicios freelance",
+      "description": "Una seccion comercial para explicar que ofreces, para quien es, como trabajas, que entregas y como iniciar una cotizacion.",
+      "cards": {
+        "sites": {
+          "title": "Sitios profesionales",
+          "body": "Landing pages, sitios personales, paginas de servicio y presencia web orientada a conversion."
+        },
+        "frontend": {
+          "title": "Desarrollo frontend",
+          "body": "Componentes, vistas, integraciones, performance y mejoras sobre productos existentes."
+        },
+        "consulting": {
+          "title": "Consultoria tecnica",
+          "body": "Auditorias, planes de mejora, arquitectura ligera y soporte para decisiones de producto."
+        }
+      },
+      "audienceTitle": "Para quien es",
+      "audienceItems": [
+        "Necesitas lanzar una pagina clara sin convertirla en un proyecto interminable.",
+        "Tienes un producto existente y quieres mejorar una parte especifica.",
+        "Quieres comunicar mejor tu oferta profesional o tecnica."
+      ],
+      "workflowTitle": "Como trabajo",
+      "workflowSteps": [
+        {
+          "title": "Diagnostico",
+          "body": "Placeholder para explicar esta etapa, tiempos y expectativas."
+        },
+        {
+          "title": "Propuesta",
+          "body": "Placeholder para explicar esta etapa, tiempos y expectativas."
+        },
+        {
+          "title": "Ejecucion",
+          "body": "Placeholder para explicar esta etapa, tiempos y expectativas."
+        },
+        {
+          "title": "Entrega",
+          "body": "Placeholder para explicar esta etapa, tiempos y expectativas."
+        }
+      ],
+      "deliverablesTitle": "Entregables",
+      "deliverableItems": [
+        "Repositorio o entrega tecnica organizada.",
+        "Pagina o feature implementada y lista para revisar.",
+        "Documentacion corta para uso, mantenimiento o siguientes pasos.",
+        "Revision final y ajustes acordados dentro del alcance."
+      ]
+    },
+    "Portfolio": {
+      "title": "Portafolio",
+      "description": "Proyectos y casos de estudio con espacio para problema, solucion, tecnologias, screenshots, resultados y aprendizajes.",
+      "projects": [
+        "Caso de estudio 1",
+        "Caso de estudio 2",
+        "Caso de estudio 3",
+        "Caso de estudio 4"
+      ],
+      "projectDetails": {
+        "problem": "Problema: placeholder para explicar el contexto y la necesidad del cliente o producto.",
+        "solution": "Solucion: placeholder para describir decisiones, arquitectura, UX o implementacion.",
+        "technologies": "Tecnologias: [Next.js], [React], [CMS], [API], [otra].",
+        "result": "Resultado: metricas, impacto o aprendizaje."
+      },
+      "caseStudyParts": [
+        "Problema",
+        "Solucion",
+        "Tecnologias",
+        "Resultado",
+        "Screenshots"
+      ],
+      "caseStudyBody": "Placeholder para completar esta parte del caso de estudio."
+    },
+    "BlogPreview": {
+      "title": "Ultimos articulos",
+      "description": "El blog se mantiene como pagina separada para que tenga su propio indice, categorias y articulos individuales.",
+      "link": "Ver blog"
+    },
+    "About": {
+      "title": "Sobre mi",
+      "description": "Una seccion para contar experiencia, criterio, forma de trabajar y que tipo de colaboraciones buscas.",
+      "bio": "Placeholder para una biografia breve. Incluye experiencia, intereses, enfoque de trabajo y una nota humana que ayude a conectar.",
+      "cards": {
+        "experience": {
+          "title": "Experiencia",
+          "body": "Placeholder para trayectoria, industrias, roles o proyectos relevantes."
+        },
+        "judgment": {
+          "title": "Criterio",
+          "body": "Placeholder para explicar como tomas decisiones tecnicas y de producto."
+        },
+        "collaboration": {
+          "title": "Colaboracion",
+          "body": "Placeholder para tu manera de comunicar, estimar y entregar."
+        }
+      },
+      "valuesTitle": "Valores de trabajo",
+      "values": [
+        "Claridad antes de complejidad.",
+        "Diseño y codigo al servicio del objetivo.",
+        "Comunicacion directa durante todo el proceso.",
+        "Entrega mantenible y facil de evolucionar."
+      ]
+    },
+    "Contact": {
+      "eyebrow": "Contacto",
+      "title": "Un lugar claro para iniciar una conversacion.",
+      "description": "Canales, expectativas, disponibilidad y un formulario placeholder para convertir esta seccion en contacto real.",
+      "cards": {
+        "email": {
+          "title": "Email",
+          "line1": "tuemail@example.com",
+          "line2": "Placeholder para correo principal."
+        },
+        "linkedin": {
+          "title": "LinkedIn",
+          "line1": "/in/tu-perfil",
+          "line2": "Placeholder para perfil profesional."
+        },
+        "calendar": {
+          "title": "Agenda",
+          "line1": "Link de calendario",
+          "line2": "Placeholder para llamadas de descubrimiento."
+        }
+      },
+      "form": {
+        "name": "Nombre",
+        "namePlaceholder": "Tu nombre",
+        "email": "Email",
+        "emailPlaceholder": "tu@email.com",
+        "message": "Mensaje",
+        "messagePlaceholder": "Cuentame que necesitas construir o mejorar.",
+        "submit": "Enviar mensaje"
+      }
+    }
+  },
+  "Blog": {
+    "Index": {
+      "eyebrow": "Blog",
+      "title": "Articulos para compartir criterio, proceso y aprendizaje.",
+      "description": "Indice de contenido con espacio para categorias, filtros, buscador y entradas individuales.",
+      "categoriesTitle": "Categorias",
+      "categories": ["Todos", "Desarrollo", "Freelance", "Producto", "Notas"],
+      "articlesTitle": "Articulos",
+      "readArticle": "Leer articulo"
+    },
+    "Post": {
+      "eyebrow": "Articulo",
+      "title": "Titulo placeholder del articulo individual.",
+      "description": "Slug actual: {slug}. Esta ruta queda lista para conectar contenido real desde MDX, CMS o archivos locales.",
+      "contentTitle": "Contenido",
+      "intro": "Introduccion placeholder para plantear el problema, contexto o aprendizaje principal del articulo.",
+      "mainHeading": "Seccion principal",
+      "mainBody": "Desarrollo placeholder con ideas, ejemplos, enlaces o notas tecnicas. Esta pagina puede convertirse en un template para todos los posts.",
+      "closingHeading": "Cierre",
+      "closingBody": "Conclusion placeholder con siguiente paso, resumen o reflexion.",
+      "back": "Volver al blog"
+    }
+  }
+}

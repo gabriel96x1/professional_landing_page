@@ -1,28 +1,29 @@
-import Link from "next/link";
+import { getBlogPosts } from "@/app/_lib/blog-posts";
+import type { AppLocale } from "@/i18n/routing";
+import { Link } from "@/i18n/navigation";
+import { useLocale, useTranslations } from "next-intl";
 import { PageSection, PlaceholderCard } from "../_components/page-sections";
 
-const recentPosts = [
-  "Articulo reciente 1",
-  "Articulo reciente 2",
-  "Articulo reciente 3",
-];
-
 export function BlogPreviewSection() {
+  const locale = useLocale() as AppLocale;
+  const t = useTranslations("Home.BlogPreview");
+  const recentPosts = getBlogPosts(locale);
+
   return (
     <PageSection
       id="blog-preview"
-      title="Ultimos articulos"
-      description="El blog se mantiene como pagina separada para que tenga su propio indice, categorias y articulos individuales."
+      title={t("title")}
+      description={t("description")}
     >
       <div className="grid gap-4 md:grid-cols-3">
         {recentPosts.map((post) => (
-          <PlaceholderCard key={post} title={post}>
-            Extracto breve, categoria, fecha y enlace al articulo completo.
+          <PlaceholderCard key={post.id} title={post.title}>
+            {post.excerpt}
           </PlaceholderCard>
         ))}
       </div>
       <Link className="button-secondary mt-6 inline-flex" href="/blog">
-        Ver blog
+        {t("link")}
       </Link>
     </PageSection>
   );

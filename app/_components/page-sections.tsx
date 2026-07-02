@@ -1,4 +1,5 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 type PageHeroProps = {
   eyebrow: string;
@@ -20,6 +21,8 @@ export function PageHero({
   primaryHref,
   primaryLabel,
 }: PageHeroProps) {
+  const t = useTranslations("Shared");
+
   return (
     <section className="border-b border-(--theme-border) bg-(--theme-background)">
       <div className="mx-auto grid w-full max-w-6xl gap-8 px-5 py-16 lg:grid-cols-[1.2fr_0.8fr] lg:px-8 lg:py-20">
@@ -41,7 +44,7 @@ export function PageHero({
         </div>
         <div className="grid content-end gap-3 rounded-lg border border-(--theme-border) bg-(--theme-surface-muted) p-5">
           <p className="text-sm font-medium text-(--theme-text-secondary)">
-            Placeholder editorial
+            {t("editorialPlaceholder")}
           </p>
           <div className="aspect-[4/3] rounded-md border border-dashed border-(--theme-border-strong) bg-(--theme-background)" />
         </div>

@@ -3,54 +3,52 @@ import {
   PlaceholderCard,
   PlaceholderList,
 } from "../_components/page-sections";
-
-const workflowSteps = ["Diagnostico", "Propuesta", "Ejecucion", "Entrega"];
+import { useTranslations } from "next-intl";
 
 export function ServicesSection() {
+  const t = useTranslations("Home.Services");
+  const audienceItems = t.raw("audienceItems") as string[];
+  const workflowSteps = t.raw("workflowSteps") as Array<{
+    title: string;
+    body: string;
+  }>;
+  const deliverableItems = t.raw("deliverableItems") as string[];
+
   return (
     <PageSection
       id="services"
-      title="Servicios freelance"
-      description="Una seccion comercial para explicar que ofreces, para quien es, como trabajas, que entregas y como iniciar una cotizacion."
+      title={t("title")}
+      description={t("description")}
     >
       <div className="grid gap-4 md:grid-cols-3">
-        <PlaceholderCard title="Sitios profesionales">
-          Landing pages, sitios personales, paginas de servicio y presencia web
-          orientada a conversion.
+        <PlaceholderCard title={t("cards.sites.title")}>
+          {t("cards.sites.body")}
         </PlaceholderCard>
-        <PlaceholderCard title="Desarrollo frontend">
-          Componentes, vistas, integraciones, performance y mejoras sobre
-          productos existentes.
+        <PlaceholderCard title={t("cards.frontend.title")}>
+          {t("cards.frontend.body")}
         </PlaceholderCard>
-        <PlaceholderCard title="Consultoria tecnica">
-          Auditorias, planes de mejora, arquitectura ligera y soporte para
-          decisiones de producto.
+        <PlaceholderCard title={t("cards.consulting.title")}>
+          {t("cards.consulting.body")}
         </PlaceholderCard>
       </div>
 
       <div className="mt-8 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
           <h3 className="text-lg font-semibold text-(--theme-text-primary)">
-            Para quien es
+            {t("audienceTitle")}
           </h3>
           <div className="mt-4">
-            <PlaceholderList
-              items={[
-                "Necesitas lanzar una pagina clara sin convertirla en un proyecto interminable.",
-                "Tienes un producto existente y quieres mejorar una parte especifica.",
-                "Quieres comunicar mejor tu oferta profesional o tecnica.",
-              ]}
-            />
+            <PlaceholderList items={audienceItems} />
           </div>
         </div>
         <div>
           <h3 className="text-lg font-semibold text-(--theme-text-primary)">
-            Como trabajo
+            {t("workflowTitle")}
           </h3>
           <div className="mt-4 grid gap-4 sm:grid-cols-2">
             {workflowSteps.map((step) => (
-              <PlaceholderCard key={step} title={step}>
-                Placeholder para explicar esta etapa, tiempos y expectativas.
+              <PlaceholderCard key={step.title} title={step.title}>
+                {step.body}
               </PlaceholderCard>
             ))}
           </div>
@@ -58,16 +56,11 @@ export function ServicesSection() {
       </div>
 
       <div className="mt-8">
-        <h3 className="text-lg font-semibold text-(--theme-text-primary)">Entregables</h3>
+        <h3 className="text-lg font-semibold text-(--theme-text-primary)">
+          {t("deliverablesTitle")}
+        </h3>
         <div className="mt-4">
-          <PlaceholderList
-            items={[
-              "Repositorio o entrega tecnica organizada.",
-              "Pagina o feature implementada y lista para revisar.",
-              "Documentacion corta para uso, mantenimiento o siguientes pasos.",
-              "Revision final y ajustes acordados dentro del alcance.",
-            ]}
-          />
+          <PlaceholderList items={deliverableItems} />
         </div>
       </div>
     </PageSection>
