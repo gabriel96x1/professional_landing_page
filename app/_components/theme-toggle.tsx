@@ -20,9 +20,7 @@ function getPreferredTheme(): ThemeName {
     return storedTheme;
   }
 
-  return window.matchMedia("(prefers-color-scheme: light)").matches
-    ? "light"
-    : "dark";
+  return "dark";
 }
 
 function applyTheme(theme: ThemeName) {

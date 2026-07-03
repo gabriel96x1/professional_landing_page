@@ -39,12 +39,12 @@ export default function BlogPage() {
         <div className="grid gap-4 md:grid-cols-3">
           {posts.map((post) => (
             <PlaceholderCard key={post.slug} title={post.title}>
-              <p className="text-xs font-semibold uppercase text-(--theme-label)">
+              <p className="font-mono text-xs font-bold uppercase tracking-[0.12em] text-(--theme-label)">
                 {post.category}
               </p>
               <p className="mt-3">{post.excerpt}</p>
               <Link
-                className="mt-4 inline-flex font-medium text-(--theme-text-primary) underline-offset-4 hover:underline"
+                className="mt-4 inline-flex font-extrabold text-(--theme-text-primary) underline-offset-4 hover:underline"
                 href={`/blog/${post.slug}`}
               >
                 {t("readArticle")}

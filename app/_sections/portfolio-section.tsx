@@ -15,7 +15,7 @@ export function PortfolioSection() {
       <div className="grid gap-5 md:grid-cols-2">
         {projects.map((project) => (
           <PlaceholderCard key={project} title={project}>
-            <div className="mb-4 aspect-video rounded-md border border-dashed border-(--theme-border-strong) bg-(--theme-surface-muted)" />
+            <div className="mb-4 aspect-video rounded-2xl border border-dashed border-(--theme-border-strong) bg-(--theme-surface-muted)" />
             <p>{t("projectDetails.problem")}</p>
             <p className="mt-3">{t("projectDetails.solution")}</p>
             <p className="mt-3">{t("projectDetails.technologies")}</p>

@@ -47,7 +47,7 @@ export function LanguageSwitcher() {
   return (
     <div
       aria-label={t("label")}
-      className="flex items-center rounded-full border border-(--theme-border) p-1"
+      className="flex items-center rounded-2xl border border-(--theme-border) bg-(--theme-surface-muted) p-1"
       role="group"
     >
       {routing.locales.map((targetLocale) => {
@@ -56,9 +56,9 @@ export function LanguageSwitcher() {
         return (
           <button
             aria-pressed={isActive}
-            className={`rounded-full px-2.5 py-1 text-xs font-semibold transition ${
+            className={`rounded-xl px-2.5 py-1 text-xs font-black uppercase transition ${
               isActive
-                ? "bg-(--theme-text-primary) text-(--theme-background)"
+                ? "bg-(--theme-accent) text-(--theme-accent-ink)"
                 : "text-(--theme-text-secondary) hover:bg-(--theme-surface-muted) hover:text-(--theme-text-primary)"
             }`}
             key={targetLocale}

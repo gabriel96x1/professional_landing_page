@@ -16,7 +16,7 @@ export function AboutSection() {
       description={t("description")}
     >
       <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-        <div className="theme-card-shadow rounded-lg border border-(--theme-border) bg-(--theme-surface) p-6 text-base leading-8 text-(--theme-text-secondary)">
+        <div className="theme-card-shadow rounded-3xl border border-(--theme-border) bg-(--theme-surface) p-6 text-base leading-8 text-(--theme-text-secondary)">
           <p>{t("bio")}</p>
         </div>
         <div className="grid gap-4 sm:grid-cols-3">
@@ -32,7 +32,7 @@ export function AboutSection() {
         </div>
       </div>
       <div className="mt-8">
-        <h3 className="text-lg font-semibold text-(--theme-text-primary)">
+        <h3 className="text-lg font-black uppercase text-(--theme-text-primary)">
           {t("valuesTitle")}
         </h3>
         <div className="mt-4">

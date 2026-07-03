@@ -4,19 +4,21 @@ import "@/app/globals.css";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Archivo, IBM_Plex_Mono } from "next/font/google";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const archivo = Archivo({
+  variable: "--font-archivo",
   subsets: ["latin"],
+  weight: ["400", "500", "700", "800", "900"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const ibmPlexMono = IBM_Plex_Mono({
+  variable: "--font-ibm-plex-mono",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 type LocaleLayoutProps = Readonly<{
@@ -54,6 +56,14 @@ export default async function LocaleLayout({
   }
 
   const t = await getTranslations({ locale, namespace: "Layout" });
+  const brand = t("brand");
+  const brandMark = brand
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((word) => word[0])
+    .join("")
+    .toUpperCase();
   const navigation = [
     { href: "/#inicio", label: t("nav.home") },
     { href: "/#portfolio", label: t("nav.portfolio") },
@@ -65,29 +75,35 @@ export default async function LocaleLayout({
 
   return (
     <html
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${archivo.variable} ${ibmPlexMono.variable} h-full antialiased`}
       data-scroll-behavior="smooth"
-      data-theme="light"
+      data-theme="dark"
       lang={locale}
     >
       <body className="min-h-full bg-(--theme-background) text-(--theme-text-primary)">
         <NextIntlClientProvider>
           <div className="flex min-h-screen flex-col">
-            <header className="sticky top-0 z-20 border-b border-(--theme-border) bg-(--theme-background)/95 backdrop-blur">
+            <header className="sticky top-0 z-20 border-b border-(--theme-border) bg-(--theme-background)/80 backdrop-blur-xl">
               <nav
                 aria-label={t("ariaLabel")}
-                className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-5 py-4 sm:flex-row sm:items-center sm:justify-between lg:px-8"
+                className="mx-auto flex min-h-20 w-full max-w-6xl flex-col gap-4 px-5 py-4 sm:flex-row sm:items-center sm:justify-between lg:px-8"
               >
                 <Link
-                  className="text-sm font-semibold uppercase text-(--theme-text-primary)"
+                  className="inline-flex items-center gap-3 text-sm font-black uppercase tracking-wide text-(--theme-text-primary)"
                   href="/#inicio"
                 >
-                  {t("brand")}
+                  <span
+                    aria-hidden="true"
+                    className="grid size-12 place-items-center rounded-2xl bg-(--theme-accent) text-base font-black text-(--theme-accent-ink) shadow-[0_7px_0_var(--theme-shadow)]"
+                  >
+                    {brandMark}
+                  </span>
+                  <span>{brand}</span>
                 </Link>
-                <div className="flex flex-wrap items-center gap-2 text-sm text-(--theme-text-secondary)">
+                <div className="flex flex-wrap items-center gap-1.5 text-sm font-bold text-(--theme-text-secondary)">
                   {navigation.map((item) => (
                     <Link
-                      className="rounded-full px-3 py-2 transition hover:bg-(--theme-surface-muted) hover:text-(--theme-text-primary)"
+                      className="rounded-full border border-transparent px-3.5 py-2.5 transition hover:border-(--theme-border-strong) hover:bg-(--theme-surface-muted) hover:text-(--theme-text-primary)"
                       href={item.href}
                       key={item.href}
                     >
@@ -101,10 +117,10 @@ export default async function LocaleLayout({
             </header>
             {children}
             <footer className="border-t border-(--theme-border) bg-(--theme-background)">
-              <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-5 py-8 text-sm text-(--theme-text-secondary) sm:flex-row sm:items-center sm:justify-between lg:px-8">
+              <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-5 py-9 text-sm text-(--theme-text-secondary) sm:flex-row sm:items-center sm:justify-between lg:px-8">
                 <p>{t("footerText")}</p>
                 <Link
-                  className="font-medium text-(--theme-text-primary) underline-offset-4 hover:underline"
+                  className="font-extrabold text-(--theme-text-primary) underline-offset-4 hover:underline"
                   href="/#contact"
                 >
                   {t("footerCta")}

@@ -40,18 +40,18 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       />
 
       <PageSection title={t("contentTitle")}>
-        <article className="theme-card-shadow max-w-3xl rounded-lg border border-(--theme-border) bg-(--theme-surface) p-6 text-base leading-8 text-(--theme-text-secondary)">
+        <article className="theme-card-shadow max-w-3xl rounded-3xl border border-(--theme-border) bg-(--theme-surface) p-6 text-base leading-8 text-(--theme-text-secondary)">
           <p>{t("intro")}</p>
-          <h2 className="mt-8 text-2xl font-semibold text-(--theme-text-primary)">
+          <h2 className="mt-8 text-3xl font-black uppercase leading-tight text-(--theme-text-primary)">
             {t("mainHeading")}
           </h2>
           <p className="mt-3">{t("mainBody")}</p>
-          <h2 className="mt-8 text-2xl font-semibold text-(--theme-text-primary)">
+          <h2 className="mt-8 text-3xl font-black uppercase leading-tight text-(--theme-text-primary)">
             {t("closingHeading")}
           </h2>
           <p className="mt-3">{t("closingBody")}</p>
           <Link
-            className="mt-8 inline-flex font-medium text-(--theme-text-primary) underline-offset-4 hover:underline"
+            className="mt-8 inline-flex font-extrabold text-(--theme-text-primary) underline-offset-4 hover:underline"
             href="/blog"
           >
             {t("back")}

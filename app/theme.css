@@ -1,32 +1,38 @@
 :root,
 :root[data-theme="light"] {
-  --theme-background: #fafaf5;
-  --theme-text-primary: #4f6817;
-  --theme-text-secondary: #5c5b4c;
-  --theme-label: #7c8132;
-  --theme-accent: #ecfc93;
-  --theme-tag-background: #ecfc93;
-  --theme-tag-text: #4f6817;
-  --theme-tag-outline: #7c8132;
-  --theme-surface: #fafaf5;
-  --theme-surface-muted: rgb(236 252 147 / 24%);
-  --theme-border: rgb(124 129 50 / 42%);
-  --theme-border-strong: #7c8132;
-  --theme-shadow: rgb(79 104 23 / 10%);
+  --theme-background: #f4e9d8;
+  --theme-text-primary: #271f18;
+  --theme-text-secondary: #665847;
+  --theme-label: #9a4f35;
+  --theme-label-soft: rgb(154 79 53 / 36%);
+  --theme-accent: #2f765d;
+  --theme-accent-ink: #f4e9d8;
+  --theme-tag-background: #2f765d;
+  --theme-tag-text: #f4e9d8;
+  --theme-tag-outline: #9a4f35;
+  --theme-surface: #fff3df;
+  --theme-surface-muted: #ead8bd;
+  --theme-border: rgb(39 31 24 / 16%);
+  --theme-border-strong: rgb(39 31 24 / 28%);
+  --theme-shadow: rgb(62 45 28 / 18%);
+  --theme-focus: #245b63;
 }
 
 :root[data-theme="dark"] {
-  --theme-background: #4f6817;
-  --theme-text-primary: #fafaf5;
-  --theme-text-secondary: #d7dcc5;
-  --theme-label: #ecfc93;
-  --theme-accent: #ecfc93;
-  --theme-tag-background: #ecfc93;
-  --theme-tag-text: #4f6817;
-  --theme-tag-outline: #ecfc93;
-  --theme-surface: #4f6817;
-  --theme-surface-muted: rgb(236 252 147 / 14%);
-  --theme-border: rgb(236 252 147 / 38%);
-  --theme-border-strong: #ecfc93;
-  --theme-shadow: rgb(0 0 0 / 16%);
+  --theme-background: #1e1b18;
+  --theme-text-primary: #f4e9d8;
+  --theme-text-secondary: #c9baa4;
+  --theme-label: #b96545;
+  --theme-label-soft: rgb(185 101 69 / 36%);
+  --theme-accent: #63b894;
+  --theme-accent-ink: #0d2119;
+  --theme-tag-background: #63b894;
+  --theme-tag-text: #0d2119;
+  --theme-tag-outline: rgb(244 233 216 / 28%);
+  --theme-surface: #312b25;
+  --theme-surface-muted: #27231f;
+  --theme-border: rgb(244 233 216 / 16%);
+  --theme-border-strong: rgb(244 233 216 / 28%);
+  --theme-shadow: rgb(0 0 0 / 38%);
+  --theme-focus: #f2c94c;
 }
