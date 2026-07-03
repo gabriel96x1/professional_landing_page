@@ -1,10 +1,10 @@
 {
   "Metadata": {
-    "title": "Professional Landing Page",
-    "description": "Portafolio profesional de una pagina con servicios freelance, proyectos destacados, sobre mi, contacto y blog separado."
+    "title": "Gabriel Ernesto Rodriguez Zamora | Software Engineer",
+    "description": "Portafolio profesional de Gabriel Ernesto Rodriguez Zamora, Software Engineer especializado en Android, Kotlin, Jetpack Compose, arquitectura movil, CI/CD y automatizacion con IA."
   },
   "Layout": {
-    "brand": "Tu Nombre",
+    "brand": "Gabriel Rodriguez",
     "ariaLabel": "Navegacion principal",
     "nav": {
       "home": "Inicio",
@@ -14,7 +14,7 @@
       "about": "Sobre mi",
       "contact": "Contacto"
     },
-    "footerText": "Tu Nombre - Portafolio profesional",
+    "footerText": "Gabriel Ernesto Rodriguez Zamora - Software Engineer",
     "footerCta": "Hablemos de tu proyecto"
   },
   "LanguageSwitcher": {
@@ -31,156 +31,174 @@
   },
   "Home": {
     "Hero": {
-      "eyebrow": "Portafolio + freelance + blog",
-      "title": "Placeholder para una propuesta profesional clara.",
-      "description": "Resumen breve de que haces, para quien trabajas y que resultado ayudas a conseguir. Esta home debe convencer en 30 a 60 segundos.",
+      "eyebrow": "Android + arquitectura movil + automatizacion",
+      "title": "Software Engineer especializado en productos moviles escalables.",
+      "description": "Construyo y modernizo aplicaciones Android con Kotlin, Jetpack Compose y arquitecturas modernas. Tambien diseno pipelines CI/CD, suites de pruebas y flujos agenticos que reducen friccion en equipos de ingenieria.",
       "primaryCta": "Contactar",
       "secondaryCta": "Ver proyectos",
-      "visualPlaceholder": "Placeholder para screenshot, retrato o visual principal.",
-      "specialty": "Especialidad principal: [tu stack / tu enfoque]."
+      "visualPlaceholder": "6+ anos de experiencia en mobile engineering",
+      "specialty": "Android, Kotlin, Jetpack Compose, CI/CD e IA aplicada a desarrollo."
     },
     "WhatIDo": {
-      "title": "Que haces",
-      "description": "Una explicacion corta de tu enfoque profesional, tus fortalezas y el tipo de problemas que resuelves.",
+      "title": "Que hago",
+      "description": "Trabajo en la interseccion entre desarrollo movil, arquitectura, calidad y automatizacion para ayudar a equipos a entregar features robustas con menos deuda tecnica.",
       "cards": {
         "web": {
-          "title": "Desarrollo web",
-          "body": "Placeholder para describir stack, alcance y tipos de producto."
+          "title": "Android moderno",
+          "body": "Desarrollo pantallas, modulos y features con Kotlin, Jetpack Compose, Coroutines, Retrofit y patrones como MVVM, MVI y Server-Driven UI."
         },
         "product": {
-          "title": "Producto y UX",
-          "body": "Placeholder para hablar de criterio, estructura y experiencia."
+          "title": "Arquitectura y calidad",
+          "body": "Modernizo bases legacy, modularizo build logic, elevo cobertura de pruebas y defino practicas para que el codigo sea mas mantenible."
         },
         "content": {
-          "title": "Contenido tecnico",
-          "body": "Placeholder para conectar el blog con tu autoridad profesional."
+          "title": "Automatizacion e IA",
+          "body": "Construyo herramientas, servidores MCP y flujos con Codex y GitHub Copilot-CLI para automatizar tareas repetitivas de ingenieria y documentacion."
         }
       }
     },
     "Services": {
-      "title": "Servicios freelance",
-      "description": "Una seccion comercial para explicar que ofreces, para quien es, como trabajas, que entregas y como iniciar una cotizacion.",
+      "title": "Servicios",
+      "description": "Puedo apoyar en desarrollo mobile, modernizacion de Android, automatizacion de calidad y herramientas internas para acelerar equipos tecnicos.",
       "cards": {
         "sites": {
-          "title": "Sitios profesionales",
-          "body": "Landing pages, sitios personales, paginas de servicio y presencia web orientada a conversion."
+          "title": "Desarrollo Android",
+          "body": "Features nativas, migraciones a Jetpack Compose, integraciones WebView, deep links, networking y modulos reutilizables."
         },
         "frontend": {
-          "title": "Desarrollo frontend",
-          "body": "Componentes, vistas, integraciones, performance y mejoras sobre productos existentes."
+          "title": "Arquitectura y testing",
+          "body": "Auditorias tecnicas, modularizacion Gradle, suites de pruebas instrumentadas/unitarias, mocks dinamicos y mejora de cobertura."
         },
         "consulting": {
-          "title": "Consultoria tecnica",
-          "body": "Auditorias, planes de mejora, arquitectura ligera y soporte para decisiones de producto."
+          "title": "DevOps y automatizacion",
+          "body": "Pipelines CI/CD, checks de PR, merge queues, SAST, Lint/Detekt y herramientas agenticas para flujos de desarrollo."
         }
       },
       "audienceTitle": "Para quien es",
       "audienceItems": [
-        "Necesitas lanzar una pagina clara sin convertirla en un proyecto interminable.",
-        "Tienes un producto existente y quieres mejorar una parte especifica.",
-        "Quieres comunicar mejor tu oferta profesional o tecnica."
+        "Equipos con aplicaciones Android que necesitan modernizar pantallas, modulos o arquitectura.",
+        "Productos que requieren mejorar cobertura de pruebas, estabilidad o velocidad de entrega.",
+        "Organizaciones que quieren automatizar procesos de ingenieria sin perder trazabilidad ni calidad."
       ],
       "workflowTitle": "Como trabajo",
       "workflowSteps": [
         {
           "title": "Diagnostico",
-          "body": "Placeholder para explicar esta etapa, tiempos y expectativas."
+          "body": "Reviso contexto, objetivos, arquitectura existente, deuda tecnica y restricciones reales del producto."
         },
         {
-          "title": "Propuesta",
-          "body": "Placeholder para explicar esta etapa, tiempos y expectativas."
+          "title": "Plan tecnico",
+          "body": "Defino alcance, riesgos, entregables, estrategia de pruebas y una ruta de implementacion incremental."
         },
         {
-          "title": "Ejecucion",
-          "body": "Placeholder para explicar esta etapa, tiempos y expectativas."
+          "title": "Implementacion",
+          "body": "Desarrollo con foco en mantenibilidad, revisiones claras, automatizacion y validacion continua."
         },
         {
-          "title": "Entrega",
-          "body": "Placeholder para explicar esta etapa, tiempos y expectativas."
+          "title": "Handoff",
+          "body": "Documento decisiones, uso, mantenimiento y siguientes pasos para que el equipo pueda continuar sin friccion."
         }
       ],
       "deliverablesTitle": "Entregables",
       "deliverableItems": [
-        "Repositorio o entrega tecnica organizada.",
-        "Pagina o feature implementada y lista para revisar.",
-        "Documentacion corta para uso, mantenimiento o siguientes pasos.",
-        "Revision final y ajustes acordados dentro del alcance."
+        "Feature, modulo o migracion implementada y lista para revision.",
+        "Pruebas unitarias, instrumentadas o mocks segun el alcance.",
+        "Pipelines, checks o automatizaciones documentadas.",
+        "Notas tecnicas con decisiones, trade-offs y siguientes pasos."
       ]
     },
     "Portfolio": {
       "title": "Portafolio",
-      "description": "Proyectos y casos de estudio con espacio para problema, solucion, tecnologias, screenshots, resultados y aprendizajes.",
+      "description": "Proyectos representativos de experiencia profesional, open source y desarrollo personal con foco en mobile, automatizacion y herramientas tecnicas.",
       "projects": [
-        "Caso de estudio 1",
-        "Caso de estudio 2",
-        "Caso de estudio 3",
-        "Caso de estudio 4"
+        {
+          "title": "Framework multi-agente para desarrollo",
+          "problem": "Problema: los flujos repetitivos de ingenieria y documentacion consumian tiempo y dependian demasiado de contexto manual.",
+          "solution": "Solucion: disene un framework de orquestacion multi-agente con MCP, herramientas locales y servidores personalizados para dar contexto a los agentes.",
+          "technologies": "Tecnologias: Codex, GitHub Copilot-CLI, MCP, TypeScript, Node.js, automatizacion de terminal.",
+          "result": "Resultado: reduccion de overhead manual y soporte para workflows complejos de desarrollo."
+        },
+        {
+          "title": "Modernizacion Android en retail",
+          "problem": "Problema: modulos legacy en Java y UI tradicional limitaban la velocidad de iteracion y la calidad del producto.",
+          "solution": "Solucion: migre codigo a Kotlin, modernice UI con Jetpack Compose, modularice Gradle e implemente checks CI/CD.",
+          "technologies": "Tecnologias: Kotlin, Java, Jetpack Compose, Retrofit, Dagger-Hilt, Coroutines, Gradle, Detekt, Lint.",
+          "result": "Resultado: features moviles para dominios B2C y Loyalty con impacto en 100K+ usuarios diarios."
+        },
+        {
+          "title": "Eleuteria Writing Studio",
+          "problem": "Problema: crear un estudio de escritura open source con frontend moderno, backend API y calidad automatizada.",
+          "solution": "Solucion: implemente una app desktop con UI React, backend Fast API, SQLite y pipeline de pruebas frontend/backend.",
+          "technologies": "Tecnologias: TypeScript, Python, React, Vite, Tailwind CSS, Fast API, shadcn-ui, SQLite, GitHub Actions.",
+          "result": "Resultado: aplicacion open source con CI/CD, pre-commit hooks, smoke tests y reporte automatizado de cobertura."
+        },
+        {
+          "title": "ReadE-DocOnline",
+          "problem": "Problema: leer y verificar documentos electronicos ICAO de forma segura desde Android.",
+          "solution": "Solucion: construi una app nativa con NFC, OCR de MRZ y handshake para extraer datos cifrados de e-passports e identificaciones.",
+          "technologies": "Tecnologias: Kotlin, Java, NFC, Android SDK, JMRTD, Bouncy Castle, OCR.",
+          "result": "Resultado: base tecnica para lectura offline de documentos electronicos y verificacion segura."
+        }
       ],
-      "projectDetails": {
-        "problem": "Problema: placeholder para explicar el contexto y la necesidad del cliente o producto.",
-        "solution": "Solucion: placeholder para describir decisiones, arquitectura, UX o implementacion.",
-        "technologies": "Tecnologias: [Next.js], [React], [CMS], [API], [otra].",
-        "result": "Resultado: metricas, impacto o aprendizaje."
-      },
       "caseStudyParts": [
-        "Problema",
-        "Solucion",
-        "Tecnologias",
-        "Resultado",
-        "Screenshots"
+        "Android",
+        "CI/CD",
+        "Testing",
+        "NFC",
+        "Agentic AI"
       ],
-      "caseStudyBody": "Placeholder para completar esta parte del caso de estudio."
+      "caseStudyBody": "Area de experiencia respaldada por proyectos reales del CV."
     },
     "BlogPreview": {
-      "title": "Ultimos articulos",
-      "description": "El blog se mantiene como pagina separada para que tenga su propio indice, categorias y articulos individuales.",
+      "title": "Ideas para escribir",
+      "description": "El blog puede crecer alrededor de Android moderno, arquitectura movil, automatizacion con IA y aprendizajes de proyectos reales.",
       "link": "Ver blog"
     },
     "About": {
       "title": "Sobre mi",
-      "description": "Una seccion para contar experiencia, criterio, forma de trabajar y que tipo de colaboraciones buscas.",
-      "bio": "Placeholder para una biografia breve. Incluye experiencia, intereses, enfoque de trabajo y una nota humana que ayude a conectar.",
+      "description": "Soy ingeniero de software con 6+ anos de experiencia construyendo, modernizando y automatizando productos moviles.",
+      "bio": "Me especializo en Android con Kotlin y Jetpack Compose, pero tambien trabajo con TypeScript, Python, React, Flutter y herramientas de automatizacion. He colaborado en productos para retail, travel, telecom y gobierno, desde features de alto trafico hasta modulos de seguridad, NFC, CI/CD y sistemas de agentes para desarrollo.",
       "cards": {
         "experience": {
           "title": "Experiencia",
-          "body": "Placeholder para trayectoria, industrias, roles o proyectos relevantes."
+          "body": "The Home Depot, IBM, Expedia Group, CODE Ingenieria y Thales DIS, con proyectos mobile, telecom, NFC y herramientas internas."
         },
         "judgment": {
           "title": "Criterio",
-          "body": "Placeholder para explicar como tomas decisiones tecnicas y de producto."
+          "body": "Priorizo arquitectura mantenible, pruebas, impacto medible y decisiones incrementales que respeten el producto existente."
         },
         "collaboration": {
           "title": "Colaboracion",
-          "body": "Placeholder para tu manera de comunicar, estimar y entregar."
+          "body": "Trabajo con claridad tecnica, documentacion util, automatizacion donde aporta valor y comunicacion directa con equipos."
         }
       },
-      "valuesTitle": "Valores de trabajo",
+      "valuesTitle": "Fortalezas",
       "values": [
-        "Claridad antes de complejidad.",
-        "Diseño y codigo al servicio del objetivo.",
-        "Comunicacion directa durante todo el proceso.",
-        "Entrega mantenible y facil de evolucionar."
+        "Android moderno con Kotlin, Jetpack Compose y arquitecturas MVVM/MVI.",
+        "Calidad con pruebas unitarias, instrumentadas, mocks y profiling.",
+        "DevOps mobile con CI/CD, GitHub Actions, SAST, Lint, Detekt y Gradle.",
+        "Automatizacion avanzada con MCP, Codex, Copilot-CLI y herramientas internas."
       ]
     },
     "Contact": {
       "eyebrow": "Contacto",
-      "title": "Un lugar claro para iniciar una conversacion.",
-      "description": "Canales, expectativas, disponibilidad y un formulario placeholder para convertir esta seccion en contacto real.",
+      "title": "Hablemos de tu producto movil o herramienta tecnica.",
+      "description": "Puedes contactarme por correo, LinkedIn o GitHub para hablar sobre Android, automatizacion, consultoria tecnica o colaboraciones.",
       "cards": {
         "email": {
           "title": "Email",
-          "line1": "tuemail@example.com",
-          "line2": "Placeholder para correo principal."
+          "line1": "gabriel96x1@gmail.com",
+          "line2": "(+52) 993 193 74 20"
         },
         "linkedin": {
           "title": "LinkedIn",
-          "line1": "/in/tu-perfil",
-          "line2": "Placeholder para perfil profesional."
+          "line1": "linkedin.com/in/gaberz96",
+          "line2": "Perfil profesional"
         },
         "calendar": {
-          "title": "Agenda",
-          "line1": "Link de calendario",
-          "line2": "Placeholder para llamadas de descubrimiento."
+          "title": "GitHub",
+          "line1": "github.com/gabriel96x1",
+          "line2": "Codigo y proyectos"
         }
       },
       "form": {
@@ -200,7 +218,7 @@
       "title": "Articulos para compartir criterio, proceso y aprendizaje.",
       "description": "Indice de contenido con espacio para categorias, filtros, buscador y entradas individuales.",
       "categoriesTitle": "Categorias",
-      "categories": ["Todos", "Desarrollo", "Freelance", "Producto", "Notas"],
+      "categories": ["Todos", "Android", "Arquitectura", "Automatizacion", "Notas"],
       "articlesTitle": "Articulos",
       "readArticle": "Leer articulo"
     },

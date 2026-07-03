@@ -3,7 +3,13 @@ import { useTranslations } from "next-intl";
 
 export function PortfolioSection() {
   const t = useTranslations("Home.Portfolio");
-  const projects = t.raw("projects") as string[];
+  const projects = t.raw("projects") as Array<{
+    title: string;
+    problem: string;
+    solution: string;
+    technologies: string;
+    result: string;
+  }>;
   const caseStudyParts = t.raw("caseStudyParts") as string[];
 
   return (
@@ -14,12 +20,12 @@ export function PortfolioSection() {
     >
       <div className="grid gap-5 md:grid-cols-2">
         {projects.map((project) => (
-          <PlaceholderCard key={project} title={project}>
+          <PlaceholderCard key={project.title} title={project.title}>
             <div className="mb-4 aspect-video rounded-2xl border border-dashed border-(--theme-border-strong) bg-(--theme-surface-muted)" />
-            <p>{t("projectDetails.problem")}</p>
-            <p className="mt-3">{t("projectDetails.solution")}</p>
-            <p className="mt-3">{t("projectDetails.technologies")}</p>
-            <p className="mt-3">{t("projectDetails.result")}</p>
+            <p>{project.problem}</p>
+            <p className="mt-3">{project.solution}</p>
+            <p className="mt-3">{project.technologies}</p>
+            <p className="mt-3">{project.result}</p>
           </PlaceholderCard>
         ))}
       </div>
