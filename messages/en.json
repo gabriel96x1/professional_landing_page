@@ -59,53 +59,54 @@
     },
     "Services": {
       "title": "Services",
-      "description": "I can help with mobile development, Android modernization, quality automation, and internal tools that accelerate technical teams.",
-      "cards": {
-        "sites": {
-          "title": "Android development",
-          "body": "Native features, Jetpack Compose migrations, WebView integrations, deep links, networking, and reusable modules."
+      "description": "Three concrete ways to help when you already have an app, MVP, or operation that needs technical judgment to move forward.",
+      "items": [
+        {
+          "key": "audit",
+          "eyebrow": "Focused diagnosis",
+          "title": "Technical audit for an app or MVP",
+          "body": "For startups or businesses that already have something built and need to understand risks, priorities, and next steps before investing more.",
+          "includes": [
+            "Architecture review and technical debt.",
+            "Critical bugs, performance, and basic security.",
+            "Improvement roadmap with cost and time estimate."
+          ],
+          "outcome": "You receive a prioritized diagnosis with risks, quick wins, and a clear improvement path.",
+          "price": "$500-$1,500 USD",
+          "cta": "Request an audit"
         },
-        "frontend": {
-          "title": "Architecture and testing",
-          "body": "Technical audits, Gradle modularization, instrumented/unit test suites, dynamic mocks, and coverage improvements."
+        {
+          "key": "automation",
+          "eyebrow": "Applied AI",
+          "title": "AI automation or integration",
+          "body": "For companies that want to use AI practically: reduce manual work, connect tools, and turn scattered information into useful processes.",
+          "includes": [
+            "Lead classification, email summaries, and reports.",
+            "Forms connected to CRMs, APIs, or internal tools.",
+            "Internal document bots and workflows with n8n, Make, or Zapier."
+          ],
+          "outcome": "We deliver a working automation connected to your real tools and ready for daily operations.",
+          "price": "$1,500-$8,000 USD",
+          "cta": "Explore automation"
         },
-        "consulting": {
-          "title": "DevOps and automation",
-          "body": "CI/CD pipelines, PR checks, merge queues, SAST, Lint/Detekt, and agentic tooling for development workflows."
+        {
+          "key": "mobile",
+          "eyebrow": "Monthly support",
+          "title": "Mobile / Android production support",
+          "body": "For startups with an existing Android app that need reliable maintenance without hiring a full team.",
+          "includes": [
+            "Releases, bugs, migrations, and performance.",
+            "Analytics, payments, authentication, and key integrations.",
+            "Play Store compliance and continuous technical support."
+          ],
+          "outcome": "Keep your app stable, current, and ready to grow with recurring senior support.",
+          "price": "$1,000-$5,000 USD/month",
+          "cta": "Discuss support"
         }
-      },
-      "audienceTitle": "Who it is for",
-      "audienceItems": [
-        "Teams with Android applications that need to modernize screens, modules, or architecture.",
-        "Products that need better test coverage, stability, or delivery speed.",
-        "Organizations that want to automate engineering processes without losing traceability or quality."
       ],
-      "workflowTitle": "How I work",
-      "workflowSteps": [
-        {
-          "title": "Diagnosis",
-          "body": "I review context, goals, existing architecture, technical debt, and real product constraints."
-        },
-        {
-          "title": "Technical plan",
-          "body": "I define scope, risks, deliverables, test strategy, and an incremental implementation path."
-        },
-        {
-          "title": "Implementation",
-          "body": "I build with maintainability, clear reviews, automation, and continuous validation in mind."
-        },
-        {
-          "title": "Handoff",
-          "body": "I document decisions, usage, maintenance, and next steps so the team can continue smoothly."
-        }
-      ],
-      "deliverablesTitle": "Deliverables",
-      "deliverableItems": [
-        "Feature, module, or migration implemented and ready for review.",
-        "Unit tests, instrumented tests, or mocks according to scope.",
-        "Pipelines, checks, or automations with documentation.",
-        "Technical notes with decisions, trade-offs, and next steps."
-      ]
+      "ctaTitle": "You do not need a generic agency. You need applied technical clarity.",
+      "ctaBody": "Tell me what you already have built, what is breaking, or which process you want to automate, and I will propose the most direct path forward.",
+      "ctaLabel": "Schedule a diagnosis"
     },
     "Portfolio": {
       "title": "Portfolio",

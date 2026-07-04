@@ -59,53 +59,54 @@
     },
     "Services": {
       "title": "Servicios",
-      "description": "Puedo apoyar en desarrollo mobile, modernizacion de Android, automatizacion de calidad y herramientas internas para acelerar equipos tecnicos.",
-      "cards": {
-        "sites": {
-          "title": "Desarrollo Android",
-          "body": "Features nativas, migraciones a Jetpack Compose, integraciones WebView, deep links, networking y modulos reutilizables."
+      "description": "Tres formas concretas de ayudar cuando ya existe una app, un MVP o una operacion que necesita criterio tecnico para avanzar.",
+      "items": [
+        {
+          "key": "audit",
+          "eyebrow": "Diagnostico puntual",
+          "title": "Auditoria tecnica de app o MVP",
+          "body": "Para startups o negocios que ya tienen algo construido y necesitan entender riesgos, prioridades y proximos pasos antes de invertir mas.",
+          "includes": [
+            "Revision de arquitectura y deuda tecnica.",
+            "Bugs criticos, performance y seguridad basica.",
+            "Roadmap de mejoras con estimacion de costo y tiempo."
+          ],
+          "outcome": "Recibes un diagnostico priorizado con riesgos, quick wins y una ruta clara de mejora.",
+          "price": "$500-$1,500 USD",
+          "cta": "Solicitar auditoria"
         },
-        "frontend": {
-          "title": "Arquitectura y testing",
-          "body": "Auditorias tecnicas, modularizacion Gradle, suites de pruebas instrumentadas/unitarias, mocks dinamicos y mejora de cobertura."
+        {
+          "key": "automation",
+          "eyebrow": "IA aplicada",
+          "title": "Automatizacion o integracion IA",
+          "body": "Para empresas que quieren usar IA de forma practica: reducir trabajo manual, conectar herramientas y convertir informacion dispersa en procesos utiles.",
+          "includes": [
+            "Clasificacion de leads, resumen de correos y reportes.",
+            "Formularios conectados a CRM, APIs o herramientas internas.",
+            "Bots internos con documentos y flujos con n8n, Make o Zapier."
+          ],
+          "outcome": "Entregamos una automatizacion funcional, conectada a tus herramientas reales y lista para operacion diaria.",
+          "price": "$1,500-$8,000 USD",
+          "cta": "Explorar automatizacion"
         },
-        "consulting": {
-          "title": "DevOps y automatizacion",
-          "body": "Pipelines CI/CD, checks de PR, merge queues, SAST, Lint/Detekt y herramientas agenticas para flujos de desarrollo."
+        {
+          "key": "mobile",
+          "eyebrow": "Soporte mensual",
+          "title": "Mobile / Android production support",
+          "body": "Para startups con una app Android existente que necesitan mantenimiento confiable sin contratar un equipo completo.",
+          "includes": [
+            "Releases, bugs, migraciones y performance.",
+            "Analytics, pagos, autenticacion e integraciones clave.",
+            "Compliance de Play Store y soporte tecnico continuo."
+          ],
+          "outcome": "Mantienes tu app estable, actualizada y preparada para crecer con soporte senior recurrente.",
+          "price": "$1,000-$5,000 USD/mes",
+          "cta": "Hablar de soporte"
         }
-      },
-      "audienceTitle": "Para quien es",
-      "audienceItems": [
-        "Equipos con aplicaciones Android que necesitan modernizar pantallas, modulos o arquitectura.",
-        "Productos que requieren mejorar cobertura de pruebas, estabilidad o velocidad de entrega.",
-        "Organizaciones que quieren automatizar procesos de ingenieria sin perder trazabilidad ni calidad."
       ],
-      "workflowTitle": "Como trabajo",
-      "workflowSteps": [
-        {
-          "title": "Diagnostico",
-          "body": "Reviso contexto, objetivos, arquitectura existente, deuda tecnica y restricciones reales del producto."
-        },
-        {
-          "title": "Plan tecnico",
-          "body": "Defino alcance, riesgos, entregables, estrategia de pruebas y una ruta de implementacion incremental."
-        },
-        {
-          "title": "Implementacion",
-          "body": "Desarrollo con foco en mantenibilidad, revisiones claras, automatizacion y validacion continua."
-        },
-        {
-          "title": "Handoff",
-          "body": "Documento decisiones, uso, mantenimiento y siguientes pasos para que el equipo pueda continuar sin friccion."
-        }
-      ],
-      "deliverablesTitle": "Entregables",
-      "deliverableItems": [
-        "Feature, modulo o migracion implementada y lista para revision.",
-        "Pruebas unitarias, instrumentadas o mocks segun el alcance.",
-        "Pipelines, checks o automatizaciones documentadas.",
-        "Notas tecnicas con decisiones, trade-offs y siguientes pasos."
-      ]
+      "ctaTitle": "No necesitas una agencia generica. Necesitas claridad tecnica aplicada.",
+      "ctaBody": "Cuentame que ya tienes construido, que esta fallando o que proceso quieres automatizar, y te propongo el camino mas directo para avanzar.",
+      "ctaLabel": "Agendar diagnostico"
     },
     "Portfolio": {
       "title": "Portafolio",

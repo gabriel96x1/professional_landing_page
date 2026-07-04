@@ -11,7 +11,7 @@ export function HeroSection() {
           <p className="font-mono text-[0.82rem] font-bold uppercase tracking-[0.12em] text-(--theme-label)">
             {t("eyebrow")}
           </p>
-          <h1 className="mt-5 max-w-full text-5xl font-black uppercase leading-[0.9] text-(--theme-text-primary) sm:text-6xl lg:text-[4.8rem] xl:text-[5.2rem] 2xl:text-[6.2rem]">
+          <h1 className="mt-5 max-w-full text-5xl font-black uppercase leading-[0.8] text-(--theme-text-primary) sm:text-6xl lg:text-7xl xl:text-8xl">
             {t("title")}
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-(--theme-text-secondary) sm:text-xl">
@@ -26,7 +26,7 @@ export function HeroSection() {
             </Link>
           </div>
         </div>
-        <aside className="theme-card-shadow flex min-h-[26rem] flex-col justify-between overflow-hidden rounded-[2rem] border border-(--theme-border-strong) bg-(--theme-surface) p-6 lg:min-h-[35rem] lg:p-10">
+        <aside className="theme-card-shadow flex min-h-104 flex-col justify-between overflow-hidden rounded-4xl border border-(--theme-border-strong) bg-(--theme-surface) p-6 lg:min-h-140 lg:p-10">
           <div className="grid size-36 place-items-center rounded-[2.375rem] border border-(--theme-border) bg-(--theme-surface-muted) shadow-[inset_0_0_0_12px_var(--theme-label-soft)]">
             <div className="grid justify-items-center gap-2" aria-hidden="true">
               <span className="block h-5 w-16 rounded-full bg-(--theme-accent)" />
