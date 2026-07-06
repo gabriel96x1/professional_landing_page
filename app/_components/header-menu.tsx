@@ -2,10 +2,12 @@
 
 import { Link } from "@/i18n/navigation";
 import { Menu, X } from "lucide-react";
+import type { ComponentProps } from "react";
 import { useState } from "react";
 
 type HeaderMenuItem = Readonly<{
-  href: string;
+  href: ComponentProps<typeof Link>["href"];
+  key: string;
   label: string;
 }>;
 
@@ -22,17 +24,6 @@ export function HeaderMenu({ closeLabel, items, openLabel }: HeaderMenuProps) {
 
   return (
     <div className="contents">
-      <div className="hidden items-center text-sm font-bold text-(--theme-text-secondary) lg:flex">
-        {items.map((item) => (
-          <Link
-            className="rounded-full border border-transparent px-3.5 py-2.5 transition hover:border-(--theme-border-strong) hover:bg-(--theme-surface-muted) hover:text-(--theme-text-primary)"
-            href={item.href}
-            key={item.href}
-          >
-            {item.label}
-          </Link>
-        ))}
-      </div>
 
       <button
         aria-controls={menuId}
@@ -57,9 +48,9 @@ export function HeaderMenu({ closeLabel, items, openLabel }: HeaderMenuProps) {
           <div className="grid gap-2 border-t border-(--theme-border) pt-4 text-sm font-bold text-(--theme-text-secondary)">
             {items.map((item) => (
               <Link
-                className="rounded-2xl border border-(--theme-border) bg-(--theme-surface-muted) px-4 py-3 transition hover:border-(--theme-border-strong) hover:text-(--theme-text-primary)"
+                className="text-center rounded-2xl border border-(--theme-border) bg-(--theme-surface-muted) px-4 py-3 transition hover:border-(--theme-border-strong) hover:text-(--theme-text-primary)"
                 href={item.href}
-                key={item.href}
+                key={item.key}
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}

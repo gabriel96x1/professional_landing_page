@@ -18,10 +18,16 @@ export function HeroSection() {
             {t("description")}
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Link className="button-primary" href="/#contact">
+            <Link
+              className="button-primary"
+              href={{ pathname: "/", hash: "contact" }}
+            >
               {t("primaryCta")}
             </Link>
-            <Link className="button-secondary" href="/#portfolio">
+            <Link
+              className="button-secondary"
+              href={{ pathname: "/", hash: "portfolio" }}
+            >
               {t("secondaryCta")}
             </Link>
           </div>

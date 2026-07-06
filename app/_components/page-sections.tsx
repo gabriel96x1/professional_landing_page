@@ -1,11 +1,12 @@
 import { Link } from "@/i18n/navigation";
+import type { ComponentProps } from "react";
 import { useTranslations } from "next-intl";
 
 type PageHeroProps = {
   eyebrow: string;
   title: string;
   description: string;
-  primaryHref?: string;
+  primaryHref?: ComponentProps<typeof Link>["href"];
   primaryLabel?: string;
 };
 

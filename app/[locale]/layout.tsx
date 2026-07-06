@@ -66,12 +66,32 @@ export default async function LocaleLayout({
     .join("")
     .toUpperCase();
   const navigation = [
-    { href: "/#inicio", label: t("nav.home") },
-    { href: "/#portfolio", label: t("nav.portfolio") },
-    { href: "/#services", label: t("nav.services") },
-    { href: "/blog", label: t("nav.blog") },
-    { href: "/#about", label: t("nav.about") },
-    { href: "/#contact", label: t("nav.contact") },
+    {
+      href: { pathname: "/", hash: "inicio" },
+      key: "inicio",
+      label: t("nav.home"),
+    },
+    {
+      href: { pathname: "/", hash: "portfolio" },
+      key: "portfolio",
+      label: t("nav.portfolio"),
+    },
+    {
+      href: { pathname: "/", hash: "services" },
+      key: "services",
+      label: t("nav.services"),
+    },
+    { href: "/blog", key: "blog", label: t("nav.blog") },
+    {
+      href: { pathname: "/", hash: "about" },
+      key: "about",
+      label: t("nav.about"),
+    },
+    {
+      href: { pathname: "/", hash: "contact" },
+      key: "contact",
+      label: t("nav.contact"),
+    },
   ];
 
   return (
@@ -91,7 +111,7 @@ export default async function LocaleLayout({
               >
                 <Link
                   className="mr-auto inline-flex min-w-0 items-center gap-3 text-sm font-black uppercase tracking-wide text-(--theme-text-primary)"
-                  href="/#inicio"
+                  href={{ pathname: "/", hash: "inicio" }}
                 >
                   <span
                     aria-hidden="true"
@@ -101,6 +121,17 @@ export default async function LocaleLayout({
                   </span>
                   <span className="hidden md:block">{brand}</span>
                 </Link>
+                <div className="hidden items-center text-sm font-bold text-(--theme-text-secondary) lg:flex">
+                  {navigation.map((item) => (
+                    <Link
+                      className="rounded-full border border-transparent px-3.5 py-2.5 transition hover:border-(--theme-border-strong) hover:bg-(--theme-surface-muted) hover:text-(--theme-text-primary)"
+                      href={item.href}
+                      key={item.key}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
                 <div className="flex shrink-0 items-center gap-2">
                   <LanguageSwitcher />
                   <ThemeToggle />
@@ -118,7 +149,7 @@ export default async function LocaleLayout({
                 <p>{t("footerText")}</p>
                 <Link
                   className="font-extrabold text-(--theme-text-primary) underline-offset-4 hover:underline"
-                  href="/#contact"
+                  href={{ pathname: "/", hash: "contact" }}
                 >
                   {t("footerCta")}
                 </Link>

@@ -75,7 +75,10 @@ export function ServicesSection() {
                 </p>
               </div>
 
-              <Link className="button-secondary mt-6 w-full" href="#contact">
+              <Link
+                className="button-secondary mt-6 w-full"
+                href={{ pathname: "/", hash: "contact" }}
+              >
                 {service.cta}
               </Link>
             </article>
@@ -92,7 +95,10 @@ export function ServicesSection() {
             {t("ctaBody")}
           </p>
         </div>
-        <Link className="button-primary w-full lg:w-auto" href="#contact">
+        <Link
+          className="button-primary w-full lg:w-auto"
+          href={{ pathname: "/", hash: "contact" }}
+        >
           {t("ctaLabel")}
         </Link>
       </div>
