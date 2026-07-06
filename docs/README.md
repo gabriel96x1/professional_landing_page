@@ -7,8 +7,9 @@ Recommended order:
 1. `architecture.md` - how the app is organized.
 2. `routes.md` - public URLs and anchors.
 3. `i18n.md` - locale routing, messages, navigation, and localized blog slugs.
-4. `agent-playbook.md` - common workflows, validation, and known gotchas.
-5. `design-rules.md` - theme tokens, palette, and visual rules.
+4. `accessibility-rules.md` - WCAG 2.2 AA enforcement for UI and content changes.
+5. `agent-playbook.md` - common workflows, validation, and known gotchas.
+6. `design-rules.md` - theme tokens, palette, and visual rules.
 
 High-level model:
 
@@ -21,3 +22,9 @@ High-level model:
 Next.js rule:
 
 This repo uses Next.js 16. Read the local docs in `node_modules/next/dist/docs/` before editing App Router code because conventions may differ from older Next.js versions.
+
+Accessibility rule:
+
+All user-facing UI and content changes must satisfy WCAG 2.2 Level AA. Read
+`accessibility-rules.md` before editing UI, navigation, layout, forms, media,
+theme colors, or localized visible/accessibility copy.

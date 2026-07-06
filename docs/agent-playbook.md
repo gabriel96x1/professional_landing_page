@@ -6,7 +6,8 @@
 2. Read relevant local Next.js docs under `node_modules/next/dist/docs/`.
 3. Read `docs/architecture.md` and `docs/routes.md`.
 4. Read `docs/i18n.md`.
-5. Inspect current files before editing.
+5. Read `docs/accessibility-rules.md` before UI, content, or interaction changes.
+6. Inspect current files before editing.
 
 Useful commands:
 
@@ -61,6 +62,10 @@ Run:
 npm run lint
 npm run build
 ```
+
+For UI, content, navigation, layout, form, media, or theme changes, also perform
+the manual accessibility checks in `docs/accessibility-rules.md`. WCAG 2.2 Level
+AA regressions are blocking defects.
 
 If a dev server is needed:
 

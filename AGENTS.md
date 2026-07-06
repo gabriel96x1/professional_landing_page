@@ -18,7 +18,8 @@ Then read the project docs in this order:
 2. `docs/architecture.md`
 3. `docs/routes.md`
 4. `docs/i18n.md`
-5. `docs/agent-playbook.md`
+5. `docs/accessibility-rules.md`
+6. `docs/agent-playbook.md`
 
 Current architecture summary:
 
@@ -33,6 +34,13 @@ Current architecture summary:
 - Global Tailwind styles and button utility classes live in `app/globals.css`.
 - User-facing copy belongs in `messages/es.json` and `messages/en.json`, not hard-coded in components.
 - Locale routing/request/navigation helpers live under `i18n/`. Use these helpers instead of ad hoc locale parsing unless there is a clear reason.
+
+Accessibility enforcement:
+
+- All user-facing UI, content, and interaction changes must conform to WCAG 2.2 Level AA.
+- Treat accessibility regressions as blocking defects, including missing accessible names, broken keyboard access, invalid semantics, insufficient contrast, obscured focus, layout that fails reflow/zoom, and non-localized accessibility copy.
+- Read and follow `docs/accessibility-rules.md` before changing UI, navigation, layout, forms, media, theme colors, or localized visible/accessibility copy.
+- Automated checks do not replace manual keyboard, focus, contrast, reflow, and localized label review for changed flows.
 
 Operational notes:
 
