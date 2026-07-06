@@ -30,9 +30,7 @@
     "switchToLight": "Switch to light theme",
     "switchToDark": "Switch to dark theme"
   },
-  "Shared": {
-    "editorialPlaceholder": "Editorial placeholder"
-  },
+  "Shared": {},
   "Home": {
     "Hero": {
       "eyebrow": "Android + mobile architecture + automation",
@@ -40,7 +38,7 @@
       "description": "I build and modernize Android applications with Kotlin, Jetpack Compose, and modern architectures. I also design CI/CD pipelines, test suites, and agentic workflows that reduce friction for engineering teams.",
       "primaryCta": "Contact",
       "secondaryCta": "View projects",
-      "visualPlaceholder": "6+ years of mobile engineering experience",
+      "visualLabel": "6+ years of mobile engineering experience",
       "specialty": "Android, Kotlin, Jetpack Compose, CI/CD, and AI applied to development."
     },
     "WhatIDo": {
@@ -157,7 +155,8 @@
     "BlogPreview": {
       "title": "Ideas to write about",
       "description": "The blog can grow around modern Android, mobile architecture, AI automation, and lessons from real projects.",
-      "link": "View blog"
+      "link": "View blog",
+      "readArticle": "Read article"
     },
     "About": {
       "title": "About me",
@@ -212,11 +211,11 @@
       },
       "form": {
         "name": "Name",
-        "namePlaceholder": "Your name",
+        "nameHint": "Your name",
         "email": "Email",
-        "emailPlaceholder": "you@email.com",
+        "emailHint": "you@email.com",
         "message": "Message",
-        "messagePlaceholder": "Tell me what you need to build or improve.",
+        "messageHint": "Tell me what you need to build or improve.",
         "submit": "Send message"
       }
     }
@@ -229,18 +228,13 @@
       "categoriesTitle": "Categories",
       "categories": ["All", "Android", "Architecture", "Automation", "Notes"],
       "articlesTitle": "Articles",
-      "readArticle": "Read article"
+      "readArticle": "Read article",
+      "heroAsideEyebrow": "Published entries",
+      "heroAsideBody": "Local content loaded from bilingual MDX files."
     },
     "Post": {
       "eyebrow": "Article",
-      "title": "Placeholder title for the individual article.",
-      "description": "Current slug: {slug}. This route is ready to connect real content from MDX, a CMS, or local files.",
       "contentTitle": "Content",
-      "intro": "Placeholder introduction to frame the problem, context, or main learning.",
-      "mainHeading": "Main section",
-      "mainBody": "Placeholder development with ideas, examples, links, or technical notes. This page can become a template for every post.",
-      "closingHeading": "Closing",
-      "closingBody": "Placeholder conclusion with next step, summary, or reflection.",
       "back": "Back to blog"
     }
   }

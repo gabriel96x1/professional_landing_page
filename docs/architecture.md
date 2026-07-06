@@ -57,13 +57,13 @@ The intent is that the home page tells the full story quickly, while the blog ke
 
 `app/[locale]/blog/page.tsx`
 
-- Localized blog index placeholder.
-- Reads locale-specific placeholder post metadata from `app/_lib/blog-posts.ts`.
+- Localized blog index.
+- Reads locale-specific MDX post metadata from `app/_lib/blog-posts.ts`.
 - Links to the active locale's `/blog/[slug]` routes.
 
 `app/[locale]/blog/[slug]/page.tsx`
 
-- Dynamic localized article placeholder.
+- Dynamic localized MDX article.
 - Uses async `params`, validates `locale + slug`, and returns `notFound()` for wrong-locale slugs.
 
 There are no standalone routes for portfolio, services, about, or contact.

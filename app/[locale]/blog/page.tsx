@@ -1,17 +1,27 @@
 import { getBlogPosts } from "@/app/_lib/blog-posts";
+import { Link } from "@/i18n/navigation";
+import { isAppLocale } from "@/i18n/routing";
+import { getTranslations } from "next-intl/server";
+import { notFound } from "next/navigation";
 import {
   PageHero,
   PageSection,
   PlaceholderCard,
 } from "../../_components/page-sections";
-import { Link } from "@/i18n/navigation";
-import type { AppLocale } from "@/i18n/routing";
-import { useLocale, useTranslations } from "next-intl";
 
-export default function BlogPage() {
-  const locale = useLocale() as AppLocale;
-  const t = useTranslations("Blog.Index");
-  const posts = getBlogPosts(locale);
+type BlogPageProps = {
+  params: Promise<{ locale: string }>;
+};
+
+export default async function BlogPage({ params }: BlogPageProps) {
+  const { locale } = await params;
+
+  if (!isAppLocale(locale)) {
+    notFound();
+  }
+
+  const t = await getTranslations({ locale, namespace: "Blog.Index" });
+  const posts = await getBlogPosts(locale);
   const categories = t.raw("categories") as string[];
 
   return (
@@ -20,6 +30,19 @@ export default function BlogPage() {
         eyebrow={t("eyebrow")}
         title={t("title")}
         description={t("description")}
+        aside={
+          <div>
+            <p className="font-mono text-xs font-bold uppercase tracking-[0.12em] text-(--theme-label)">
+              {t("heroAsideEyebrow")}
+            </p>
+            <p className="mt-4 text-4xl font-black uppercase leading-none text-(--theme-text-primary)">
+              {posts.length}
+            </p>
+            <p className="mt-3 text-sm leading-6 text-(--theme-text-secondary)">
+              {t("heroAsideBody")}
+            </p>
+          </div>
+        }
       />
 
       <PageSection title={t("categoriesTitle")}>
@@ -41,6 +64,9 @@ export default function BlogPage() {
             <PlaceholderCard key={post.slug} title={post.title}>
               <p className="font-mono text-xs font-bold uppercase tracking-[0.12em] text-(--theme-label)">
                 {post.category}
+              </p>
+              <p className="mt-2 font-mono text-xs text-(--theme-text-muted)">
+                {post.publishedAt} / {post.readingTime}
               </p>
               <p className="mt-3">{post.excerpt}</p>
               <Link

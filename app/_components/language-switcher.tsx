@@ -1,6 +1,6 @@
 "use client";
 
-import { getLocalizedPost, getPostByLocaleSlug } from "@/app/_lib/blog-posts";
+import { getLocalizedBlogPath } from "@/app/_lib/blog-slugs";
 import type { AppLocale } from "@/i18n/routing";
 import { routing } from "@/i18n/routing";
 import { useLocale, useTranslations } from "next-intl";
@@ -21,13 +21,10 @@ export function LanguageSwitcher() {
     const blogSlug = currentSegments[2] === "blog" ? currentSegments[3] : undefined;
 
     if (blogSlug) {
-      const currentPost = getPostByLocaleSlug(locale, blogSlug);
-      const targetPost = currentPost
-        ? getLocalizedPost(targetLocale, currentPost.id)
-        : undefined;
+      const targetBlogPath = getLocalizedBlogPath(locale, blogSlug, targetLocale);
 
-      if (targetPost) {
-        return `/${targetLocale}/blog/${targetPost.slug}`;
+      if (targetBlogPath) {
+        return targetBlogPath;
       }
     }
 

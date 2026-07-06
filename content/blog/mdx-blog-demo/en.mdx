@@ -1,0 +1,35 @@
+export const metadata = {
+  id: "mdx-blog-demo",
+  slug: "testing-the-mdx-blog",
+  title: "Testing the MDX blog",
+  category: "Notes",
+  excerpt:
+    "A test post to validate that the blog now reads local MDX content and displays it on the home page, blog index, and article page.",
+  publishedAt: "2026-07-06",
+  readingTime: "3 min",
+}
+
+This article confirms that the blog now reads real entries from local MDX files. Metadata lives next to the content, and the page can render enriched Markdown from the repository.
+
+## What this post validates
+
+The new flow checks three important surfaces:
+
+- The home blog section shows real entries.
+- The blog index lists metadata loaded from MDX.
+- The article route renders the full post body.
+
+## How to write an entry
+
+Each language gets its own MDX file and its own slug. That keeps URLs natural for each audience and leaves a stable `id` to connect translations.
+
+```ts
+export const metadata = {
+  id: "mdx-blog-demo",
+  slug: "testing-the-mdx-blog",
+}
+```
+
+## Next step
+
+With this foundation, adding a new entry means creating the `es.mdx` and `en.mdx` pair, registering the id, and letting Next generate the localized routes.

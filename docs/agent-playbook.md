@@ -49,7 +49,7 @@ Change blog behavior:
 
 - Edit `app/[locale]/blog/page.tsx` for the index.
 - Edit `app/[locale]/blog/[slug]/page.tsx` for article pages.
-- Edit `app/_lib/blog-posts.ts` for localized slugs and placeholder post metadata.
+- Edit `app/_lib/blog-posts.ts` and `content/blog/` for localized slugs and MDX post metadata.
 - Keep stable post ids and separate Spanish/English slugs.
 - If replacing placeholders with real content, prefer a structured data source or MDX/CMS integration over hard-coded strings once content grows.
 
@@ -76,10 +76,10 @@ curl -I http://localhost:3000/es
 curl -I http://localhost:3000/en
 curl -I http://localhost:3000/es/blog
 curl -I http://localhost:3000/en/blog
-curl -I http://localhost:3000/es/blog/articulo-placeholder-1
-curl -I http://localhost:3000/en/blog/article-placeholder-1
-curl -I http://localhost:3000/es/blog/article-placeholder-1
-curl -I http://localhost:3000/en/blog/articulo-placeholder-1
+curl -I http://localhost:3000/es/blog/probando-blog-con-mdx
+curl -I http://localhost:3000/en/blog/testing-the-mdx-blog
+curl -I http://localhost:3000/es/blog/testing-the-mdx-blog
+curl -I http://localhost:3000/en/blog/probando-blog-con-mdx
 curl -I http://localhost:3000/portfolio
 curl -I http://localhost:3000/es/portfolio
 curl -I http://localhost:3000/en/contact

@@ -30,9 +30,7 @@
     "switchToLight": "Cambiar a tema claro",
     "switchToDark": "Cambiar a tema oscuro"
   },
-  "Shared": {
-    "editorialPlaceholder": "Placeholder editorial"
-  },
+  "Shared": {},
   "Home": {
     "Hero": {
       "eyebrow": "Android + arquitectura movil + automatizacion",
@@ -40,7 +38,7 @@
       "description": "Construyo y modernizo aplicaciones Android con Kotlin, Jetpack Compose y arquitecturas modernas. Tambien diseno pipelines CI/CD, suites de pruebas y flujos agenticos que reducen friccion en equipos de ingenieria.",
       "primaryCta": "Contactar",
       "secondaryCta": "Ver proyectos",
-      "visualPlaceholder": "6+ anos de experiencia en mobile engineering",
+      "visualLabel": "6+ anos de experiencia en mobile engineering",
       "specialty": "Android, Kotlin, Jetpack Compose, CI/CD e IA aplicada a desarrollo."
     },
     "WhatIDo": {
@@ -157,7 +155,8 @@
     "BlogPreview": {
       "title": "Ideas para escribir",
       "description": "El blog puede crecer alrededor de Android moderno, arquitectura movil, automatizacion con IA y aprendizajes de proyectos reales.",
-      "link": "Ver blog"
+      "link": "Ver blog",
+      "readArticle": "Leer articulo"
     },
     "About": {
       "title": "Sobre mi",
@@ -212,11 +211,11 @@
       },
       "form": {
         "name": "Nombre",
-        "namePlaceholder": "Tu nombre",
+        "nameHint": "Tu nombre",
         "email": "Email",
-        "emailPlaceholder": "tu@email.com",
+        "emailHint": "tu@email.com",
         "message": "Mensaje",
-        "messagePlaceholder": "Cuentame que necesitas construir o mejorar.",
+        "messageHint": "Cuentame que necesitas construir o mejorar.",
         "submit": "Enviar mensaje"
       }
     }
@@ -229,18 +228,13 @@
       "categoriesTitle": "Categorias",
       "categories": ["Todos", "Android", "Arquitectura", "Automatizacion", "Notas"],
       "articlesTitle": "Articulos",
-      "readArticle": "Leer articulo"
+      "readArticle": "Leer articulo",
+      "heroAsideEyebrow": "Entradas publicadas",
+      "heroAsideBody": "Contenido local cargado desde archivos MDX bilingues."
     },
     "Post": {
       "eyebrow": "Articulo",
-      "title": "Titulo placeholder del articulo individual.",
-      "description": "Slug actual: {slug}. Esta ruta queda lista para conectar contenido real desde MDX, CMS o archivos locales.",
       "contentTitle": "Contenido",
-      "intro": "Introduccion placeholder para plantear el problema, contexto o aprendizaje principal del articulo.",
-      "mainHeading": "Seccion principal",
-      "mainBody": "Desarrollo placeholder con ideas, ejemplos, enlaces o notas tecnicas. Esta pagina puede convertirse en un template para todos los posts.",
-      "closingHeading": "Cierre",
-      "closingBody": "Conclusion placeholder con siguiente paso, resumen o reflexion.",
       "back": "Volver al blog"
     }
   }

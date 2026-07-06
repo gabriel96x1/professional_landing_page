@@ -1,6 +1,5 @@
 import { Link } from "@/i18n/navigation";
 import type { ComponentProps } from "react";
-import { useTranslations } from "next-intl";
 
 type PageHeroProps = {
   eyebrow: string;
@@ -8,6 +7,7 @@ type PageHeroProps = {
   description: string;
   primaryHref?: ComponentProps<typeof Link>["href"];
   primaryLabel?: string;
+  aside?: React.ReactNode;
 };
 
 type PlaceholderCardProps = {
@@ -21,12 +21,15 @@ export function PageHero({
   description,
   primaryHref,
   primaryLabel,
+  aside,
 }: PageHeroProps) {
-  const t = useTranslations("Shared");
-
   return (
     <section className="border-b border-(--theme-border) bg-(--theme-background)">
-      <div className="mx-auto grid w-full max-w-6xl gap-10 px-5 py-20 lg:grid-cols-[1.2fr_0.8fr] lg:px-8 lg:py-24">
+      <div
+        className={`mx-auto grid w-full max-w-6xl gap-10 px-5 py-20 lg:px-8 lg:py-24 ${
+          aside ? "lg:grid-cols-[1.2fr_0.8fr]" : ""
+        }`}
+      >
         <div>
           <p className="font-mono text-[0.82rem] font-bold uppercase tracking-[0.12em] text-(--theme-label)">
             {eyebrow}
@@ -43,12 +46,11 @@ export function PageHero({
             </Link>
           ) : null}
         </div>
-        <div className="theme-card-shadow grid content-end gap-3 rounded-[2rem] border border-(--theme-border-strong) bg-(--theme-surface) p-6">
-          <p className="text-sm font-medium text-(--theme-text-secondary)">
-            {t("editorialPlaceholder")}
-          </p>
-          <div className="aspect-[4/3] rounded-3xl border border-dashed border-(--theme-border-strong) bg-(--theme-background)" />
-        </div>
+        {aside ? (
+          <div className="theme-card-shadow grid content-center gap-4 rounded-[2rem] border border-(--theme-border-strong) bg-(--theme-surface) p-6">
+            {aside}
+          </div>
+        ) : null}
       </div>
     </section>
   );

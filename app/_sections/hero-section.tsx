@@ -38,7 +38,7 @@ export function HeroSection() {
           </div>
           <div className="mt-5 grid gap-3 text-sm text-(--theme-text-secondary)">
             <p className="font-mono text-2xl font-bold uppercase tracking-normal text-(--theme-label)">
-              {t("visualPlaceholder")}
+              {t("visualLabel")}
             </p>
             <p className="text-3xl font-black uppercase leading-8 text-(--theme-text-primary) sm:text-4xl">
               {t("specialty")}

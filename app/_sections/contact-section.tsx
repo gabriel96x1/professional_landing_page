@@ -69,7 +69,7 @@ export function ContactSection() {
               {t("form.name")}
               <input
                 className="min-h-12 rounded-2xl border border-(--theme-border-strong) bg-(--theme-background) px-4 text-base font-normal text-(--theme-text-primary) placeholder:text-(--theme-text-secondary)"
-                placeholder={t("form.namePlaceholder")}
+                placeholder={t("form.nameHint")}
                 type="text"
               />
             </label>
@@ -77,7 +77,7 @@ export function ContactSection() {
               {t("form.email")}
               <input
                 className="min-h-12 rounded-2xl border border-(--theme-border-strong) bg-(--theme-background) px-4 text-base font-normal text-(--theme-text-primary) placeholder:text-(--theme-text-secondary)"
-                placeholder={t("form.emailPlaceholder")}
+                placeholder={t("form.emailHint")}
                 type="email"
               />
             </label>
@@ -85,7 +85,7 @@ export function ContactSection() {
               {t("form.message")}
               <textarea
                 className="min-h-36 rounded-2xl border border-(--theme-border-strong) bg-(--theme-background) px-4 py-3 text-base font-normal text-(--theme-text-primary) placeholder:text-(--theme-text-secondary)"
-                placeholder={t("form.messagePlaceholder")}
+                placeholder={t("form.messageHint")}
               />
             </label>
             <button className="button-primary w-fit" type="button">

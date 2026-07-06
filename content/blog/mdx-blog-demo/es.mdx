@@ -1,0 +1,35 @@
+export const metadata = {
+  id: "mdx-blog-demo",
+  slug: "probando-blog-con-mdx",
+  title: "Probando el blog con MDX",
+  category: "Notas",
+  excerpt:
+    "Un post de prueba para validar que el blog ya lee contenido local en MDX y lo muestra en el home, el indice y la pagina individual.",
+  publishedAt: "2026-07-06",
+  readingTime: "3 min",
+}
+
+Este articulo confirma que el blog ya lee entradas reales desde archivos MDX locales. La metadata vive junto al contenido y la pagina puede renderizar Markdown enriquecido desde el repositorio.
+
+## Que valida este post
+
+El flujo nuevo prueba tres superficies importantes:
+
+- La seccion de blog en el home muestra entradas reales.
+- El indice del blog lista metadata tomada del MDX.
+- La ruta individual renderiza el cuerpo completo del articulo.
+
+## Como se escribe una entrada
+
+Cada idioma tiene su propio archivo MDX y su propio slug. Eso mantiene las URLs naturales para cada audiencia y deja un `id` estable para conectar traducciones.
+
+```ts
+export const metadata = {
+  id: "mdx-blog-demo",
+  slug: "probando-blog-con-mdx",
+}
+```
+
+## Siguiente paso
+
+Con esta base, agregar una entrada nueva significa crear el par `es.mdx` y `en.mdx`, registrar el id y dejar que Next genere las rutas localizadas.

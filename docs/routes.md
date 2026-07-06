@@ -39,8 +39,8 @@ This keeps hash navigation smooth and prevents the sticky header from covering s
 | --- | --- | --- |
 | `/es/blog` | `app/[locale]/blog/page.tsx` | Spanish blog index, categories, article cards |
 | `/en/blog` | `app/[locale]/blog/page.tsx` | English blog index, categories, article cards |
-| `/es/blog/[slug]` | `app/[locale]/blog/[slug]/page.tsx` | Spanish article placeholder |
-| `/en/blog/[slug]` | `app/[locale]/blog/[slug]/page.tsx` | English article placeholder |
+| `/es/blog/[slug]` | `app/[locale]/blog/[slug]/page.tsx` | Spanish MDX article |
+| `/en/blog/[slug]` | `app/[locale]/blog/[slug]/page.tsx` | English MDX article |
 
 The blog should remain separate unless the user explicitly asks to merge it into the one-page home.
 Blog slugs are locale-specific. Spanish slugs should not be valid on English
@@ -78,8 +78,8 @@ Expected local responses:
 - `/en` returns `200`
 - `/es/blog` returns `200`
 - `/en/blog` returns `200`
-- `/es/blog/articulo-placeholder-1` returns `200`
-- `/en/blog/article-placeholder-1` returns `200`
-- `/es/blog/article-placeholder-1` returns `404`
-- `/en/blog/articulo-placeholder-1` returns `404`
+- `/es/blog/probando-blog-con-mdx` returns `200`
+- `/en/blog/testing-the-mdx-blog` returns `200`
+- `/es/blog/testing-the-mdx-blog` returns `404`
+- `/en/blog/probando-blog-con-mdx` returns `404`
 - `/portfolio`, `/services`, `/about`, and `/contact` redirect through localized compatibility routes to home anchors
