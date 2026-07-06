@@ -28,17 +28,13 @@ export function HeroSection() {
         </div>
         <aside className="theme-card-shadow flex min-h-104 flex-col justify-between overflow-hidden rounded-4xl border border-(--theme-border-strong) bg-(--theme-surface) p-6 lg:min-h-140 lg:p-10">
           <div className="grid size-36 place-items-center rounded-[2.375rem] border border-(--theme-border) bg-(--theme-surface-muted) shadow-[inset_0_0_0_12px_var(--theme-label-soft)]">
-            <div className="grid justify-items-center gap-2" aria-hidden="true">
-              <span className="block h-5 w-16 rounded-full bg-(--theme-accent)" />
-              <span className="block size-9 rounded-full bg-(--theme-accent)" />
-              <span className="block h-4 w-20 rounded-full bg-(--theme-accent)" />
-            </div>
+
           </div>
           <div className="mt-5 grid gap-3 text-sm text-(--theme-text-secondary)">
-            <p className="font-mono text-[0.82rem] font-bold uppercase tracking-[0.12em] text-(--theme-label)">
+            <p className="font-mono text-2xl font-bold uppercase tracking-normal text-(--theme-label)">
               {t("visualPlaceholder")}
             </p>
-            <p className="text-3xl font-black uppercase leading-[0.96] text-(--theme-text-primary) sm:text-5xl">
+            <p className="text-3xl font-black uppercase leading-8 text-(--theme-text-primary) sm:text-4xl">
               {t("specialty")}
             </p>
           </div>

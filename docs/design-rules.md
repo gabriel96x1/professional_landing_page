@@ -39,6 +39,24 @@ semantic tokens and avoid replacing colors directly in components.
 - Outline tags should use `--theme-tag-outline`.
 - Soft surfaces and borders should derive from the palette in `app/theme.css`.
 
+## Spacing And Sizing
+
+- Use Tailwind's standard scale for layout measurements instead of raw CSS
+  units. Prefer utilities like `p-4`, `px-6`, `gap-8`, `space-y-10`,
+  `max-w-6xl`, `w-full`, `min-h-screen`, `rounded-lg`, and `text-base`.
+- Avoid `rem`, `px`, `em`, percentages, viewport units, and arbitrary Tailwind
+  values such as `p-[1.5rem]`, `mt-[32px]`, `text-[1rem]`, or
+  `max-w-[72rem]` when a standard Tailwind utility expresses the same intent.
+- Use responsive Tailwind variants with standard values for breakpoint-specific
+  adjustments, for example `px-4 sm:px-6 lg:px-8` and
+  `grid-cols-1 md:grid-cols-2`.
+- Arbitrary values are allowed only when the project needs a measurement that
+  Tailwind does not provide semantically, such as a browser safe-area inset,
+  a third-party embed constraint, or a one-off calculation tied to runtime
+  variables.
+- If a repeated custom measurement becomes necessary, add or document a named
+  token instead of scattering arbitrary values through components.
+
 ## Interaction
 
 - The theme switcher should be available in the global navigation.
