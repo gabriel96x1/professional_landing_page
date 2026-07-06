@@ -1,3 +1,4 @@
+import { HeaderMenu } from "@/app/_components/header-menu";
 import { LanguageSwitcher } from "@/app/_components/language-switcher";
 import { ThemeToggle } from "@/app/_components/theme-toggle";
 import "@/app/globals.css";
@@ -86,10 +87,10 @@ export default async function LocaleLayout({
             <header className="sticky top-0 z-20 border-b border-(--theme-border) bg-(--theme-background)/80 backdrop-blur-xl">
               <nav
                 aria-label={t("ariaLabel")}
-                className="mx-auto flex min-h-20 w-full max-w-6xl flex-col gap-4 px-5 py-4 sm:flex-row sm:items-center sm:justify-between lg:px-8"
+                className="mx-auto flex min-h-20 w-full max-w-6xl flex-wrap items-center gap-2 px-4 py-4 lg:px-8"
               >
                 <Link
-                  className="inline-flex items-center gap-3 text-sm font-black uppercase tracking-wide text-(--theme-text-primary)"
+                  className="mr-auto inline-flex min-w-0 items-center gap-3 text-sm font-black uppercase tracking-wide text-(--theme-text-primary)"
                   href="/#inicio"
                 >
                   <span
@@ -98,21 +99,17 @@ export default async function LocaleLayout({
                   >
                     {brandMark}
                   </span>
-                  <span>{brand}</span>
+                  <span className="hidden md:block">{brand}</span>
                 </Link>
-                <div className="flex flex-wrap items-center gap-1.5 text-sm font-bold text-(--theme-text-secondary)">
-                  {navigation.map((item) => (
-                    <Link
-                      className="rounded-full border border-transparent px-3.5 py-2.5 transition hover:border-(--theme-border-strong) hover:bg-(--theme-surface-muted) hover:text-(--theme-text-primary)"
-                      href={item.href}
-                      key={item.href}
-                    >
-                      {item.label}
-                    </Link>
-                  ))}
+                <div className="flex shrink-0 items-center gap-2">
                   <LanguageSwitcher />
                   <ThemeToggle />
                 </div>
+                <HeaderMenu
+                  closeLabel={t("menu.close")}
+                  items={navigation}
+                  openLabel={t("menu.open")}
+                />
               </nav>
             </header>
             {children}

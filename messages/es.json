@@ -14,6 +14,10 @@
       "about": "Sobre mi",
       "contact": "Contacto"
     },
+    "menu": {
+      "open": "Abrir menu principal",
+      "close": "Cerrar menu principal"
+    },
     "footerText": "Gabriel Ernesto Rodriguez Zamora - Software Engineer",
     "footerCta": "Hablemos de tu proyecto"
   },
