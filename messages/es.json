@@ -6,6 +6,7 @@
   "Layout": {
     "brand": "Gabriel Rodriguez",
     "ariaLabel": "Navegacion principal",
+    "skipToContent": "Saltar al contenido principal",
     "nav": {
       "home": "Inicio",
       "portfolio": "Portafolio",
@@ -24,7 +25,9 @@
   "LanguageSwitcher": {
     "label": "Cambiar idioma",
     "es": "ES",
-    "en": "EN"
+    "en": "EN",
+    "esLabel": "Cambiar a espanol",
+    "enLabel": "Cambiar a ingles"
   },
   "Theme": {
     "switchToLight": "Cambiar a tema claro",
@@ -156,7 +159,8 @@
       "title": "Explora el blog",
       "description": "Ideas prácticas sobre desarrollo móvil, arquitectura, automatización con IA y aprendizajes de proyectos reales para construir con mejor criterio.",
       "link": "Ver artículos",
-      "readArticle": "Leer articulo"
+      "readArticle": "Leer articulo",
+      "readArticleLabel": "Leer articulo: {title}"
     },
     "About": {
       "title": "Sobre mi",
@@ -188,6 +192,7 @@
       "eyebrow": "Contacto",
       "title": "Hablemos de tu producto movil o herramienta tecnica.",
       "description": "Puedes contactarme por correo, LinkedIn o GitHub para hablar sobre Android, automatizacion, consultoria tecnica o colaboraciones.",
+      "externalNewTab": "(se abre en una pestana nueva)",
       "cards": {
         "contact": {
           "title": "Contacto",
@@ -210,6 +215,7 @@
         }
       },
       "form": {
+        "label": "Formulario de contacto",
         "name": "Nombre",
         "nameHint": "Tu nombre",
         "email": "Email",
@@ -229,13 +235,19 @@
       "categories": ["Todos", "Android", "Arquitectura", "Automatizacion", "Notas"],
       "articlesTitle": "Articulos",
       "readArticle": "Leer articulo",
+      "readArticleLabel": "Leer articulo: {title}",
       "heroAsideEyebrow": "Entradas publicadas",
       "heroAsideBody": "Contenido local cargado desde archivos MDX bilingues."
     },
     "Post": {
       "eyebrow": "Articulo",
       "contentTitle": "Contenido",
-      "back": "Volver al blog"
+      "back": "Volver al blog",
+      "metadata": {
+        "category": "Categoria",
+        "publishedAt": "Fecha de publicacion",
+        "readingTime": "Tiempo de lectura"
+      }
     }
   }
 }

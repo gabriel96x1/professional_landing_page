@@ -18,13 +18,14 @@ export async function BlogPreviewSection() {
       <div className="grid gap-4 md:grid-cols-3">
         {recentPosts.map((post) => (
           <PlaceholderCard key={post.id} title={post.title}>
-            <p className="font-mono text-xs font-bold uppercase tracking-[0.12em] text-(--theme-label)">
+            <p className="font-mono text-xs font-bold uppercase text-(--theme-label)">
               {post.category}
             </p>
             <p className="mt-3">{post.excerpt}</p>
             <Link
               className="mt-4 inline-flex font-extrabold text-(--theme-text-primary) underline-offset-4 hover:underline"
               href={`/blog/${post.slug}`}
+              aria-label={t("readArticleLabel", { title: post.title })}
             >
               {t("readArticle")}
             </Link>

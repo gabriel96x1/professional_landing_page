@@ -52,6 +52,7 @@ export function LanguageSwitcher() {
 
         return (
           <button
+            aria-label={t(`${targetLocale}Label`)}
             aria-pressed={isActive}
             className={`rounded-xl px-2.5 py-1 text-xs font-black uppercase transition ${
               isActive

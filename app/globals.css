@@ -38,7 +38,25 @@ html {
 h1,
 h2,
 h3 {
-  letter-spacing: -0.05em;
+  letter-spacing: 0;
+}
+
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 50;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+a {
+  text-decoration-thickness: max(1px, 0.08em);
+  text-underline-offset: 0.2em;
 }
 
 @layer components {
@@ -142,5 +160,22 @@ h3 {
 
   .theme-card-shadow {
     box-shadow: 0 12px 0 var(--theme-shadow);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  .button-primary:hover,
+  .button-primary:active,
+  .button-secondary:hover {
+    transform: none;
   }
 }

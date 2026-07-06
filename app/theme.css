@@ -3,8 +3,8 @@
   --theme-background: #f4e9d8;
   --theme-text-primary: #271f18;
   --theme-text-secondary: #665847;
-  --theme-label: #9a4f35;
-  --theme-label-soft: rgb(154 79 53 / 36%);
+  --theme-label: #8a432c;
+  --theme-label-soft: rgb(138 67 44 / 36%);
   --theme-accent: #2f765d;
   --theme-accent-ink: #f4e9d8;
   --theme-tag-background: #2f765d;
@@ -22,13 +22,13 @@
   --theme-background: #1e1b18;
   --theme-text-primary: #f4e9d8;
   --theme-text-secondary: #c9baa4;
-  --theme-label: #b96545;
-  --theme-label-soft: rgb(185 101 69 / 36%);
+  --theme-label: #d98a68;
+  --theme-label-soft: rgb(217 138 104 / 36%);
   --theme-accent: #63b894;
   --theme-accent-ink: #0d2119;
   --theme-tag-background: #63b894;
   --theme-tag-text: #0d2119;
-  --theme-tag-outline: rgb(244 233 216 / 28%);
+  --theme-tag-outline: #d98a68;
   --theme-surface: #312b25;
   --theme-surface-muted: #27231f;
   --theme-border: rgb(244 233 216 / 16%);

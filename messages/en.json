@@ -6,6 +6,7 @@
   "Layout": {
     "brand": "Gabriel Rodriguez",
     "ariaLabel": "Primary navigation",
+    "skipToContent": "Skip to main content",
     "nav": {
       "home": "Home",
       "portfolio": "Portfolio",
@@ -24,7 +25,9 @@
   "LanguageSwitcher": {
     "label": "Change language",
     "es": "ES",
-    "en": "EN"
+    "en": "EN",
+    "esLabel": "Switch to Spanish",
+    "enLabel": "Switch to English"
   },
   "Theme": {
     "switchToLight": "Switch to light theme",
@@ -156,7 +159,8 @@
       "title": "Explore the blog",
       "description": "Practical ideas on mobile development, architecture, AI automation, and learnings from real projects to build with better judgment.",
       "link": "View articles",
-      "readArticle": "Read article"
+      "readArticle": "Read article",
+      "readArticleLabel": "Read article: {title}"
     },
     "About": {
       "title": "About me",
@@ -188,6 +192,7 @@
       "eyebrow": "Contact",
       "title": "Let's talk about your mobile product or technical tool.",
       "description": "You can reach me by email, LinkedIn, or GitHub to talk about Android, automation, technical consulting, or collaborations.",
+      "externalNewTab": "(opens in a new tab)",
       "cards": {
         "contact": {
           "title": "Contact",
@@ -210,6 +215,7 @@
         }
       },
       "form": {
+        "label": "Contact form",
         "name": "Name",
         "nameHint": "Your name",
         "email": "Email",
@@ -229,13 +235,19 @@
       "categories": ["All", "Android", "Architecture", "Automation", "Notes"],
       "articlesTitle": "Articles",
       "readArticle": "Read article",
+      "readArticleLabel": "Read article: {title}",
       "heroAsideEyebrow": "Published entries",
       "heroAsideBody": "Local content loaded from bilingual MDX files."
     },
     "Post": {
       "eyebrow": "Article",
       "contentTitle": "Content",
-      "back": "Back to blog"
+      "back": "Back to blog",
+      "metadata": {
+        "category": "Category",
+        "publishedAt": "Publication date",
+        "readingTime": "Reading time"
+      }
     }
   }
 }

@@ -103,6 +103,9 @@ export default async function LocaleLayout({
     >
       <body className="min-h-full bg-(--theme-background) text-(--theme-text-primary)">
         <NextIntlClientProvider>
+          <a className="button-primary skip-link" href="#main-content">
+            {t("skipToContent")}
+          </a>
           <div className="flex min-h-screen flex-col">
             <header className="sticky top-0 z-20 border-b border-(--theme-border) bg-(--theme-background)/80 backdrop-blur-xl">
               <nav
@@ -110,7 +113,8 @@ export default async function LocaleLayout({
                 className="mx-auto flex min-h-20 w-full max-w-6xl flex-wrap items-center gap-2 px-4 py-4 lg:px-8"
               >
                 <Link
-                  className="mr-auto inline-flex min-w-0 items-center gap-3 text-sm font-black uppercase tracking-wide text-(--theme-text-primary)"
+                  aria-label={brand}
+                  className="mr-auto inline-flex min-w-0 items-center gap-3 text-sm font-black uppercase text-(--theme-text-primary)"
                   href={{ pathname: "/", hash: "inicio" }}
                 >
                   <span
@@ -119,7 +123,10 @@ export default async function LocaleLayout({
                   >
                     {brandMark}
                   </span>
-                  <span className="hidden md:block">{brand}</span>
+                  <span className="sr-only">{brand}</span>
+                  <span aria-hidden="true" className="hidden md:block">
+                    {brand}
+                  </span>
                 </Link>
                 <div className="hidden items-center text-sm font-bold text-(--theme-text-secondary) lg:flex">
                   {navigation.map((item) => (

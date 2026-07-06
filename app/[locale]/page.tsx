@@ -8,7 +8,7 @@ import { WhatIDoSection } from "../_sections/what-i-do-section";
 
 export default function Home() {
   return (
-    <main>
+    <main id="main-content">
       <HeroSection />
       <WhatIDoSection />
       <ServicesSection />

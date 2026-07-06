@@ -31,10 +31,10 @@ export function PageHero({
         }`}
       >
         <div>
-          <p className="font-mono text-[0.82rem] font-bold uppercase tracking-[0.12em] text-(--theme-label)">
+          <p className="font-mono text-sm font-bold uppercase text-(--theme-label)">
             {eyebrow}
           </p>
-          <h1 className="mt-5 max-w-4xl text-5xl font-black uppercase leading-[0.9] text-(--theme-text-primary) sm:text-6xl lg:text-[4.8rem] xl:text-[5.2rem]">
+          <h1 className="mt-5 max-w-4xl text-5xl font-black uppercase leading-none text-(--theme-text-primary) sm:text-6xl lg:text-7xl xl:text-8xl">
             {title}
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-(--theme-text-secondary) sm:text-xl">
@@ -67,10 +67,19 @@ export function PageSection({
   description?: string;
   children: React.ReactNode;
 }) {
+  const headingId = id ? `${id}-title` : undefined;
+
   return (
-    <section id={id} className="mx-auto w-full max-w-6xl px-5 py-14 lg:px-8 lg:py-16">
+    <section
+      aria-labelledby={headingId}
+      id={id}
+      className="mx-auto w-full max-w-6xl px-5 py-14 lg:px-8 lg:py-16"
+    >
       <div className="mb-8 max-w-3xl">
-        <h2 className="text-4xl font-black uppercase leading-[0.94] text-(--theme-text-primary) sm:text-5xl">
+        <h2
+          className="text-4xl font-black uppercase leading-tight text-(--theme-text-primary) sm:text-5xl"
+          id={headingId}
+        >
           {title}
         </h2>
         {description ? (

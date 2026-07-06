@@ -21,7 +21,10 @@ export function PortfolioSection() {
       <div className="grid gap-5 md:grid-cols-2">
         {projects.map((project) => (
           <PlaceholderCard key={project.title} title={project.title}>
-            <div className="mb-4 aspect-video rounded-2xl border border-dashed border-(--theme-border-strong) bg-(--theme-surface-muted)" />
+            <div
+              aria-hidden="true"
+              className="mb-4 aspect-video rounded-2xl border border-dashed border-(--theme-border-strong) bg-(--theme-surface-muted)"
+            />
             <p>{project.problem}</p>
             <p className="mt-3">{project.solution}</p>
             <p className="mt-3">{project.technologies}</p>

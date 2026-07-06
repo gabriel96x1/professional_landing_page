@@ -60,7 +60,10 @@ export function ServicesSection() {
               <ul className="mt-5 grid gap-2 text-sm leading-5 text-(--theme-text-secondary)">
                 {service.includes.map((item) => (
                   <li key={item} className="flex gap-2">
-                    <span className="mt-2 size-1.5 shrink-0 rounded-full bg-(--theme-label)" />
+                    <span
+                      aria-hidden="true"
+                      className="mt-2 size-1.5 shrink-0 rounded-full bg-(--theme-label)"
+                    />
                     <span>{item}</span>
                   </li>
                 ))}

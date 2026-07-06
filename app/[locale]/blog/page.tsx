@@ -25,14 +25,14 @@ export default async function BlogPage({ params }: BlogPageProps) {
   const categories = t.raw("categories") as string[];
 
   return (
-    <main>
+    <main id="main-content">
       <PageHero
         eyebrow={t("eyebrow")}
         title={t("title")}
         description={t("description")}
         aside={
           <div>
-            <p className="font-mono text-xs font-bold uppercase tracking-[0.12em] text-(--theme-label)">
+            <p className="font-mono text-xs font-bold uppercase text-(--theme-label)">
               {t("heroAsideEyebrow")}
             </p>
             <p className="mt-4 text-4xl font-black uppercase leading-none text-(--theme-text-primary)">
@@ -62,16 +62,17 @@ export default async function BlogPage({ params }: BlogPageProps) {
         <div className="grid gap-4 md:grid-cols-3">
           {posts.map((post) => (
             <PlaceholderCard key={post.slug} title={post.title}>
-              <p className="font-mono text-xs font-bold uppercase tracking-[0.12em] text-(--theme-label)">
+              <p className="font-mono text-xs font-bold uppercase text-(--theme-label)">
                 {post.category}
               </p>
-              <p className="mt-2 font-mono text-xs text-(--theme-text-muted)">
-                {post.publishedAt} / {post.readingTime}
+              <p className="mt-2 font-mono text-xs text-(--theme-text-secondary)">
+                <time dateTime={post.publishedAt}>{post.publishedAt}</time> / {post.readingTime}
               </p>
               <p className="mt-3">{post.excerpt}</p>
               <Link
                 className="mt-4 inline-flex font-extrabold text-(--theme-text-primary) underline-offset-4 hover:underline"
                 href={`/blog/${post.slug}`}
+                aria-label={t("readArticleLabel", { title: post.title })}
               >
                 {t("readArticle")}
               </Link>
