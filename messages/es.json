@@ -34,8 +34,8 @@
   "Home": {
     "Hero": {
       "eyebrow": "Android + arquitectura movil + automatizacion",
-      "title": "Software Engineer especializado en productos moviles escalables.",
-      "description": "Construyo y modernizo aplicaciones Android con Kotlin, Jetpack Compose y arquitecturas modernas. Tambien diseno pipelines CI/CD, suites de pruebas y flujos agenticos que reducen friccion en equipos de ingenieria.",
+      "title": "La IA acelera. La experiencia responde por el resultado.",
+      "description": "Soy Software Engineer especializado en productos móviles escalables. Construyo y modernizo apps Android con Kotlin, Jetpack Compose y arquitecturas modernas, diseño pipelines CI/CD y flujos agénticos.",
       "primaryCta": "Contactar",
       "secondaryCta": "Ver proyectos",
       "visualLabel": "6+ anos de experiencia en mobile engineering",
@@ -153,9 +153,9 @@
       "caseStudyBody": "Area de experiencia respaldada por proyectos reales del CV."
     },
     "BlogPreview": {
-      "title": "Ideas para escribir",
-      "description": "El blog puede crecer alrededor de Android moderno, arquitectura movil, automatizacion con IA y aprendizajes de proyectos reales.",
-      "link": "Ver blog",
+      "title": "Explora el blog",
+      "description": "Ideas prácticas sobre desarrollo móvil, arquitectura, automatización con IA y aprendizajes de proyectos reales para construir con mejor criterio.",
+      "link": "Ver artículos",
       "readArticle": "Leer articulo"
     },
     "About": {
@@ -223,8 +223,8 @@
   "Blog": {
     "Index": {
       "eyebrow": "Blog",
-      "title": "Articulos para compartir criterio, proceso y aprendizaje.",
-      "description": "Indice de contenido con espacio para categorias, filtros, buscador y entradas individuales.",
+      "title": "Artículos sobre producto, tecnología y crecimiento.",
+      "description": "Ideas prácticas, aprendizajes de proyectos reales y reflexiones sobre cómo construir mejores experiencias digitales.",
       "categoriesTitle": "Categorias",
       "categories": ["Todos", "Android", "Arquitectura", "Automatizacion", "Notas"],
       "articlesTitle": "Articulos",

@@ -34,8 +34,8 @@
   "Home": {
     "Hero": {
       "eyebrow": "Android + mobile architecture + automation",
-      "title": "Software Engineer specialized in scalable mobile products.",
-      "description": "I build and modernize Android applications with Kotlin, Jetpack Compose, and modern architectures. I also design CI/CD pipelines, test suites, and agentic workflows that reduce friction for engineering teams.",
+      "title": "AI accelerates. Technical expertise delivers the results.",
+      "description": "I am a Software Engineer specializing in scalable mobile products. I build and modernize Android apps with Kotlin, Jetpack Compose, and modern architectures, design CI/CD pipelines, and agentic workflows.",
       "primaryCta": "Contact",
       "secondaryCta": "View projects",
       "visualLabel": "6+ years of mobile engineering experience",
@@ -153,9 +153,9 @@
       "caseStudyBody": "Experience area backed by real projects from the CV."
     },
     "BlogPreview": {
-      "title": "Ideas to write about",
-      "description": "The blog can grow around modern Android, mobile architecture, AI automation, and lessons from real projects.",
-      "link": "View blog",
+      "title": "Explore the blog",
+      "description": "Practical ideas on mobile development, architecture, AI automation, and learnings from real projects to build with better judgment.",
+      "link": "View articles",
       "readArticle": "Read article"
     },
     "About": {
@@ -223,8 +223,8 @@
   "Blog": {
     "Index": {
       "eyebrow": "Blog",
-      "title": "Articles to share judgment, process, and learning.",
-      "description": "Content index with room for categories, filters, search, and individual entries.",
+      "title": "Articles about product, technology, and growth.",
+      "description": "Practical ideas, learnings from real projects, and reflections on how to build better digital experiences.",
       "categoriesTitle": "Categories",
       "categories": ["All", "Android", "Architecture", "Automation", "Notes"],
       "articlesTitle": "Articles",

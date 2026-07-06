@@ -50,7 +50,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       />
 
       <PageSection title={t("contentTitle")}>
-        <article className="theme-card-shadow max-w-3xl rounded-3xl border border-(--theme-border) bg-(--theme-surface) p-6 text-base leading-8 text-(--theme-text-secondary)">
+        <article className="theme-card-shadow max-w-3xl rounded-3xl border border-(--theme-border) bg-(--theme-surface) p-4 text-base leading-8 text-(--theme-text-secondary)">
           <div className="mb-8 flex flex-wrap gap-3 font-mono text-xs font-bold uppercase tracking-[0.12em] text-(--theme-label)">
             <span>{post.category}</span>
             <span>{post.publishedAt}</span>
