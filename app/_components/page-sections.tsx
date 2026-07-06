@@ -66,7 +66,7 @@ export function PageSection({
   children: React.ReactNode;
 }) {
   return (
-    <section id={id} className="mx-auto w-full max-w-6xl px-5 py-16 lg:px-8 lg:py-24">
+    <section id={id} className="mx-auto w-full max-w-6xl px-5 py-14 lg:px-8 lg:py-16">
       <div className="mb-8 max-w-3xl">
         <h2 className="text-4xl font-black uppercase leading-[0.94] text-(--theme-text-primary) sm:text-5xl">
           {title}
