@@ -21,24 +21,50 @@ export function ContactSection() {
 
         <div>
           <div className="grid gap-4 md:grid-cols-3">
-            <PlaceholderCard title={t("cards.email.title")}>
-              {t("cards.email.line1")}
+            <PlaceholderCard title={t("cards.contact.title")}>
+              <a
+                className="block max-w-full truncate font-semibold text-(--theme-text-primary) underline-offset-4 hover:underline"
+                href={t("cards.contact.emailHref")}
+              >
+                {t("cards.contact.line1")}
+              </a>
               <br />
-              {t("cards.email.line2")}
+              <a
+                className="font-semibold text-(--theme-text-primary) underline-offset-4 hover:underline"
+                href={t("cards.contact.whatsappHref")}
+                rel="noreferrer"
+                target="_blank"
+              >
+                {t("cards.contact.line2")}
+              </a>
             </PlaceholderCard>
             <PlaceholderCard title={t("cards.linkedin.title")}>
-              {t("cards.linkedin.line1")}
+              <a
+                className="font-semibold text-(--theme-text-primary) underline-offset-4 hover:underline"
+                href={t("cards.linkedin.href")}
+                rel="noreferrer"
+                target="_blank"
+              >
+                {t("cards.linkedin.line1")}
+              </a>
               <br />
               {t("cards.linkedin.line2")}
             </PlaceholderCard>
-            <PlaceholderCard title={t("cards.calendar.title")}>
-              {t("cards.calendar.line1")}
+            <PlaceholderCard title={t("cards.github.title")}>
+              <a
+                className="font-semibold text-(--theme-text-primary) underline-offset-4 hover:underline"
+                href={t("cards.github.href")}
+                rel="noreferrer"
+                target="_blank"
+              >
+                {t("cards.github.line1")}
+              </a>
               <br />
-              {t("cards.calendar.line2")}
+              {t("cards.github.line2")}
             </PlaceholderCard>
           </div>
 
-          <form className="theme-card-shadow mt-8 grid gap-4 rounded-[2rem] border border-(--theme-border) bg-(--theme-surface) p-6">
+          <form className="theme-card-shadow mt-8 grid gap-4 rounded-4xl border border-(--theme-border) bg-(--theme-surface) p-6">
             <label className="grid gap-2 text-sm font-extrabold text-(--theme-text-primary)">
               {t("form.name")}
               <input

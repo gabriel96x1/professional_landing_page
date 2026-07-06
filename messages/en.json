@@ -190,19 +190,23 @@
       "title": "Let's talk about your mobile product or technical tool.",
       "description": "You can reach me by email, LinkedIn, or GitHub to talk about Android, automation, technical consulting, or collaborations.",
       "cards": {
-        "email": {
-          "title": "Email",
-          "line1": "gabriel96x1@gmail.com",
-          "line2": "(+52) 993 193 74 20"
+        "contact": {
+          "title": "Contact",
+          "line1": "gabriel.rodriguez.zamora@proton.me",
+          "emailHref": "mailto:gabriel.rodriguez.zamora@proton.me",
+          "line2": "(+52) 993 193 74 20",
+          "whatsappHref": "https://wa.me/529931937420"
         },
         "linkedin": {
           "title": "LinkedIn",
           "line1": "linkedin.com/in/gaberz96",
+          "href": "https://www.linkedin.com/in/gaberz96",
           "line2": "Professional profile"
         },
-        "calendar": {
+        "github": {
           "title": "GitHub",
           "line1": "github.com/gabriel96x1",
+          "href": "https://github.com/gabriel96x1",
           "line2": "Code and projects"
         }
       },
