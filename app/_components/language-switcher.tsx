@@ -30,10 +30,15 @@ export function LanguageSwitcher() {
   function getTargetPath(targetLocale: AppLocale) {
     const currentPath = stripHash(pathname);
     const currentSegments = currentPath.split("/");
-    const blogSlug = currentSegments[1] === "blog" ? currentSegments[2] : undefined;
+    const blogSlug =
+      currentSegments[1] === "blog" ? currentSegments[2] : undefined;
 
     if (blogSlug) {
-      const targetBlogPath = getLocalizedBlogPath(locale, blogSlug, targetLocale);
+      const targetBlogPath = getLocalizedBlogPath(
+        locale,
+        blogSlug,
+        targetLocale,
+      );
 
       if (targetBlogPath) {
         return stripHash(targetBlogPath.replace(`/${targetLocale}`, ""));

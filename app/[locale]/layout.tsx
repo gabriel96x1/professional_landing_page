@@ -34,7 +34,10 @@ export async function generateMetadata({
   const safeLocale = hasLocale(routing.locales, locale)
     ? locale
     : routing.defaultLocale;
-  const t = await getTranslations({ locale: safeLocale, namespace: "Metadata" });
+  const t = await getTranslations({
+    locale: safeLocale,
+    namespace: "Metadata",
+  });
 
   return {
     title: t("title"),

@@ -276,7 +276,13 @@
       "title": "Artículos sobre producto, tecnología y crecimiento.",
       "description": "Ideas prácticas, aprendizajes de proyectos reales y reflexiones sobre cómo construir mejores experiencias digitales.",
       "categoriesTitle": "Categorias",
-      "categories": ["Todos", "Android y iOS", "Arquitectura", "Automatizacion", "Notas"],
+      "categories": [
+        "Todos",
+        "Android y iOS",
+        "Arquitectura",
+        "Automatizacion",
+        "Notas"
+      ],
       "articlesTitle": "Articulos",
       "readArticle": "Leer articulo",
       "readArticleLabel": "Leer articulo: {title}",

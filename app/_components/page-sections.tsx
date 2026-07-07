@@ -41,7 +41,10 @@ export function PageHero({
             {description}
           </p>
           {primaryHref && primaryLabel ? (
-            <Link className="button-primary mt-8 inline-flex" href={primaryHref}>
+            <Link
+              className="button-primary mt-8 inline-flex"
+              href={primaryHref}
+            >
               {primaryLabel}
             </Link>
           ) : null}
@@ -99,7 +102,9 @@ export function PlaceholderCard({ title, children }: PlaceholderCardProps) {
       <h3 className="text-lg font-black uppercase leading-tight text-(--theme-text-primary)">
         {title}
       </h3>
-      <div className="mt-3 text-sm leading-6 text-(--theme-text-secondary)">{children}</div>
+      <div className="mt-3 text-sm leading-6 text-(--theme-text-secondary)">
+        {children}
+      </div>
     </article>
   );
 }
@@ -108,7 +113,10 @@ export function PlaceholderList({ items }: { items: string[] }) {
   return (
     <ul className="grid gap-3 text-sm leading-6 text-(--theme-text-secondary)">
       {items.map((item) => (
-        <li key={item} className="rounded-2xl border border-(--theme-border) bg-(--theme-surface) p-4">
+        <li
+          key={item}
+          className="rounded-2xl border border-(--theme-border) bg-(--theme-surface) p-4"
+        >
           {item}
         </li>
       ))}

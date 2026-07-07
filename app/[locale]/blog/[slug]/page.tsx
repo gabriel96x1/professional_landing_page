@@ -35,7 +35,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { Content } = post;
   const metadataItems = [
     { label: t("metadata.category"), value: post.category },
-    { dateTime: post.publishedAt, label: t("metadata.publishedAt"), value: post.publishedAt },
+    {
+      dateTime: post.publishedAt,
+      label: t("metadata.publishedAt"),
+      value: post.publishedAt,
+    },
     { label: t("metadata.readingTime"), value: post.readingTime },
   ];
 

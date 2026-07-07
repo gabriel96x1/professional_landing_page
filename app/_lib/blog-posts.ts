@@ -33,8 +33,10 @@ const blogPostRegistry = [
   {
     id: "mdx-blog-demo",
     locales: {
-      es: () => import("@/content/blog/mdx-blog-demo/es.mdx") as Promise<BlogPostModule>,
-      en: () => import("@/content/blog/mdx-blog-demo/en.mdx") as Promise<BlogPostModule>,
+      es: () =>
+        import("@/content/blog/mdx-blog-demo/es.mdx") as Promise<BlogPostModule>,
+      en: () =>
+        import("@/content/blog/mdx-blog-demo/en.mdx") as Promise<BlogPostModule>,
     },
   },
 ] satisfies BlogPostRegistryEntry[];
@@ -49,7 +51,9 @@ async function loadPost(locale: AppLocale, entry: BlogPostRegistryEntry) {
 }
 
 export async function getBlogPosts(locale: AppLocale) {
-  const posts = await Promise.all(blogPostRegistry.map((entry) => loadPost(locale, entry)));
+  const posts = await Promise.all(
+    blogPostRegistry.map((entry) => loadPost(locale, entry)),
+  );
 
   return posts
     .map((post) => ({
@@ -68,7 +72,9 @@ export async function getBlogPosts(locale: AppLocale) {
 }
 
 export async function getPostByLocaleSlug(locale: AppLocale, slug: string) {
-  const entry = blogPostRegistry.find(({ id }) => blogPostSlugs[id][locale] === slug);
+  const entry = blogPostRegistry.find(
+    ({ id }) => blogPostSlugs[id][locale] === slug,
+  );
 
   if (!entry) {
     return undefined;
@@ -81,7 +87,10 @@ export async function getPostByLocaleSlug(locale: AppLocale, slug: string) {
 
 export function getAllBlogStaticParams() {
   return blogPostRegistry.flatMap(({ id }) =>
-    Object.entries(blogPostSlugs[id]).map(([locale, slug]) => ({ locale, slug })),
+    Object.entries(blogPostSlugs[id]).map(([locale, slug]) => ({
+      locale,
+      slug,
+    })),
   );
 }
 

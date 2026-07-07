@@ -47,7 +47,11 @@ export function HomeSectionLink({
 
     const sectionId = getHomeSectionHash(href);
 
-    if (!sectionId || pathname !== "/" || window.location.hash !== `#${sectionId}`) {
+    if (
+      !sectionId ||
+      pathname !== "/" ||
+      window.location.hash !== `#${sectionId}`
+    ) {
       return;
     }
 

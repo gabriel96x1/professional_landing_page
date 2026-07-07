@@ -51,7 +51,7 @@ export const metadata = {
   excerpt: "Resumen corto para el home y el indice del blog.",
   publishedAt: "2026-07-06",
   readingTime: "3 min",
-}
+};
 
 Contenido del articulo en MDX.
 
@@ -72,7 +72,7 @@ export const metadata = {
   excerpt: "Short summary for the home page and blog index.",
   publishedAt: "2026-07-06",
   readingTime: "3 min",
-}
+};
 ```
 
 3. Register the post id and slugs in `app/_lib/blog-slugs.ts`:

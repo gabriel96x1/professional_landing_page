@@ -16,7 +16,10 @@ const components = {
     />
   ),
   p: (props: ComponentProps<"p">) => (
-    <p className="mt-4 text-base leading-8 text-(--theme-text-secondary)" {...props} />
+    <p
+      className="mt-4 text-base leading-8 text-(--theme-text-secondary)"
+      {...props}
+    />
   ),
   ul: (props: ComponentProps<"ul">) => (
     <ul

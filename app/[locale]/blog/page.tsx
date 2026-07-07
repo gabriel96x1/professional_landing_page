@@ -66,7 +66,8 @@ export default async function BlogPage({ params }: BlogPageProps) {
                 {post.category}
               </p>
               <p className="mt-2 font-mono text-xs text-(--theme-text-secondary)">
-                <time dateTime={post.publishedAt}>{post.publishedAt}</time> / {post.readingTime}
+                <time dateTime={post.publishedAt}>{post.publishedAt}</time> /{" "}
+                {post.readingTime}
               </p>
               <p className="mt-3">{post.excerpt}</p>
               <Link

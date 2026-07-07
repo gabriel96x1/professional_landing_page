@@ -18,5 +18,7 @@ export function getLocalizedBlogPath(
     (slugs) => slugs[currentLocale] === currentSlug,
   );
 
-  return postEntry ? `/${targetLocale}/blog/${postEntry[targetLocale]}` : undefined;
+  return postEntry
+    ? `/${targetLocale}/blog/${postEntry[targetLocale]}`
+    : undefined;
 }

@@ -15,14 +15,14 @@ unprefixed `app/page.tsx`.
 The localized home routes `/es` and `/en` are the main pages. Header tabs use
 hash links to scroll to sections on the localized home page.
 
-| Label | Link | Owner |
-| --- | --- | --- |
-| Inicio / Home | `/{locale}#inicio` | `app/[locale]/page.tsx` |
-| Portafolio / Portfolio | `/{locale}#portfolio` | `app/[locale]/page.tsx` |
-| Servicios / Services | `/{locale}#services` | `app/[locale]/page.tsx` |
-| Blog | `/{locale}/blog` | `app/[locale]/blog/page.tsx` |
-| Sobre mi / About | `/{locale}#about` | `app/[locale]/page.tsx` |
-| Contacto / Contact | `/{locale}#contact` | `app/[locale]/page.tsx` |
+| Label                  | Link                  | Owner                        |
+| ---------------------- | --------------------- | ---------------------------- |
+| Inicio / Home          | `/{locale}#inicio`    | `app/[locale]/page.tsx`      |
+| Portafolio / Portfolio | `/{locale}#portfolio` | `app/[locale]/page.tsx`      |
+| Servicios / Services   | `/{locale}#services`  | `app/[locale]/page.tsx`      |
+| Blog                   | `/{locale}/blog`      | `app/[locale]/blog/page.tsx` |
+| Sobre mi / About       | `/{locale}#about`     | `app/[locale]/page.tsx`      |
+| Contacto / Contact     | `/{locale}#contact`   | `app/[locale]/page.tsx`      |
 
 CSS in `app/globals.css` sets:
 
@@ -35,12 +35,12 @@ This keeps hash navigation smooth and prevents the sticky header from covering s
 
 ## Standalone Blog Routes
 
-| Route | File | Purpose |
-| --- | --- | --- |
-| `/es/blog` | `app/[locale]/blog/page.tsx` | Spanish blog index, categories, article cards |
-| `/en/blog` | `app/[locale]/blog/page.tsx` | English blog index, categories, article cards |
-| `/es/blog/[slug]` | `app/[locale]/blog/[slug]/page.tsx` | Spanish MDX article |
-| `/en/blog/[slug]` | `app/[locale]/blog/[slug]/page.tsx` | English MDX article |
+| Route             | File                                | Purpose                                       |
+| ----------------- | ----------------------------------- | --------------------------------------------- |
+| `/es/blog`        | `app/[locale]/blog/page.tsx`        | Spanish blog index, categories, article cards |
+| `/en/blog`        | `app/[locale]/blog/page.tsx`        | English blog index, categories, article cards |
+| `/es/blog/[slug]` | `app/[locale]/blog/[slug]/page.tsx` | Spanish MDX article                           |
+| `/en/blog/[slug]` | `app/[locale]/blog/[slug]/page.tsx` | English MDX article                           |
 
 The blog should remain separate unless the user explicitly asks to merge it into the one-page home.
 Blog slugs are locale-specific. Spanish slugs should not be valid on English
@@ -51,20 +51,20 @@ routes, and English slugs should not be valid on Spanish routes.
 These routes used to be standalone pages. They now exist only as compatibility
 redirects to localized home anchors.
 
-| Old URL | Current Target |
-| --- | --- |
-| `/portfolio` | `/{locale}#portfolio` |
-| `/services` | `/{locale}#services` |
-| `/about` | `/{locale}#about` |
-| `/contact` | `/{locale}#contact` |
-| `/es/portfolio` | `/es#portfolio` |
-| `/en/portfolio` | `/en#portfolio` |
-| `/es/services` | `/es#services` |
-| `/en/services` | `/en#services` |
-| `/es/about` | `/es#about` |
-| `/en/about` | `/en#about` |
-| `/es/contact` | `/es#contact` |
-| `/en/contact` | `/en#contact` |
+| Old URL         | Current Target        |
+| --------------- | --------------------- |
+| `/portfolio`    | `/{locale}#portfolio` |
+| `/services`     | `/{locale}#services`  |
+| `/about`        | `/{locale}#about`     |
+| `/contact`      | `/{locale}#contact`   |
+| `/es/portfolio` | `/es#portfolio`       |
+| `/en/portfolio` | `/en#portfolio`       |
+| `/es/services`  | `/es#services`        |
+| `/en/services`  | `/en#services`        |
+| `/es/about`     | `/es#about`           |
+| `/en/about`     | `/en#about`           |
+| `/es/contact`   | `/es#contact`         |
+| `/en/contact`   | `/en#contact`         |
 
 For non-blog content, edit `app/[locale]/page.tsx`, `app/_sections/`, and the
 message catalogs.

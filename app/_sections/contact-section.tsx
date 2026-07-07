@@ -43,7 +43,9 @@ export function ContactSection() {
                       className="size-4 shrink-0 text-(--theme-label)"
                       strokeWidth={2.4}
                     />
-                    <span className="min-w-0 truncate">{t("cards.contact.line1")}</span>
+                    <span className="min-w-0 truncate">
+                      {t("cards.contact.line1")}
+                    </span>
                   </a>
                   <a
                     className="flex items-center gap-2 font-semibold text-(--theme-text-primary) underline-offset-4 hover:underline"

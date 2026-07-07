@@ -6,7 +6,11 @@ export function HeroSection() {
   const t = useTranslations("Home.Hero");
 
   return (
-    <section aria-labelledby="inicio-title" id={homeSectionIds.home} className="bg-(--theme-background)">
+    <section
+      aria-labelledby="inicio-title"
+      id={homeSectionIds.home}
+      className="bg-(--theme-background)"
+    >
       <div className="mx-auto grid min-h-[calc(100svh-5rem)] w-full max-w-6xl items-center gap-10 px-5 py-16 lg:grid-cols-[minmax(0,1fr)_minmax(20rem,0.72fr)] lg:gap-14 lg:px-8 lg:py-24">
         <div className="min-w-0">
           <p className="font-mono text-sm font-bold uppercase text-(--theme-label)">
@@ -43,9 +47,7 @@ export function HeroSection() {
           <div
             aria-hidden="true"
             className="grid size-36 place-items-center rounded-[2.375rem] border border-(--theme-border) bg-(--theme-surface-muted) shadow-[inset_0_0_0_12px_var(--theme-label-soft)]"
-          >
-
-          </div>
+          ></div>
           <div className="mt-5 grid gap-3 text-sm text-(--theme-text-secondary)">
             <p
               className="font-mono text-2xl font-bold uppercase text-(--theme-label)"
