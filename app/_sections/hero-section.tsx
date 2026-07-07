@@ -1,3 +1,4 @@
+import { homeSectionIds } from "@/app/_lib/home-sections";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 
@@ -5,7 +6,7 @@ export function HeroSection() {
   const t = useTranslations("Home.Hero");
 
   return (
-    <section aria-labelledby="inicio-title" id="inicio" className="bg-(--theme-background)">
+    <section aria-labelledby="inicio-title" id={homeSectionIds.home} className="bg-(--theme-background)">
       <div className="mx-auto grid min-h-[calc(100svh-5rem)] w-full max-w-6xl items-center gap-10 px-5 py-16 lg:grid-cols-[minmax(0,1fr)_minmax(20rem,0.72fr)] lg:gap-14 lg:px-8 lg:py-24">
         <div className="min-w-0">
           <p className="font-mono text-sm font-bold uppercase text-(--theme-label)">
@@ -23,13 +24,13 @@ export function HeroSection() {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
               className="button-primary"
-              href={{ pathname: "/", hash: "contact" }}
+              href={{ pathname: "/", hash: homeSectionIds.contact }}
             >
               {t("primaryCta")}
             </Link>
             <Link
               className="button-secondary"
-              href={{ pathname: "/", hash: "portfolio" }}
+              href={{ pathname: "/", hash: homeSectionIds.portfolio }}
             >
               {t("secondaryCta")}
             </Link>

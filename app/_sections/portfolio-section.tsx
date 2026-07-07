@@ -1,3 +1,4 @@
+import { homeSectionIds } from "@/app/_lib/home-sections";
 import { PageSection, PlaceholderCard } from "../_components/page-sections";
 import { useTranslations } from "next-intl";
 
@@ -14,7 +15,7 @@ export function PortfolioSection() {
 
   return (
     <PageSection
-      id="portfolio"
+      id={homeSectionIds.portfolio}
       title={t("title")}
       description={t("description")}
     >

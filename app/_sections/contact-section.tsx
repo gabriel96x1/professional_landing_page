@@ -1,3 +1,4 @@
+import { homeSectionIds } from "@/app/_lib/home-sections";
 import { PlaceholderCard } from "../_components/page-sections";
 import { Mail, Phone } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -9,7 +10,7 @@ export function ContactSection() {
   return (
     <section
       aria-labelledby="contact-title"
-      id="contact"
+      id={homeSectionIds.contact}
       className="border-t border-(--theme-border) bg-(--theme-background)"
     >
       <div className="mx-auto grid w-full max-w-6xl gap-10 px-5 py-16 lg:grid-cols-[0.8fr_1fr] lg:px-8 lg:py-24">

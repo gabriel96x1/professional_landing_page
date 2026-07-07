@@ -1,4 +1,5 @@
 import { getBlogPosts } from "@/app/_lib/blog-posts";
+import { homeSectionIds } from "@/app/_lib/home-sections";
 import { Link } from "@/i18n/navigation";
 import { getLocale, getTranslations } from "next-intl/server";
 import { PageSection, PlaceholderCard } from "../_components/page-sections";
@@ -11,7 +12,7 @@ export async function BlogPreviewSection() {
 
   return (
     <PageSection
-      id="blog-preview"
+      id={homeSectionIds.blogPreview}
       title={t("title")}
       description={t("description")}
     >

@@ -1,6 +1,7 @@
 import { HeaderMenu } from "@/app/_components/header-menu";
 import { LanguageSwitcher } from "@/app/_components/language-switcher";
 import { ThemeToggle } from "@/app/_components/theme-toggle";
+import { homeSectionIds } from "@/app/_lib/home-sections";
 import "@/app/globals.css";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
@@ -64,29 +65,29 @@ export default async function LocaleLayout({
     .toUpperCase();
   const navigation = [
     {
-      href: { pathname: "/", hash: "inicio" },
-      key: "inicio",
+      href: { pathname: "/", hash: homeSectionIds.home },
+      key: homeSectionIds.home,
       label: t("nav.home"),
     },
     {
-      href: { pathname: "/", hash: "portfolio" },
-      key: "portfolio",
+      href: { pathname: "/", hash: homeSectionIds.portfolio },
+      key: homeSectionIds.portfolio,
       label: t("nav.portfolio"),
     },
     {
-      href: { pathname: "/", hash: "services" },
-      key: "services",
+      href: { pathname: "/", hash: homeSectionIds.services },
+      key: homeSectionIds.services,
       label: t("nav.services"),
     },
     { href: "/blog", key: "blog", label: t("nav.blog") },
     {
-      href: { pathname: "/", hash: "about" },
-      key: "about",
+      href: { pathname: "/", hash: homeSectionIds.about },
+      key: homeSectionIds.about,
       label: t("nav.about"),
     },
     {
-      href: { pathname: "/", hash: "contact" },
-      key: "contact",
+      href: { pathname: "/", hash: homeSectionIds.contact },
+      key: homeSectionIds.contact,
       label: t("nav.contact"),
     },
   ];
@@ -112,7 +113,7 @@ export default async function LocaleLayout({
                 <Link
                   aria-label={brand}
                   className="mr-auto inline-flex min-w-0 items-center gap-3 text-sm font-black uppercase text-(--theme-text-primary)"
-                  href={{ pathname: "/", hash: "inicio" }}
+                  href={{ pathname: "/", hash: homeSectionIds.home }}
                 >
                   <span
                     aria-hidden="true"
@@ -153,7 +154,7 @@ export default async function LocaleLayout({
                 <p>{t("footerText")}</p>
                 <Link
                   className="font-extrabold text-(--theme-text-primary) underline-offset-4 hover:underline"
-                  href={{ pathname: "/", hash: "contact" }}
+                  href={{ pathname: "/", hash: homeSectionIds.contact }}
                 >
                   {t("footerCta")}
                 </Link>

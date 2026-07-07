@@ -1,3 +1,4 @@
+import { homeSectionIds } from "@/app/_lib/home-sections";
 import { Link } from "@/i18n/navigation";
 import {
   Bot,
@@ -36,7 +37,7 @@ export function ServicesSection() {
 
   return (
     <PageSection
-      id="services"
+      id={homeSectionIds.services}
       title={t("title")}
       description={t("description")}
     >
@@ -90,7 +91,7 @@ export function ServicesSection() {
 
               <Link
                 className="button-secondary mt-6 w-full"
-                href={{ pathname: "/", hash: "contact" }}
+                href={{ pathname: "/", hash: homeSectionIds.contact }}
               >
                 {service.cta}
               </Link>
@@ -110,7 +111,7 @@ export function ServicesSection() {
         </div>
         <Link
           className="button-primary w-full lg:w-auto"
-          href={{ pathname: "/", hash: "contact" }}
+          href={{ pathname: "/", hash: homeSectionIds.contact }}
         >
           {t("ctaLabel")}
         </Link>

@@ -1,3 +1,4 @@
+import { homeSectionIds } from "@/app/_lib/home-sections";
 import { redirectToHomeSection } from "@/app/_lib/section-redirects";
 
 export default async function ServicesRedirect({
@@ -5,5 +6,5 @@ export default async function ServicesRedirect({
 }: {
   params: Promise<{ locale: string }>;
 }) {
-  await redirectToHomeSection(params, "services");
+  await redirectToHomeSection(params, homeSectionIds.services);
 }

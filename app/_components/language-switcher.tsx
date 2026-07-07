@@ -1,10 +1,25 @@
 "use client";
 
 import { getLocalizedBlogPath } from "@/app/_lib/blog-slugs";
+import { isHomeSectionId } from "@/app/_lib/home-sections";
+import { usePathname, useRouter } from "@/i18n/navigation";
 import type { AppLocale } from "@/i18n/routing";
 import { routing } from "@/i18n/routing";
 import { useLocale, useTranslations } from "next-intl";
-import { usePathname, useRouter } from "next/navigation";
+
+function stripHash(path: string) {
+  return path.split("#")[0] || "/";
+}
+
+function getNormalizedHash() {
+  const hashTargets = window.location.hash
+    .split("#")
+    .map((target) => target.trim())
+    .filter(Boolean);
+  const validTarget = hashTargets.findLast(isHomeSectionId);
+
+  return validTarget ? `#${validTarget}` : "";
+}
 
 export function LanguageSwitcher() {
   const locale = useLocale() as AppLocale;
@@ -13,23 +28,19 @@ export function LanguageSwitcher() {
   const t = useTranslations("LanguageSwitcher");
 
   function getTargetPath(targetLocale: AppLocale) {
-    const segments = pathname.split("/");
-    const currentLocale = segments[1];
-    const isLocalizedPath = routing.locales.includes(currentLocale as AppLocale);
-    const currentPath = isLocalizedPath ? pathname : `/${locale}${pathname}`;
+    const currentPath = stripHash(pathname);
     const currentSegments = currentPath.split("/");
-    const blogSlug = currentSegments[2] === "blog" ? currentSegments[3] : undefined;
+    const blogSlug = currentSegments[1] === "blog" ? currentSegments[2] : undefined;
 
     if (blogSlug) {
       const targetBlogPath = getLocalizedBlogPath(locale, blogSlug, targetLocale);
 
       if (targetBlogPath) {
-        return targetBlogPath;
+        return stripHash(targetBlogPath.replace(`/${targetLocale}`, ""));
       }
     }
 
-    currentSegments[1] = targetLocale;
-    return currentSegments.join("/") || `/${targetLocale}`;
+    return currentPath;
   }
 
   function switchLocale(targetLocale: AppLocale) {
@@ -37,8 +48,9 @@ export function LanguageSwitcher() {
       return;
     }
 
-    const hash = window.location.hash;
-    router.push(`${getTargetPath(targetLocale)}${hash}`);
+    router.push(`${getTargetPath(targetLocale)}${getNormalizedHash()}`, {
+      locale: targetLocale,
+    });
   }
 
   return (

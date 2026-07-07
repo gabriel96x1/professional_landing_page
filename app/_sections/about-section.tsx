@@ -1,3 +1,4 @@
+import { homeSectionIds } from "@/app/_lib/home-sections";
 import {
   PageSection,
   PlaceholderCard,
@@ -11,7 +12,7 @@ export function AboutSection() {
 
   return (
     <PageSection
-      id="about"
+      id={homeSectionIds.about}
       title={t("title")}
       description={t("description")}
     >

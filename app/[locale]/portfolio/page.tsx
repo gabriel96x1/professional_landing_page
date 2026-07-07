@@ -1,3 +1,4 @@
+import { homeSectionIds } from "@/app/_lib/home-sections";
 import { redirectToHomeSection } from "@/app/_lib/section-redirects";
 
 export default async function PortfolioRedirect({
@@ -5,5 +6,5 @@ export default async function PortfolioRedirect({
 }: {
   params: Promise<{ locale: string }>;
 }) {
-  await redirectToHomeSection(params, "portfolio");
+  await redirectToHomeSection(params, homeSectionIds.portfolio);
 }
