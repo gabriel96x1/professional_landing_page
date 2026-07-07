@@ -77,11 +77,11 @@ export default async function LocaleLayout({
       key: homeSectionIds.portfolio,
       label: t("nav.portfolio"),
     },
-    {
+    /*{  
       href: { pathname: "/", hash: homeSectionIds.services },
       key: homeSectionIds.services,
       label: t("nav.services"),
-    },
+    },*/
     { href: "/blog", key: "blog", label: t("nav.blog") },
     {
       href: { pathname: "/", hash: homeSectionIds.about },
