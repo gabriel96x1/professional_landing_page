@@ -5,21 +5,14 @@ import "@/app/globals.css";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
-import { Archivo, IBM_Plex_Mono } from "next/font/google";
+import { Archivo } from "next/font/google";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 
 const archivo = Archivo({
   variable: "--font-archivo",
   subsets: ["latin"],
-  weight: ["400", "500", "700", "800", "900"],
-});
-
-const ibmPlexMono = IBM_Plex_Mono({
-  variable: "--font-ibm-plex-mono",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
 });
 
 type LocaleLayoutProps = Readonly<{
@@ -30,6 +23,8 @@ type LocaleLayoutProps = Readonly<{
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
+
+export const dynamicParams = false;
 
 export async function generateMetadata({
   params,
@@ -55,6 +50,8 @@ export default async function LocaleLayout({
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
+
+  setRequestLocale(locale);
 
   const t = await getTranslations({ locale, namespace: "Layout" });
   const brand = t("brand");
@@ -96,7 +93,7 @@ export default async function LocaleLayout({
 
   return (
     <html
-      className={`${archivo.variable} ${ibmPlexMono.variable} h-full antialiased`}
+      className={`${archivo.variable} h-full antialiased`}
       data-scroll-behavior="smooth"
       data-theme="dark"
       lang={locale}
