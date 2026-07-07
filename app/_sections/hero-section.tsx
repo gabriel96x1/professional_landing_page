@@ -1,5 +1,5 @@
+import { HomeSectionLink } from "@/app/_components/home-section-link";
 import { homeSectionIds } from "@/app/_lib/home-sections";
-import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 
 export function HeroSection() {
@@ -22,18 +22,18 @@ export function HeroSection() {
             {t("description")}
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Link
+            <HomeSectionLink
               className="button-primary"
               href={{ pathname: "/", hash: homeSectionIds.contact }}
             >
               {t("primaryCta")}
-            </Link>
-            <Link
+            </HomeSectionLink>
+            <HomeSectionLink
               className="button-secondary"
               href={{ pathname: "/", hash: homeSectionIds.portfolio }}
             >
               {t("secondaryCta")}
-            </Link>
+            </HomeSectionLink>
           </div>
         </div>
         <aside

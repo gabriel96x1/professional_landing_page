@@ -1,5 +1,6 @@
 "use client";
 
+import { HomeSectionLink } from "@/app/_components/home-section-link";
 import { Link } from "@/i18n/navigation";
 import { Menu, X } from "lucide-react";
 import type { ComponentProps } from "react";
@@ -61,14 +62,14 @@ export function HeaderMenu({ closeLabel, items, openLabel }: HeaderMenuProps) {
       <div className="w-full lg:hidden" hidden={!isOpen} id={menuId}>
         <div className="grid gap-2 border-t border-(--theme-border) pt-4 text-sm font-bold text-(--theme-text-secondary)">
           {items.map((item) => (
-            <Link
+            <HomeSectionLink
               className="text-center rounded-2xl border border-(--theme-border) bg-(--theme-surface-muted) px-4 py-3 transition hover:border-(--theme-border-strong) hover:text-(--theme-text-primary)"
               href={item.href}
               key={item.key}
               onClick={() => setIsOpen(false)}
             >
               {item.label}
-            </Link>
+            </HomeSectionLink>
           ))}
         </div>
       </div>

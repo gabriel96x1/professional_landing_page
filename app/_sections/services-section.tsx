@@ -1,5 +1,5 @@
+import { HomeSectionLink } from "@/app/_components/home-section-link";
 import { homeSectionIds } from "@/app/_lib/home-sections";
-import { Link } from "@/i18n/navigation";
 import {
   Bot,
   ClipboardCheck,
@@ -55,7 +55,7 @@ export function ServicesSection() {
                   <p className="font-mono text-xs font-bold uppercase text-(--theme-label)">
                     {service.eyebrow}
                   </p>
-                  <h3 className="mt-3 text-2xl font-black uppercase leading-[0.95] text-(--theme-text-primary) [overflow-wrap:anywhere]">
+                  <h3 className="mt-3 text-2xl font-black uppercase leading-[0.95] text-(--theme-text-primary) wrap-anywhere">
                     {service.title}
                   </h3>
                 </div>
@@ -89,12 +89,12 @@ export function ServicesSection() {
                 </p>
               </div>
 
-              <Link
+              <HomeSectionLink
                 className="button-secondary mt-6 w-full"
                 href={{ pathname: "/", hash: homeSectionIds.contact }}
               >
                 {service.cta}
-              </Link>
+              </HomeSectionLink>
             </article>
           );
         })}
@@ -109,12 +109,12 @@ export function ServicesSection() {
             {t("ctaBody")}
           </p>
         </div>
-        <Link
+        <HomeSectionLink
           className="button-primary w-full lg:w-auto"
           href={{ pathname: "/", hash: homeSectionIds.contact }}
         >
           {t("ctaLabel")}
-        </Link>
+        </HomeSectionLink>
       </div>
     </PageSection>
   );

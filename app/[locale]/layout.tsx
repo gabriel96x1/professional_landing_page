@@ -1,9 +1,9 @@
 import { HeaderMenu } from "@/app/_components/header-menu";
+import { HomeSectionLink } from "@/app/_components/home-section-link";
 import { LanguageSwitcher } from "@/app/_components/language-switcher";
 import { ThemeToggle } from "@/app/_components/theme-toggle";
 import { homeSectionIds } from "@/app/_lib/home-sections";
 import "@/app/globals.css";
-import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
 import { Archivo } from "next/font/google";
@@ -110,7 +110,7 @@ export default async function LocaleLayout({
                 aria-label={t("ariaLabel")}
                 className="mx-auto flex min-h-20 w-full max-w-6xl flex-wrap items-center gap-2 px-4 py-4 lg:px-8"
               >
-                <Link
+                <HomeSectionLink
                   aria-label={brand}
                   className="mr-auto inline-flex min-w-0 items-center gap-3 text-sm font-black uppercase text-(--theme-text-primary)"
                   href={{ pathname: "/", hash: homeSectionIds.home }}
@@ -125,16 +125,16 @@ export default async function LocaleLayout({
                   <span aria-hidden="true" className="hidden md:block">
                     {brand}
                   </span>
-                </Link>
+                </HomeSectionLink>
                 <div className="hidden items-center text-sm font-bold text-(--theme-text-secondary) lg:flex">
                   {navigation.map((item) => (
-                    <Link
+                    <HomeSectionLink
                       className="rounded-full border border-transparent px-3.5 py-2.5 transition hover:border-(--theme-border-strong) hover:bg-(--theme-surface-muted) hover:text-(--theme-text-primary)"
                       href={item.href}
                       key={item.key}
                     >
                       {item.label}
-                    </Link>
+                    </HomeSectionLink>
                   ))}
                 </div>
                 <div className="flex shrink-0 items-center gap-2">
@@ -152,12 +152,12 @@ export default async function LocaleLayout({
             <footer className="border-t border-(--theme-border) bg-(--theme-background)">
               <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-5 py-9 text-sm text-(--theme-text-secondary) sm:flex-row sm:items-center sm:justify-between lg:px-8">
                 <p>{t("footerText")}</p>
-                <Link
+                <HomeSectionLink
                   className="font-extrabold text-(--theme-text-primary) underline-offset-4 hover:underline"
                   href={{ pathname: "/", hash: homeSectionIds.contact }}
                 >
                   {t("footerCta")}
-                </Link>
+                </HomeSectionLink>
               </div>
             </footer>
           </div>
