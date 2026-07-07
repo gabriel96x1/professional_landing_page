@@ -1,4 +1,5 @@
 import { PlaceholderCard } from "../_components/page-sections";
+import { Mail, Phone } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export function ContactSection() {
@@ -31,19 +32,29 @@ export function ContactSection() {
           <div className="grid gap-4 md:grid-cols-3">
             <PlaceholderCard title={t("cards.contact.title")}>
               <a
-                className="block max-w-full truncate font-semibold text-(--theme-text-primary) underline-offset-4 hover:underline"
+                className="flex max-w-full items-center gap-2 font-semibold text-(--theme-text-primary) underline-offset-4 hover:underline"
                 href={t("cards.contact.emailHref")}
               >
-                {t("cards.contact.line1")}
+                <Mail
+                  aria-hidden="true"
+                  className="size-4 shrink-0 text-(--theme-label)"
+                  strokeWidth={2.4}
+                />
+                <span className="min-w-0 truncate">{t("cards.contact.line1")}</span>
               </a>
               <br />
               <a
-                className="font-semibold text-(--theme-text-primary) underline-offset-4 hover:underline"
+                className="flex items-center gap-2 font-semibold text-(--theme-text-primary) underline-offset-4 hover:underline"
                 href={t("cards.contact.whatsappHref")}
                 rel="noreferrer"
                 target="_blank"
               >
-                {t("cards.contact.line2")}
+                <Phone
+                  aria-hidden="true"
+                  className="size-4 shrink-0 text-(--theme-label)"
+                  strokeWidth={2.4}
+                />
+                <span>{t("cards.contact.line2")}</span>
                 <span className="sr-only"> {externalNewTabText}</span>
               </a>
             </PlaceholderCard>
