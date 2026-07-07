@@ -50,7 +50,7 @@
       "cards": {
         "web": {
           "title": "Apps and mobile-first experiences",
-          "body": "I design and build Android apps, multiplatform solutions, and fast web experiences for customers, internal teams, or field operations."
+          "body": "I design and build Android and iOS apps, multiplatform solutions, and fast web experiences for customers, internal teams, or field operations."
         },
         "product": {
           "title": "AI automation and integration",
@@ -100,7 +100,7 @@
           "title": "Mobile and multiplatform apps",
           "body": "For businesses that need to launch an app, digitize a field process, or stabilize a mobile product already in use.",
           "includes": [
-            "Native Android apps or multiplatform solutions.",
+            "Native Android and iOS apps or multiplatform solutions.",
             "Authentication, payments, analytics, notifications, and offline mode.",
             "Releases, performance, Play Store, maintenance, and technical support."
           ],
@@ -167,7 +167,7 @@
           "result": "Result: a foundation for automating complex technical tasks with traceability and human control."
         },
         {
-          "title": "Android modernization in retail",
+          "title": "Android and iOS modernization in retail",
           "problem": "Problem: legacy Java modules and traditional UI slowed iteration speed, stability, and quality in a high-traffic app.",
           "solution": "Solution: I migrated code to Kotlin, modernized UI with Jetpack Compose, modularized Gradle, and implemented CI/CD checks.",
           "technologies": "Technologies: Kotlin, Java, Jetpack Compose, Retrofit, Dagger-Hilt, Coroutines, Gradle, Detekt, Lint.",
@@ -182,14 +182,14 @@
         },
         {
           "title": "ReadE-DocOnline",
-          "problem": "Problem: securely read and verify ICAO-compliant electronic documents from Android, even in limited-connectivity scenarios.",
+          "problem": "Problem: securely read and verify ICAO-compliant electronic documents from Android and iOS, even in limited-connectivity scenarios.",
           "solution": "Solution: I built a native app with NFC, MRZ OCR, and a secure handshake to extract encrypted data from e-passports and IDs.",
-          "technologies": "Technologies: Kotlin, Java, NFC, Android SDK, JMRTD, Bouncy Castle, OCR.",
+          "technologies": "Technologies: Kotlin, Java, NFC, Android and iOS SDK, JMRTD, Bouncy Castle, OCR.",
           "result": "Result: technical foundation for offline electronic document reading and secure verification."
         }
       ],
       "caseStudyParts": [
-        "Android",
+        "Android and iOS",
         "Web",
         "CI/CD",
         "Cloud",
@@ -218,13 +218,13 @@
           "body": "I prioritize business clarity, maintainable architecture, testing, measurable impact, and incremental decisions."
         },
         "collaboration": {
-          "title": "Collaboration",
+          "title": "Synergy",
           "body": "I work with direct communication, useful documentation, and automation where it truly adds value."
         }
       },
       "valuesTitle": "Strengths",
       "values": [
-        "Android and multiplatform apps with maintainable architecture.",
+        "Android and iOS and multiplatform apps with maintainable architecture.",
         "Websites, portals, and dashboards connected to real data and tools.",
         "AI automations with APIs, documents, CRMs, email, and spreadsheets.",
         "Cloud, CI/CD, testing, monitoring, and technical pipelines with human oversight."
@@ -276,7 +276,7 @@
       "title": "Articles about product, technology, and growth.",
       "description": "Practical ideas, learnings from real projects, and reflections on how to build better digital experiences.",
       "categoriesTitle": "Categories",
-      "categories": ["All", "Android", "Architecture", "Automation", "Notes"],
+      "categories": ["All", "Android and iOS", "Architecture", "Automation", "Notes"],
       "articlesTitle": "Articles",
       "readArticle": "Read article",
       "readArticleLabel": "Read article: {title}",

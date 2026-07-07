@@ -47,18 +47,18 @@ export function ServicesSection() {
           return (
             <article
               key={service.key}
-              className="theme-card-shadow flex min-h-full flex-col rounded-3xl border border-(--theme-border) bg-(--theme-surface) p-5 sm:p-6"
+              className="theme-card-shadow flex min-h-full flex-col justify-between overflow-hidden rounded-3xl border border-(--theme-border) bg-(--theme-surface) p-5 sm:p-6"
             >
-              <div className="flex items-start justify-between gap-4">
-                <div>
+              <div className="grid grid-cols-[minmax(0,1fr)_2.75rem] items-start gap-4">
+                <div className="min-w-0">
                   <p className="font-mono text-xs font-bold uppercase text-(--theme-label)">
                     {service.eyebrow}
                   </p>
-                  <h3 className="mt-3 text-2xl font-black uppercase leading-[0.95] text-(--theme-text-primary)">
+                  <h3 className="mt-3 text-2xl font-black uppercase leading-[0.95] text-(--theme-text-primary) [overflow-wrap:anywhere]">
                     {service.title}
                   </h3>
                 </div>
-                <div className="grid size-11 shrink-0 place-items-center rounded-2xl border border-(--theme-border-strong) bg-(--theme-surface-muted) text-(--theme-text-primary)">
+                <div className="grid size-11 place-items-center rounded-2xl border border-(--theme-border-strong) bg-(--theme-surface-muted) text-(--theme-text-primary)">
                   <Icon aria-hidden="true" size={22} strokeWidth={2.2} />
                 </div>
               </div>

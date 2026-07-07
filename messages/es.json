@@ -50,7 +50,7 @@
       "cards": {
         "web": {
           "title": "Apps y experiencias mobile-first",
-          "body": "Diseno y desarrollo apps Android, soluciones multiplataforma y experiencias web rapidas para clientes, equipos internos o procesos de campo."
+          "body": "Diseno y desarrollo apps Android y iOS, soluciones multiplataforma y experiencias web rapidas para clientes, equipos internos o procesos de campo."
         },
         "product": {
           "title": "Automatizacion e integracion con IA",
@@ -100,7 +100,7 @@
           "title": "Apps moviles y multiplataforma",
           "body": "Para negocios que necesitan lanzar una app, digitalizar un proceso de campo o estabilizar un producto mobile que ya esta en uso.",
           "includes": [
-            "Apps Android nativas o soluciones multiplataforma.",
+            "Apps Android y iOS nativas o soluciones multiplataforma.",
             "Autenticacion, pagos, analytics, notificaciones y modo offline.",
             "Releases, performance, Play Store, mantenimiento y soporte tecnico."
           ],
@@ -167,7 +167,7 @@
           "result": "Resultado: base para automatizar tareas tecnicas complejas con trazabilidad y control humano."
         },
         {
-          "title": "Modernizacion Android en retail",
+          "title": "Modernizacion Android y iOS en retail",
           "problem": "Problema: modulos legacy en Java y UI tradicional limitaban la velocidad de iteracion, la estabilidad y la calidad de una app de alto trafico.",
           "solution": "Solucion: migre codigo a Kotlin, modernice UI con Jetpack Compose, modularice Gradle e implemente checks CI/CD.",
           "technologies": "Tecnologias: Kotlin, Java, Jetpack Compose, Retrofit, Dagger-Hilt, Coroutines, Gradle, Detekt, Lint.",
@@ -182,14 +182,14 @@
         },
         {
           "title": "ReadE-DocOnline",
-          "problem": "Problema: leer y verificar documentos electronicos ICAO de forma segura desde Android, incluso en escenarios con conectividad limitada.",
+          "problem": "Problema: leer y verificar documentos electronicos ICAO de forma segura desde Android y iOS, incluso en escenarios con conectividad limitada.",
           "solution": "Solucion: construi una app nativa con NFC, OCR de MRZ y handshake para extraer datos cifrados de e-passports e identificaciones.",
-          "technologies": "Tecnologias: Kotlin, Java, NFC, Android SDK, JMRTD, Bouncy Castle, OCR.",
+          "technologies": "Tecnologias: Kotlin, Java, NFC, Android y iOS SDK, JMRTD, Bouncy Castle, OCR.",
           "result": "Resultado: base tecnica para lectura offline de documentos electronicos y verificacion segura."
         }
       ],
       "caseStudyParts": [
-        "Android",
+        "Android y iOS",
         "Web",
         "CI/CD",
         "Nube",
@@ -218,13 +218,13 @@
           "body": "Priorizo claridad de negocio, arquitectura mantenible, pruebas, impacto medible y decisiones incrementales."
         },
         "collaboration": {
-          "title": "Colaboracion",
+          "title": "Sinergia",
           "body": "Trabajo con comunicacion directa, documentacion util y automatizacion donde realmente aporta valor."
         }
       },
       "valuesTitle": "Fortalezas",
       "values": [
-        "Apps Android y multiplataforma con arquitectura mantenible.",
+        "Apps Android y iOS y multiplataforma con arquitectura mantenible.",
         "Web, portales y dashboards conectados a datos y herramientas reales.",
         "Automatizaciones con IA, APIs, documentos, CRM, correo y hojas de calculo.",
         "Nube, CI/CD, testing, monitoreo y pipelines tecnicos con control humano."
@@ -276,7 +276,7 @@
       "title": "Artículos sobre producto, tecnología y crecimiento.",
       "description": "Ideas prácticas, aprendizajes de proyectos reales y reflexiones sobre cómo construir mejores experiencias digitales.",
       "categoriesTitle": "Categorias",
-      "categories": ["Todos", "Android", "Arquitectura", "Automatizacion", "Notas"],
+      "categories": ["Todos", "Android y iOS", "Arquitectura", "Automatizacion", "Notas"],
       "articlesTitle": "Articulos",
       "readArticle": "Leer articulo",
       "readArticleLabel": "Leer articulo: {title}",
