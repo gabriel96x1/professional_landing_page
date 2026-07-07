@@ -19,8 +19,9 @@ Then read the project docs in this order:
 2. `docs/architecture.md`
 3. `docs/routes.md`
 4. `docs/i18n.md`
-5. `docs/accessibility-rules.md`
-6. `docs/agent-playbook.md`
+5. `docs/testing-conventions.md`
+6. `docs/accessibility-rules.md`
+7. `docs/agent-playbook.md`
 
 Current architecture summary:
 
@@ -42,6 +43,13 @@ Accessibility enforcement:
 - Treat accessibility regressions as blocking defects, including missing accessible names, broken keyboard access, invalid semantics, insufficient contrast, obscured focus, layout that fails reflow/zoom, and non-localized accessibility copy.
 - Read and follow `docs/accessibility-rules.md` before changing UI, navigation, layout, forms, media, theme colors, or localized visible/accessibility copy.
 - Automated checks do not replace manual keyboard, focus, contrast, reflow, and localized label review for changed flows.
+
+Testing enforcement:
+
+- This project follows TDD for application changes: write the tests first, confirm the expected failure, then implement in real app code.
+- After implementation starts, do not edit the tests to make the code pass. Only application code should change unless the user changes the requirement or the test is proven invalid for the reasons documented in `docs/testing-conventions.md`.
+- Do not weaken assertions, delete failing tests, lower coverage thresholds, or move coverage away from the behavior under change.
+- Read and follow `docs/testing-conventions.md` before changing application behavior, fixing bugs, refactoring risky code, or adding features.
 
 Operational notes:
 

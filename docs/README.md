@@ -7,9 +7,10 @@ Recommended order:
 1. `architecture.md` - how the app is organized.
 2. `routes.md` - public URLs and anchors.
 3. `i18n.md` - locale routing, messages, navigation, and localized blog slugs.
-4. `accessibility-rules.md` - WCAG 2.2 AA enforcement for UI and content changes.
-5. `agent-playbook.md` - common workflows, validation, and known gotchas.
-6. `design-rules.md` - theme tokens, palette, and visual rules.
+4. `testing-conventions.md` - TDD workflow and coverage expectations.
+5. `accessibility-rules.md` - WCAG 2.2 AA enforcement for UI and content changes.
+6. `agent-playbook.md` - common workflows, validation, and known gotchas.
+7. `design-rules.md` - theme tokens, palette, and visual rules.
 
 High-level model:
 
