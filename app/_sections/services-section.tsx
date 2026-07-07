@@ -1,10 +1,17 @@
 import { Link } from "@/i18n/navigation";
-import { Bot, ClipboardCheck, Smartphone } from "lucide-react";
+import {
+  Bot,
+  ClipboardCheck,
+  CloudCog,
+  Globe,
+  Smartphone,
+  Workflow,
+} from "lucide-react";
 import { useTranslations } from "next-intl";
 import { PageSection } from "../_components/page-sections";
 
 type Service = {
-  key: "audit" | "automation" | "mobile";
+  key: "audit" | "automation" | "mobile" | "web" | "cloud" | "pipelines";
   eyebrow: string;
   title: string;
   body: string;
@@ -18,6 +25,9 @@ const serviceIcons = {
   audit: ClipboardCheck,
   automation: Bot,
   mobile: Smartphone,
+  web: Globe,
+  cloud: CloudCog,
+  pipelines: Workflow,
 } as const;
 
 export function ServicesSection() {

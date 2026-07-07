@@ -12,7 +12,7 @@ export function HeroSection() {
             {t("eyebrow")}
           </p>
           <h1
-            className="mt-5 max-w-full text-5xl font-black uppercase leading-none text-(--theme-text-primary) sm:text-6xl lg:text-7xl"
+            className="mt-5 max-w-full break-words text-5xl font-black uppercase leading-none text-(--theme-text-primary) sm:text-6xl lg:text-7xl"
             id="inicio-title"
           >
             {t("title")}

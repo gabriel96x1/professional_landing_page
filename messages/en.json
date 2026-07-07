@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Gabriel Ernesto Rodriguez Zamora | Software Engineer",
-    "description": "Professional portfolio for Gabriel Ernesto Rodriguez Zamora, a Software Engineer specializing in Android, Kotlin, Jetpack Compose, mobile architecture, CI/CD, and AI automation."
+    "description": "Professional portfolio for Gabriel Ernesto Rodriguez Zamora, a Software Engineer specializing in mobile-first apps, web, cloud, automation, and AI applied to business workflows."
   },
   "Layout": {
     "brand": "Gabriel Rodriguez",
@@ -36,111 +36,153 @@
   "Shared": {},
   "Home": {
     "Hero": {
-      "eyebrow": "Android + mobile architecture + automation",
-      "title": "AI accelerates. Technical expertise delivers the results.",
-      "description": "I am a Software Engineer specializing in scalable mobile products. I build and modernize Android apps with Kotlin, Jetpack Compose, and modern architectures, design CI/CD pipelines, and agentic workflows.",
-      "primaryCta": "Contact",
-      "secondaryCta": "View projects",
-      "visualLabel": "6+ years of mobile engineering experience",
-      "specialty": "Android, Kotlin, Jetpack Compose, CI/CD, and AI applied to development."
+      "eyebrow": "Mobile-first + applied AI + automation",
+      "title": "AI accelerates. Experience is accountable for the result.",
+      "description": "I build mobile apps, websites, integrations, cloud foundations, and AI automations for businesses that want to reduce manual work, respond faster, and organize their processes without relying on improvised solutions.",
+      "primaryCta": "Talk through your process",
+      "secondaryCta": "View use cases",
+      "visualLabel": "Mobile, web, cloud, and applied AI",
+      "specialty": "Apps, automations, integrations, and pipelines with human oversight."
     },
     "WhatIDo": {
       "title": "What I do",
-      "description": "I work across mobile development, architecture, quality, and automation to help teams ship robust features with less technical debt.",
+      "description": "I turn business needs into concrete systems: mobile experiences, websites, integrations, and AI workflows that work in real operations.",
       "cards": {
         "web": {
-          "title": "Modern Android",
-          "body": "I build screens, modules, and features with Kotlin, Jetpack Compose, Coroutines, Retrofit, and patterns such as MVVM, MVI, and Server-Driven UI."
+          "title": "Apps and mobile-first experiences",
+          "body": "I design and build Android apps, multiplatform solutions, and fast web experiences for customers, internal teams, or field operations."
         },
         "product": {
-          "title": "Architecture and quality",
-          "body": "I modernize legacy codebases, modularize build logic, raise test coverage, and define practices that make code easier to maintain."
+          "title": "AI automation and integration",
+          "body": "I connect email, WhatsApp, CRMs, spreadsheets, APIs, and documents to create workflows that classify, summarize, notify, and execute repetitive tasks."
         },
         "content": {
-          "title": "Automation and AI",
-          "body": "I build tools, MCP servers, and workflows with Codex and GitHub Copilot-CLI to automate repetitive engineering and documentation tasks."
+          "title": "Cloud, quality, and technical operations",
+          "body": "I configure infrastructure, deployments, CI/CD, monitoring, and AI-assisted pipelines so your systems are maintainable, measurable, and ready to grow."
         }
       }
     },
     "Services": {
       "title": "Services",
-      "description": "Three concrete ways to help when you already have an app, MVP, or operation that needs technical judgment to move forward.",
+      "description": "Six clear ways to move from an idea, operational problem, or existing product to a digital solution the business can actually use.",
       "items": [
         {
           "key": "audit",
-          "eyebrow": "Focused diagnosis",
-          "title": "Technical audit for an app or MVP",
-          "body": "For startups or businesses that already have something built and need to understand risks, priorities, and next steps before investing more.",
+          "eyebrow": "Starting point",
+          "title": "Digital and AI diagnosis",
+          "body": "For businesses that want to use AI, automate tasks, or improve operations, but need clarity before investing in tools or development.",
           "includes": [
-            "Architecture review and technical debt.",
-            "Critical bugs, performance, and basic security.",
-            "Improvement roadmap with cost and time estimate."
+            "Mapping manual processes and friction points.",
+            "Opportunities for app, web, cloud, integration, or AI.",
+            "Roadmap with risks, costs, quick wins, and priorities."
           ],
-          "outcome": "You receive a prioritized diagnosis with risks, quick wins, and a clear improvement path.",
-          "price": "$500-$1,500 USD",
-          "cta": "Request an audit"
+          "outcome": "You get a clear path: what to automate, what to build first, and what to avoid.",
+          "price": "Free",
+          "cta": "Schedule diagnosis"
         },
         {
           "key": "automation",
-          "eyebrow": "Applied AI",
+          "eyebrow": "Connected operations",
           "title": "AI automation or integration",
-          "body": "For companies that want to use AI practically: reduce manual work, connect tools, and turn scattered information into useful processes.",
+          "body": "For teams living across WhatsApp, email, Excel, forms, CRMs, or disconnected tools that want to reduce repetitive work.",
           "includes": [
-            "Lead classification, email summaries, and reports.",
-            "Forms connected to CRMs, APIs, or internal tools.",
-            "Internal document bots and workflows with n8n, Make, or Zapier."
+            "Classification of leads, requests, messages, or tickets.",
+            "Summaries, reports, and automatic follow-up.",
+            "Connection with APIs, CRMs, Google Sheets, databases, or internal tools."
           ],
-          "outcome": "We deliver a working automation connected to your real tools and ready for daily operations.",
+          "outcome": "We deliver a workflow running with your real tools and human review points.",
           "price": "$1,500-$8,000 USD",
           "cta": "Explore automation"
         },
         {
           "key": "mobile",
-          "eyebrow": "Monthly support",
-          "title": "Mobile / Android production support",
-          "body": "For startups with an existing Android app that need reliable maintenance without hiring a full team.",
+          "eyebrow": "Digital product",
+          "title": "Mobile and multiplatform apps",
+          "body": "For businesses that need to launch an app, digitize a field process, or stabilize a mobile product already in use.",
           "includes": [
-            "Releases, bugs, migrations, and performance.",
-            "Analytics, payments, authentication, and key integrations.",
-            "Play Store compliance and continuous technical support."
+            "Native Android apps or multiplatform solutions.",
+            "Authentication, payments, analytics, notifications, and offline mode.",
+            "Releases, performance, Play Store, maintenance, and technical support."
           ],
-          "outcome": "Keep your app stable, current, and ready to grow with recurring senior support.",
-          "price": "$1,000-$5,000 USD/month",
-          "cta": "Discuss support"
+          "outcome": "We build or improve a usable, connected product prepared for daily operation.",
+          "price": "$2,000+ USD / monthly support",
+          "cta": "Discuss app"
+        },
+        {
+          "key": "web",
+          "eyebrow": "Conversion",
+          "title": "Websites, landing pages, and portals",
+          "body": "For businesses that need to explain their offer better, capture leads, show services, or give access to customers and internal teams.",
+          "includes": [
+            "Landing pages, professional websites, portals, and dashboards.",
+            "Forms, basic technical SEO, performance, and analytics.",
+            "Connection with WhatsApp, email, CRMs, APIs, or automations."
+          ],
+          "outcome": "Your web presence becomes clear, fast, and connected to a measurable business action.",
+          "price": "$800-$3,500 USD",
+          "cta": "Plan website"
+        },
+        {
+          "key": "cloud",
+          "eyebrow": "Technical foundation",
+          "title": "Cloud, data, and infrastructure",
+          "body": "For businesses that already depend on scattered files, accounts, and tools and need a more organized foundation to operate.",
+          "includes": [
+            "APIs, databases, storage, authentication, and backups.",
+            "Hosting, domains, monitoring, logs, and cost control.",
+            "Lightweight architecture on AWS, Google Cloud, Vercel, or equivalent services."
+          ],
+          "outcome": "Your systems become better connected, monitored, and ready to grow without losing control.",
+          "price": "$1,000-$6,000 USD",
+          "cta": "Organize infrastructure"
+        },
+        {
+          "key": "pipelines",
+          "eyebrow": "Internal AI",
+          "title": "Pipelines and internal copilots",
+          "body": "For teams that want to use AI inside operations or development, with their own context, clear rules, and human approval.",
+          "includes": [
+            "Internal assistants over documents, processes, or code.",
+            "Pipelines for QA, reports, documentation, releases, and follow-up.",
+            "Agentic workflows with permissions, traceability, and review before execution."
+          ],
+          "outcome": "Your team gets AI support for repetitive work without losing supervision or judgment.",
+          "price": "$2,000-$10,000 USD",
+          "cta": "Design copilot"
         }
       ],
-      "ctaTitle": "You do not need a generic agency. You need applied technical clarity.",
-      "ctaBody": "Tell me what you already have built, what is breaking, or which process you want to automate, and I will propose the most direct path forward.",
-      "ctaLabel": "Schedule a diagnosis"
+      "ctaTitle": "I do not sell AI as an accessory. I design complete workflows.",
+      "ctaBody": "Data, tools, permissions, costs, human validation, and maintenance: the solution should work in your operation, not only in a demo.",
+      "ctaLabel": "Schedule diagnosis"
     },
     "Portfolio": {
       "title": "Portfolio",
-      "description": "Representative professional, open-source, and personal projects focused on mobile, automation, and technical tooling.",
+      "description": "Projects that show judgment for building mobile products, automations, integrations, and technical tools ready for real operations.",
       "projects": [
         {
           "title": "Multi-agent development framework",
           "problem": "Problem: repetitive engineering and documentation workflows consumed time and depended too much on manually supplied context.",
-          "solution": "Solution: I designed a multi-agent orchestration framework with MCP, local tools, and custom servers to provide agents with project context.",
+          "solution": "Solution: I designed a multi-agent orchestration framework with MCP, local tools, and custom servers to connect agents with real project context.",
           "technologies": "Technologies: Codex, GitHub Copilot-CLI, MCP, TypeScript, Node.js, terminal automation.",
-          "result": "Result: reduced manual overhead and support for complex development workflows."
+          "result": "Result: a foundation for automating complex technical tasks with traceability and human control."
         },
         {
           "title": "Android modernization in retail",
-          "problem": "Problem: legacy Java modules and traditional UI slowed iteration speed and product quality.",
+          "problem": "Problem: legacy Java modules and traditional UI slowed iteration speed, stability, and quality in a high-traffic app.",
           "solution": "Solution: I migrated code to Kotlin, modernized UI with Jetpack Compose, modularized Gradle, and implemented CI/CD checks.",
           "technologies": "Technologies: Kotlin, Java, Jetpack Compose, Retrofit, Dagger-Hilt, Coroutines, Gradle, Detekt, Lint.",
           "result": "Result: mobile features for B2C and Loyalty domains impacting 100K+ daily active users."
         },
         {
           "title": "Eleuteria Writing Studio",
-          "problem": "Problem: create an open-source writing studio with a modern frontend, API backend, and automated quality gates.",
+          "problem": "Problem: create a complete product with a modern interface, API backend, local persistence, and automated quality gates.",
           "solution": "Solution: I implemented a desktop app with a React UI, Fast API backend, SQLite, and frontend/backend test pipelines.",
           "technologies": "Technologies: TypeScript, Python, React, Vite, Tailwind CSS, Fast API, shadcn-ui, SQLite, GitHub Actions.",
           "result": "Result: open-source application with CI/CD, pre-commit hooks, smoke tests, and automated coverage reporting."
         },
         {
           "title": "ReadE-DocOnline",
-          "problem": "Problem: securely read and verify ICAO-compliant electronic documents from Android.",
+          "problem": "Problem: securely read and verify ICAO-compliant electronic documents from Android, even in limited-connectivity scenarios.",
           "solution": "Solution: I built a native app with NFC, MRZ OCR, and a secure handshake to extract encrypted data from e-passports and IDs.",
           "technologies": "Technologies: Kotlin, Java, NFC, Android SDK, JMRTD, Bouncy Castle, OCR.",
           "result": "Result: technical foundation for offline electronic document reading and secure verification."
@@ -148,12 +190,12 @@
       ],
       "caseStudyParts": [
         "Android",
+        "Web",
         "CI/CD",
-        "Testing",
-        "NFC",
-        "Agentic AI"
+        "Cloud",
+        "Applied AI"
       ],
-      "caseStudyBody": "Experience area backed by real projects from the CV."
+      "caseStudyBody": "Experience area backed by real projects, internal products, and technical automations."
     },
     "BlogPreview": {
       "title": "Explore the blog",
@@ -164,34 +206,34 @@
     },
     "About": {
       "title": "About me",
-      "description": "I am a software engineer with 6+ years of experience building, modernizing, and automating mobile products.",
-      "bio": "I specialize in Android with Kotlin and Jetpack Compose, while also working with TypeScript, Python, React, Flutter, and automation tooling. I have collaborated on products across retail, travel, telecom, and government, from high-traffic features to security modules, NFC, CI/CD, and agent systems for development.",
+      "description": "I am a software engineer with 6+ years of experience building, modernizing, and automating digital products.",
+      "bio": "I specialize in mobile, while also working with TypeScript, Python, React, Flutter, cloud, and automation tooling. My focus is turning business needs into concrete systems: apps, websites, integrations, pipelines, and AI workflows that work in real operations, not only in demos.",
       "cards": {
         "experience": {
           "title": "Experience",
-          "body": "The Home Depot, IBM, Expedia Group, CODE Ingenieria, and Thales DIS, across mobile, telecom, NFC, and internal tooling projects."
+          "body": "The Home Depot, IBM, Expedia Group, CODE Ingenieria, and Thales DIS, across mobile, retail, travel, telecom, NFC, and internal tooling projects."
         },
         "judgment": {
           "title": "Judgment",
-          "body": "I prioritize maintainable architecture, testing, measurable impact, and incremental decisions that respect the existing product."
+          "body": "I prioritize business clarity, maintainable architecture, testing, measurable impact, and incremental decisions."
         },
         "collaboration": {
           "title": "Collaboration",
-          "body": "I work with technical clarity, useful documentation, automation where it adds value, and direct communication with teams."
+          "body": "I work with direct communication, useful documentation, and automation where it truly adds value."
         }
       },
       "valuesTitle": "Strengths",
       "values": [
-        "Modern Android with Kotlin, Jetpack Compose, and MVVM/MVI architectures.",
-        "Quality through unit tests, instrumented tests, mocks, and profiling.",
-        "Mobile DevOps with CI/CD, GitHub Actions, SAST, Lint, Detekt, and Gradle.",
-        "Advanced automation with MCP, Codex, Copilot-CLI, and internal tools."
+        "Android and multiplatform apps with maintainable architecture.",
+        "Websites, portals, and dashboards connected to real data and tools.",
+        "AI automations with APIs, documents, CRMs, email, and spreadsheets.",
+        "Cloud, CI/CD, testing, monitoring, and technical pipelines with human oversight."
       ]
     },
     "Contact": {
       "eyebrow": "Contact",
-      "title": "Let's talk about your mobile product or technical tool.",
-      "description": "You can reach me by email, LinkedIn, or GitHub to talk about Android, automation, technical consulting, or collaborations.",
+      "title": "Let's talk about the process you want to improve.",
+      "description": "Tell me if you need to launch an app, create a website, automate a manual operation, integrate tools, or apply AI with technical judgment.",
       "externalNewTab": "(opens in a new tab)",
       "cards": {
         "contact": {
@@ -205,13 +247,15 @@
           "title": "LinkedIn",
           "line1": "linkedin.com/in/gaberz96",
           "href": "https://www.linkedin.com/in/gaberz96",
-          "line2": "Professional profile"
+          "line2": "Professional profile",
+          "ariaLabel": "Open LinkedIn profile"
         },
         "github": {
           "title": "GitHub",
           "line1": "github.com/gabriel96x1",
           "href": "https://github.com/gabriel96x1",
-          "line2": "Code and projects"
+          "line2": "Code and projects",
+          "ariaLabel": "Open GitHub profile"
         }
       },
       "form": {
@@ -221,7 +265,7 @@
         "email": "Email",
         "emailHint": "you@email.com",
         "message": "Message",
-        "messageHint": "Tell me what you need to build or improve.",
+        "messageHint": "Tell me which process you want to improve, automate, or turn into a product.",
         "submit": "Send message"
       }
     }
