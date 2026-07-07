@@ -66,6 +66,43 @@ Prefer the smallest reliable test that proves the behavior:
 Avoid testing implementation details when the user-visible behavior can be
 asserted directly.
 
+## Vitest Projects And Browser Mode
+
+Vitest is configured with two unit-test projects:
+
+- Node tests use `tests/**/*.test.{ts,tsx}` for pure helpers, server components,
+  App Router page functions, route helpers, request config, and proxy adapters.
+- Browser tests use `tests/**/*.browser.test.{ts,tsx}` for interactive React
+  components that need a real DOM, events, local storage, hash state, or
+  accessible role queries.
+
+Browser tests run through Vitest Browser Mode with the Playwright provider:
+
+- The configured browser is headless Chromium via `@vitest/browser-playwright`.
+- Install/update the local browser runtime with:
+
+```bash
+bunx playwright install chromium
+```
+
+- Browser Mode starts a local Vitest browser server on localhost. In sandboxed
+  agent environments this may require escalated permission, but on a normal
+  developer machine it should run as part of `bun run test:coverage` and
+  `bun run precommit`.
+- These tests are still unit/component tests. Do not start `next dev` or test
+  full HTTP routes from `.browser.test.tsx` files.
+- Use `tests/helpers/browser-render.tsx` to mount React components and clean up
+  after each test.
+- Use `tests/helpers/browser-interact.ts` for user interactions so React updates
+  are wrapped in `act`.
+- Use `tests/helpers/test-state.ts` to reset mocked locale, router, middleware,
+  and navigation state between tests.
+
+Prefer Browser Mode over jsdom when testing client components in this project.
+Good browser-test candidates include menu open/close behavior, Escape handling,
+theme toggling, local storage, same-anchor scrolling, language switching, form
+labels, external-link labels, and other accessible DOM interactions.
+
 ## Validation
 
 Before handing off a change, run the relevant project checks:
