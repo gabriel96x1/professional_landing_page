@@ -33,7 +33,7 @@ export default async function Home({ params }: HomeProps) {
     <main id="main-content">
       <HeroSection />
       <WhatIDoSection />
-      <ServicesSection />
+      {/* <ServicesSection /> TODO: Add services section when ready  */}
       <PortfolioSection />
       <BlogPreviewSection />
       <AboutSection />
