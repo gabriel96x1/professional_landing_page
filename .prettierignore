@@ -1,0 +1,7 @@
+.next
+coverage
+node_modules
+types
+
+bun.lock
+package-lock.json

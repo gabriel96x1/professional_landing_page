@@ -1,0 +1,11 @@
+#!/bin/sh
+
+export PATH="$HOME/.bun/bin:/opt/homebrew/bin:/usr/local/bin:$PATH"
+
+if ! command -v bun >/dev/null 2>&1; then
+  echo "Bun is required for pre-commit checks but was not found in PATH." >&2
+  echo "Install Bun or add it to your Git client's PATH, then retry the commit." >&2
+  exit 127
+fi
+
+bun run precommit
