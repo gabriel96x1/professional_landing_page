@@ -20,9 +20,6 @@ const contentSecurityPolicy = [
   "base-uri 'self'",
   "form-action 'self'",
   "frame-ancestors 'none'",
-  ...(isDev
-    ? []
-    : ["require-trusted-types-for 'script'", "trusted-types nextjs"]),
   "upgrade-insecure-requests",
 ].join("; ");
 
