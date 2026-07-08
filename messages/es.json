@@ -240,8 +240,9 @@
           "title": "Contacto",
           "line1": "gabriel.rodriguez.zamora@proton.me",
           "emailHref": "mailto:gabriel.rodriguez.zamora@proton.me",
-          "line2": "(+52) 993 193 74 20",
-          "whatsappHref": "https://wa.me/529931937420"
+          "line2": "WhatsApp",
+          "whatsappHref": "https://wa.me/523351169359",
+          "ariaLabel": "Abrir contacto por WhatsApp"
         },
         "linkedin": {
           "title": "LinkedIn",

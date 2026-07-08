@@ -1,6 +1,6 @@
 import { homeSectionIds } from "@/app/_lib/home-sections";
 import { PlaceholderCard } from "../_components/page-sections";
-import { Mail, Phone } from "lucide-react";
+import { Mail } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export function ContactSection() {
@@ -47,22 +47,17 @@ export function ContactSection() {
                       {t("cards.contact.line1")}
                     </span>
                   </a>
+                </div>
+                <div className="flex items-center gap-3">
                   <a
-                    className="flex items-center gap-2 font-semibold text-(--theme-text-primary) underline-offset-4 hover:underline"
+                    aria-label={`${t("cards.contact.ariaLabel")} ${externalNewTabText}`}
+                    className="inline-flex size-11 items-center justify-center rounded-full border border-(--theme-border-strong) text-(--theme-text-primary) transition hover:border-(--theme-label) hover:text-(--theme-label) focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--theme-label)"
                     href={t("cards.contact.whatsappHref")}
                     rel="noreferrer"
                     target="_blank"
                   >
-                    <Phone
-                      aria-hidden="true"
-                      className="size-4 shrink-0 text-(--theme-label)"
-                      strokeWidth={2.4}
-                    />
-                    <span>{t("cards.contact.line2")}</span>
-                    <span className="sr-only"> {externalNewTabText}</span>
+                    <WhatsAppIcon />
                   </a>
-                </div>
-                <div className="flex items-center gap-3">
                   <a
                     aria-label={`${t("cards.linkedin.ariaLabel")} ${externalNewTabText}`}
                     className="inline-flex size-11 items-center justify-center rounded-full border border-(--theme-border-strong) text-(--theme-text-primary) transition hover:border-(--theme-label) hover:text-(--theme-label) focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--theme-label)"
@@ -140,6 +135,20 @@ export function ContactSection() {
         </div>
       </div>
     </section>
+  );
+}
+
+function WhatsAppIcon() {
+  return (
+    <svg
+      aria-hidden="true"
+      className="size-5"
+      fill="currentColor"
+      focusable="false"
+      viewBox="0 0 24 24"
+    >
+      <path d="M12.04 2C6.54 2 2.06 6.43 2.06 11.89c0 1.74.46 3.43 1.34 4.92L2 22l5.34-1.39a10.08 10.08 0 0 0 4.7 1.18c5.5 0 9.98-4.43 9.98-9.9C22.02 6.43 17.54 2 12.04 2Zm0 18.11c-1.5 0-2.97-.4-4.25-1.17l-.3-.18-3.17.82.85-3.06-.2-.32a8.03 8.03 0 0 1-1.23-4.31c0-4.53 3.72-8.21 8.3-8.21 4.57 0 8.29 3.68 8.29 8.21 0 4.52-3.72 8.22-8.29 8.22Zm4.55-6.15c-.25-.12-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.12-.17.25-.64.8-.78.96-.14.17-.29.19-.54.07-.25-.13-1.05-.38-2-1.22-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.09-.16.04-.31-.02-.43-.06-.13-.56-1.34-.77-1.83-.2-.48-.41-.41-.56-.42h-.48c-.17 0-.43.06-.66.31-.23.25-.87.84-.87 2.05 0 1.2.89 2.37 1.01 2.54.12.16 1.74 2.63 4.22 3.69.59.25 1.05.4 1.41.52.59.18 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.2-.58.2-1.07.14-1.18-.06-.1-.23-.16-.48-.29Z" />
+    </svg>
   );
 }
 

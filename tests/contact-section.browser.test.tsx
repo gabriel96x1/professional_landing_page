@@ -32,4 +32,37 @@ describe("ContactSection", () => {
       )
       .toHaveAttribute("target", "_blank");
   });
+
+  it("links the icon-only WhatsApp contact without exposing the phone number", async () => {
+    await render(<ContactSection />);
+
+    const whatsappLink = page.getByRole("link", {
+      name: "Open WhatsApp contact (opens in a new tab)",
+    });
+
+    await expect
+      .element(whatsappLink)
+      .toHaveAttribute("href", "https://wa.me/523351169359");
+    await expect.element(whatsappLink).toHaveAttribute("target", "_blank");
+    await expect
+      .element(page.getByText(/\(\+52\) 335 116 9359/))
+      .not.toBeInTheDocument();
+  });
+
+  it("places WhatsApp beside the LinkedIn and GitHub icon links", async () => {
+    await render(<ContactSection />);
+
+    const whatsappLink = document.querySelector(
+      'a[href="https://wa.me/523351169359"]',
+    );
+    const linkedinLink = document.querySelector(
+      'a[href="Home.Contact.cards.linkedin.href"]',
+    );
+    const githubLink = document.querySelector(
+      'a[href="Home.Contact.cards.github.href"]',
+    );
+
+    expect(whatsappLink?.parentElement).toBe(linkedinLink?.parentElement);
+    expect(whatsappLink?.parentElement).toBe(githubLink?.parentElement);
+  });
 });

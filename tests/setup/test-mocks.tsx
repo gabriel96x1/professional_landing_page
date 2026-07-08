@@ -86,6 +86,10 @@ function resolveTranslation(
   const fullKey = namespace ? `${namespace}.${key}` : key;
 
   const messages: Record<string, string> = {
+    "Home.Contact.cards.contact.ariaLabel": "Open WhatsApp contact",
+    "Home.Contact.cards.contact.line2": "(+52) 335 116 9359",
+    "Home.Contact.cards.contact.whatsappHref": "https://wa.me/523351169359",
+    "Home.Contact.externalNewTab": "(opens in a new tab)",
     "LanguageSwitcher.en": "EN",
     "LanguageSwitcher.enLabel": "Switch to English",
     "LanguageSwitcher.es": "ES",
