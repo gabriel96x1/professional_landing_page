@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import { AboutSection } from "../_sections/about-section";
 import { BlogPreviewSection } from "../_sections/blog-preview-section";
 import { ContactSection } from "../_sections/contact-section";
@@ -38,6 +39,7 @@ export default async function Home({ params }: HomeProps) {
       <BlogPreviewSection />
       <AboutSection />
       <ContactSection />
+      <Analytics />
     </main>
   );
 }
