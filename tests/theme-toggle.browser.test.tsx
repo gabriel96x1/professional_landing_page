@@ -46,10 +46,13 @@ describe("ThemeToggle", () => {
   it("honors a stored light preference before toggling", async () => {
     window.localStorage.setItem("site-theme", "light");
 
-    await render(<ThemeToggle />);
+    const container = await render(<ThemeToggle />);
 
     await expect
       .element(page.getByRole("button", { name: "Switch to dark theme" }))
       .toHaveAttribute("aria-pressed", "false");
+    expect(container.querySelector("svg")?.getAttribute("viewBox")).toBe(
+      "0 0 256 258",
+    );
   });
 });

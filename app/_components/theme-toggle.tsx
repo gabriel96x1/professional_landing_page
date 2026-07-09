@@ -1,8 +1,9 @@
 "use client";
 
-import { Moon, Sun } from "lucide-react";
+import { Moon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useEffect, useSyncExternalStore } from "react";
+import { FigmaSunIcon } from "./icons/figma-sun-icon";
 
 type ThemeName = "light" | "dark";
 
@@ -74,7 +75,7 @@ export function ThemeToggle() {
         {isDark ? (
           <Moon className="theme-toggle__icon" size={16} strokeWidth={2} />
         ) : (
-          <Sun className="theme-toggle__icon" size={16} strokeWidth={2} />
+          <FigmaSunIcon className="theme-toggle__icon" />
         )}
       </span>
     </button>

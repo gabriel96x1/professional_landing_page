@@ -1,5 +1,8 @@
 import { homeSectionIds } from "@/app/_lib/home-sections";
 import { PlaceholderCard } from "../_components/page-sections";
+import { GitHubIcon } from "../_components/icons/github-icon";
+import { LinkedInIcon } from "../_components/icons/linkedin-icon";
+import { WhatsAppIcon } from "../_components/icons/whatsapp-icon";
 import { Mail } from "lucide-react";
 import { useTranslations } from "next-intl";
 
@@ -56,7 +59,7 @@ export function ContactSection() {
                     rel="noreferrer"
                     target="_blank"
                   >
-                    <WhatsAppIcon />
+                    <WhatsAppIcon className="size-5" />
                   </a>
                   <a
                     aria-label={`${t("cards.linkedin.ariaLabel")} ${externalNewTabText}`}
@@ -65,7 +68,7 @@ export function ContactSection() {
                     rel="noreferrer"
                     target="_blank"
                   >
-                    <LinkedInIcon />
+                    <LinkedInIcon className="size-5" />
                   </a>
                   <a
                     aria-label={`${t("cards.github.ariaLabel")} ${externalNewTabText}`}
@@ -74,7 +77,7 @@ export function ContactSection() {
                     rel="noreferrer"
                     target="_blank"
                   >
-                    <GitHubIcon />
+                    <GitHubIcon className="size-5" />
                   </a>
                 </div>
               </div>
@@ -135,47 +138,5 @@ export function ContactSection() {
         </div>
       </div>
     </section>
-  );
-}
-
-function WhatsAppIcon() {
-  return (
-    <svg
-      aria-hidden="true"
-      className="size-5"
-      fill="currentColor"
-      focusable="false"
-      viewBox="0 0 24 24"
-    >
-      <path d="M12.04 2C6.54 2 2.06 6.43 2.06 11.89c0 1.74.46 3.43 1.34 4.92L2 22l5.34-1.39a10.08 10.08 0 0 0 4.7 1.18c5.5 0 9.98-4.43 9.98-9.9C22.02 6.43 17.54 2 12.04 2Zm0 18.11c-1.5 0-2.97-.4-4.25-1.17l-.3-.18-3.17.82.85-3.06-.2-.32a8.03 8.03 0 0 1-1.23-4.31c0-4.53 3.72-8.21 8.3-8.21 4.57 0 8.29 3.68 8.29 8.21 0 4.52-3.72 8.22-8.29 8.22Zm4.55-6.15c-.25-.12-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.12-.17.25-.64.8-.78.96-.14.17-.29.19-.54.07-.25-.13-1.05-.38-2-1.22-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.09-.16.04-.31-.02-.43-.06-.13-.56-1.34-.77-1.83-.2-.48-.41-.41-.56-.42h-.48c-.17 0-.43.06-.66.31-.23.25-.87.84-.87 2.05 0 1.2.89 2.37 1.01 2.54.12.16 1.74 2.63 4.22 3.69.59.25 1.05.4 1.41.52.59.18 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.2-.58.2-1.07.14-1.18-.06-.1-.23-.16-.48-.29Z" />
-    </svg>
-  );
-}
-
-function LinkedInIcon() {
-  return (
-    <svg
-      aria-hidden="true"
-      className="size-5"
-      fill="currentColor"
-      focusable="false"
-      viewBox="0 0 24 24"
-    >
-      <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V8.99h3.42v1.57h.05c.48-.9 1.64-1.85 3.37-1.85 3.61 0 4.27 2.37 4.27 5.46v6.28ZM5.32 7.42a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12Zm1.78 13.03H3.54V8.99H7.1v11.46ZM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0Z" />
-    </svg>
-  );
-}
-
-function GitHubIcon() {
-  return (
-    <svg
-      aria-hidden="true"
-      className="size-5"
-      fill="currentColor"
-      focusable="false"
-      viewBox="0 0 24 24"
-    >
-      <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.14c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.74.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.17 1.18A10.96 10.96 0 0 1 12 6.01c.98 0 1.96.13 2.88.39 2.2-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.77.11 3.06.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.27 5.7.41.36.78 1.06.78 2.14v3.18c0 .31.21.67.79.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" />
-    </svg>
   );
 }
