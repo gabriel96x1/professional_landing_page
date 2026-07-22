@@ -19,6 +19,10 @@ describe("robots", () => {
     expect(safeRule!.allow).toBe("/");
   });
 
+  it("includes a sitemap URL", () => {
+    expect(result.sitemap).toBe("https://gabrielrzamora.com/sitemap.xml");
+  });
+
   it("blocks AI training crawlers from all paths", () => {
     const aiRule = result.rules.find(
       (rule) =>
@@ -40,9 +44,5 @@ describe("robots", () => {
     const generalRule = result.rules.find((rule) => rule.userAgent === "*");
 
     expect(generalRule!.disallow).toBe("/api/");
-  });
-
-  it("includes a sitemap URL", () => {
-    expect(result.sitemap).toBe("https://gabrielrzamora.com/sitemap.xml");
   });
 });
